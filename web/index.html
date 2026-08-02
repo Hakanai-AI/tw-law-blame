@@ -78,6 +78,10 @@ input[type=search]{width:100%;padding:9px 12px;border:1px solid var(--rule);
 .panel p{margin:0 0 6px}
 .panel .purpose{color:var(--ink);font-family:"Noto Serif TC","Songti TC",serif;line-height:1.85}
 .panel .meta{color:var(--muted);font-size:.78rem}
+.why-line{display:block;margin-top:8px;font-size:.78rem;color:var(--muted)}
+.why-line b{color:var(--ink)}
+.why-line b.hot{color:var(--del);border:1px solid var(--del);border-radius:99px;
+  padding:0 8px;font-size:.7rem;margin-right:4px}
 
 /* Law view */
 #tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:14px}
@@ -339,9 +343,33 @@ function chipPanel(kind, payload){
       <p><button class="chip" data-open="${esc(payload.slug)}">查看修法紀錄（${payload.amendments} 筆）→</button></p>
     </div>`;
   }
-  return `<div class="panel">${payload.defs.map(d =>
-    `<p><b>${esc(d.law)}</b> ${esc(d.article)}：${esc(d.text)}
-     ${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">原文</a>`:""}</p>`).join("")}</div>`;
+  return `<div class="panel">${payload.defs.map(d => `
+    <p><b>${esc(d.law)}</b> ${esc(d.article)}：${esc(d.text)}
+      ${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">原文</a>`:""}</p>
+    <p>${d.slug
+      ? `<button class="chip" data-open="${esc(d.slug)}">查看 ${esc(d.law)} 修法紀錄（${d.amendments} 筆）→</button>`
+      : `<span class="meta">${esc(d.law)} 尚無修法紀錄可查 — 立法院對照表（ID19）目前只到第10屆，這部法較新或未被收錄。</span>`}</p>
+  `).join("")}</div>`;
+}
+
+function lawWhy(l){
+  const y = (l.modified||"").slice(0,4), m=(l.modified||"").slice(4,6), d=(l.modified||"").slice(6,8);
+  const when = y ? `${y}-${m}-${d}` : "—";
+  const fresh = y && Number(y) >= 2024;
+  return `<span class="why-line">
+    ${fresh?`<b class="hot">近期修法</b> `:""}現行法最後修正 <b>${when}</b>
+    · 歷次修正 ${l.enactedAmendments||0} 次 · 本站收錄 ${l.amendments} 筆提案</span>`;
+}
+
+// Same law, other headlines today — the cheapest useful "context" there is.
+function related(it, all){
+  const mine = new Set(it.laws.map(l=>l.slug));
+  if (!mine.size) return "";
+  const sib = all.filter(o => o !== it && o.laws.some(l=>mine.has(l.slug))).slice(0,3);
+  if (!sib.length) return "";
+  return `<div class="panel"><p class="meta">今日相關報導</p>${sib.map(o =>
+    `<p>· <a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.title)}</a>
+      <span class="n">${esc(o.source)}</span></p>`).join("")}</div>`;
 }
 
 function newsCard(it, q){
@@ -356,7 +384,9 @@ function newsCard(it, q){
     <div class="chips">${chips.map(c =>
       `<button class="chip" data-kind="${c.kind}" data-ck="${esc(c.key)}" aria-expanded="false">
         <span class="k">${c.tag}</span>${esc(c.label)}</button>`).join("")}</div>
+    ${it.laws.map(l=>lawWhy(l)).join("")}
     <div class="slot"></div>
+    ${related(it, NEWS.items)}
   </article>`;
 }
 

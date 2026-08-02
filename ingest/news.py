@@ -111,7 +111,8 @@ def match_laws(headline: str, laws: list[dict]) -> list[dict]:
     return hits
 
 
-def match_terms(headline: str, glossary: dict, matched_laws: list[dict]) -> list[dict]:
+def match_terms(headline: str, glossary: dict, matched_laws: list[dict],
+                by_name: dict) -> list[dict]:
     """Legal jargon in the headline, with the statute's own definition.
 
     A term like 主管機關 is defined by 229 different statutes, so an arbitrary
@@ -125,7 +126,16 @@ def match_terms(headline: str, glossary: dict, matched_laws: list[dict]) -> list
         if len(term) < 3 or term not in headline:
             continue
         preferred = [d for d in defs if d["law"] in names] or defs
-        out.append({"term": term, "defs": preferred[:3], "scoped": bool(
+        # A term's defining statute is often NOT in our proposals corpus —
+        # 新住民基本法 defines 新住民 but has no 對照表 rows, because ID19 has not
+        # published 屆11. Carry the slug when we DO have it so the panel can link
+        # to the blame view, and say so plainly when we don't.
+        enriched = []
+        for d in preferred[:3]:
+            law = by_name.get(d["law"])
+            enriched.append({**d, "slug": law["slug"] if law else "",
+                             "amendments": law["amendments"] if law else 0})
+        out.append({"term": term, "defs": enriched, "scoped": bool(
             [d for d in defs if d["law"] in names])})
     # Longest first: 目的事業主管機關 is more informative than 主管機關.
     out.sort(key=lambda t: -len(t["term"]))
@@ -140,6 +150,11 @@ def match_terms(headline: str, glossary: dict, matched_laws: list[dict]) -> list
 def main() -> int:
     idx = json.loads((DATA / "index.json").read_text(encoding="utf-8"))
     laws = idx["laws"]
+    by_name = {l["law"]: l for l in laws}
+    try:
+        tldr = json.loads((DATA / "tldr.json").read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        tldr = {}
     try:
         glossary = json.loads((DATA / "terms.json").read_text(encoding="utf-8"))["terms"]
     except FileNotFoundError:
@@ -167,7 +182,12 @@ def main() -> int:
             continue
         seen.add(it["title"])
         it["laws"] = match_laws(it["title"], laws)
-        it["terms"] = match_terms(it["title"], glossary, it["laws"])
+        for l in it["laws"]:
+            t = tldr.get(l["slug"], {})
+            l["modified"] = t.get("modified", "")
+            l["enactedAmendments"] = t.get("amendments", 0)
+            l["purpose"] = t.get("purpose", "")
+        it["terms"] = match_terms(it["title"], glossary, it["laws"], by_name)
         uniq.append(it)
 
     matched = [i for i in uniq if i["laws"] or i["terms"]]

@@ -146,6 +146,20 @@ def main() -> int:
         json.dumps(tldr, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"tldr for {len(tldr)} laws")
 
+    # "Why is this in the news now?" — a statute amended in the last two years
+    # is a far better answer than one untouched since 2014. 32 laws changed in
+    # 2026 and 52 in 2025, so this is a real signal, not a rare badge.
+    recent = sorted(
+        ({"law": v["law"], "slug": k, "modified": v["modified"],
+          "articles": v["articles"], "amendments": v["amendments"]}
+         for k, v in tldr.items() if (v["modified"] or "")[:4].isdigit()
+         and int(v["modified"][:4]) >= 2024),
+        key=lambda r: r["modified"], reverse=True)
+    (DATA / "recent.json").write_text(
+        json.dumps({"since": "2024", "count": len(recent), "laws": recent},
+                   ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"{len(recent)} corpus laws amended since 2024")
+
     (DATA / "enacted" / "_meta.json").write_text(json.dumps({
         "source": "全國法規資料庫 (law.moj.gov.tw)",
         "updated": doc.get("UpdateDate"),
