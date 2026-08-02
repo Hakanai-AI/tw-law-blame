@@ -65,6 +65,11 @@ a{color:var(--accent)}
 footer{border-top:1px solid var(--rule);margin-top:40px;padding:18px 0 40px;
   font-size:.78rem;color:var(--muted)}
 .empty{color:var(--muted);padding:40px 0;text-align:center}
+#tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:14px}
+#tools input[type=search]{flex:1 1 260px}
+.chk{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);
+  white-space:nowrap;cursor:pointer}
+mark{background:rgba(180,140,20,.28);color:inherit;border-radius:2px;padding:0 1px}
 </style>
 </head>
 <body>
@@ -78,10 +83,17 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding:18px 0 40px;
 
 <div class="grid">
   <aside>
-    <input type="search" id="q" placeholder="搜尋法律名稱…" aria-label="搜尋法律名稱">
+    <input type="search" id="q" placeholder="搜尋法律名稱…（例：石油、電業）" aria-label="搜尋法律名稱">
     <ul class="laws" id="laws"></ul>
   </aside>
-  <main id="main"><p class="empty">← 從左側選一部法律</p></main>
+  <main>
+    <div id="tools" hidden>
+      <input type="search" id="fq" placeholder="在這部法律內搜尋條文、立法理由、提案人…" aria-label="全文搜尋">
+      <label class="chk"><input type="checkbox" id="only3"> 只看三讀通過</label>
+      <span class="n" id="count"></span>
+    </div>
+    <div id="main"><p class="empty">← 從左側選一部法律</p></div>
+  </main>
 </div>
 
 <footer>
@@ -126,25 +138,50 @@ function renderLaws(filter=""){
     || `<li><span class="n" style="padding:10px 6px;display:block">查無符合</span></li>`;
 }
 
-async function open(slug){
-  current = slug;
-  renderLaws($("#q").value);
-  $("#main").innerHTML = `<p class="empty">載入中…</p>`;
-  const rows = await (await fetch(`data/${encodeURIComponent(slug)}.json`)).json();
-  $("#main").innerHTML = rows.map(r => {
+let ROWS = [];
+
+const mark = (t, q) => !q ? t
+  : t.replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"), "gi"), m => `<mark>${m}</mark>`);
+
+function renderRows(){
+  const q = $("#fq").value.trim();
+  const only3 = $("#only3").checked;
+  let rows = ROWS;
+  if (only3) rows = rows.filter(r => (r.status||"").includes("三讀"));
+  if (q) rows = rows.filter(r =>
+    (r.article+r.title+r.who+r.why+r.old+r.new).includes(q));
+
+  $("#count").textContent = `${rows.length} / ${ROWS.length} 筆`;
+  // Rendering thousands of diffs at once locks the tab; the corpus has laws
+  // with 2000+ amendments. Cap and say so rather than truncate silently.
+  const cap = 200, shown = rows.slice(0, cap);
+  $("#main").innerHTML = shown.map(r => {
     const passed = (r.status||"").includes("三讀");
     return `<article class="rec">
-      <h3>${r.article} <span style="font-weight:400;color:var(--muted);font-size:.85rem">${r.title||""}</span></h3>
+      <h3>${r.article} <span style="font-weight:400;color:var(--muted);font-size:.85rem">${mark(r.title||"",q)}</span></h3>
       <div class="meta">
         <span>第${r.term}屆 第${String(Number(r.session))}會期</span>
-        <span>提案：${r.who}</span>
+        <span>提案：${mark(r.who,q)}</span>
         <span class="pill ${passed?"passed":""}">${r.status}</span>
         ${r.pdf?`<a href="${r.pdf}" target="_blank" rel="noopener">官方文件 PDF</a>`:""}
       </div>
       <div class="diff">${r.old||r.new ? diff(r.old, r.new) : "<span class='n'>無條文對照</span>"}</div>
-      ${r.why?`<div class="why"><b>立法理由</b>：${r.why}</div>`:""}
+      ${r.why?`<div class="why"><b>立法理由</b>：${mark(r.why,q)}</div>`:""}
     </article>`;
-  }).join("") || `<p class="empty">此法律無可顯示的修正紀錄</p>`;
+  }).join("") || `<p class="empty">${q||only3 ? "查無符合的修正紀錄" : "此法律無可顯示的修正紀錄"}</p>`;
+  if (rows.length > cap)
+    $("#main").insertAdjacentHTML("beforeend",
+      `<p class="empty">顯示前 ${cap} 筆，共 ${rows.length} 筆 — 縮小搜尋範圍以看到其餘</p>`);
+}
+
+async function open(slug, push=true){
+  current = slug;
+  renderLaws($("#q").value);
+  $("#tools").hidden = false;
+  $("#main").innerHTML = `<p class="empty">載入中…</p>`;
+  ROWS = await (await fetch(`data/${encodeURIComponent(slug)}.json`)).json();
+  renderRows();
+  if (push) location.hash = encodeURIComponent(slug);
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -153,6 +190,12 @@ $("#laws").addEventListener("click", e => {
   if (b) open(b.dataset.slug);
 });
 $("#q").addEventListener("input", e => renderLaws(e.target.value));
+$("#fq").addEventListener("input", renderRows);
+$("#only3").addEventListener("change", renderRows);
+addEventListener("hashchange", () => {
+  const s = decodeURIComponent(location.hash.slice(1));
+  if (s && s !== current) open(s, false);
+});
 
 fetch("data/index.json").then(r => r.json()).then(d => {
   INDEX = d;
@@ -163,6 +206,8 @@ fetch("data/index.json").then(r => r.json()).then(d => {
     + `正式條文請以全國法規資料庫為準。`;
   $("#gen").textContent = `· 資料更新於 ${d.generated}`;
   renderLaws();
+  const s = decodeURIComponent(location.hash.slice(1));
+  if (s) open(s, false);
 });
 </script>
 </body>

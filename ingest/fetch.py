@@ -76,10 +76,18 @@ def article_of(title: str) -> str:
 
 
 def law_of(title: str) -> str:
-    """Law name from a 對照表 title, stripping the article/scope suffix."""
+    """Law name from a 對照表 title, stripping the article/scope suffix.
+
+    Titles are free text, so the same statute arrives as "電業法", "電業法修正"
+    and "電業法修正草案". Without the trailing-verb strip those become three
+    separate laws in the index and the amendment history for one statute is
+    split three ways.
+    """
     t = re.sub(r"(草案)?對照表$", "", title or "").strip()
     m = re.match(r"(.+?)(第[一二三四五六七八九十百零〇\d]+條|部分條文|全文|條文)", t)
-    return (m.group(1) if m else t).strip() or "—"
+    t = (m.group(1) if m else t).strip()
+    t = re.sub(r"(修正|增訂|刪除|制定|訂定|部分|部份|草案|等)+$", "", t).strip()
+    return t or "—"
 
 
 def build(term: str, period: str) -> dict:

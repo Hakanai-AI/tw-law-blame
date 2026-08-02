@@ -37,6 +37,12 @@ jobs:
         with:
           python-version: '3.12'
 
+      # Start from empty. Shards are named after the parsed law name, so a
+      # change to that parser leaves the old names behind and they would ship
+      # alongside the new ones.
+      - name: Clear stale shards
+        run: rm -rf data
+
       - name: Fetch 立法院 open data
         env:
           TERMS: ${{ inputs.terms || '8,9,10,11' }}
@@ -59,15 +65,10 @@ jobs:
               sys.exit(f"corpus too small ({n} amendments) — refusing to publish")
           PY
 
-      - name: Commit refreshed data
-        run: |
-          git config user.name  'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data
-          git diff --staged --quiet && echo "no change" && exit 0
-          git commit -m "chore(data): refresh 立法院 open data"
-          git push
-
+      # Data is NOT committed. The corpus is ~93MB and every run rewrites all
+      # of it, so a daily commit would add ~34GB of git history per year to
+      # store a file that is fully reproducible from this script. It is built
+      # fresh each run and shipped straight to Pages.
       - name: Assemble the site
         run: cp -r data web/data
 

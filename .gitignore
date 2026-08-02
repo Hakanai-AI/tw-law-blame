@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 /tmp/
+
+# Built fresh by CI each run, never committed (93MB, fully reproducible).
+data/
