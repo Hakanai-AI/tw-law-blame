@@ -1,0 +1,86 @@
+name: ingest-and-deploy
+
+# Daily refresh + Pages deploy. Also runs on push to main and on demand.
+#
+# Event-driven was considered and rejected: 立法院 publishes no webhook, and
+# the underlying datasets refresh on their own schedule (ID19/ID20 weekly,
+# id=373 daily at 13:00 TPE). A daily poll after that window is the earliest
+# useful signal available, so a cron IS the event source here.
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 15:00 Asia/Taipei — after the 13:00 dataset refresh
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      terms:
+        description: 'Comma-separated 屆 to ingest'
+        default: '8,9,10,11'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Fetch 立法院 open data
+        env:
+          TERMS: ${{ inputs.terms || '8,9,10,11' }}
+          MAX_PERIOD: '8'
+        run: python3 ingest/fetch.py
+
+      # Assert on content, not on the previous step's exit code. Every failure
+      # mode this API has returns HTTP 200 with nothing usable, so a green
+      # fetch step is not evidence that data exists.
+      - name: Assert the corpus is non-trivial
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, sys
+          idx = json.loads(pathlib.Path("data/index.json").read_text())
+          n = idx["totals"]["amendments"]
+          print(f"{idx['totals']['laws']} laws, {n} amendments")
+          for s in idx["skipped"]:
+              print(f"  skipped {s}")
+          if n < 500:
+              sys.exit(f"corpus too small ({n} amendments) — refusing to publish")
+          PY
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data
+          git diff --staged --quiet && echo "no change" && exit 0
+          git commit -m "chore(data): refresh 立法院 open data"
+          git push
+
+      - name: Assemble the site
+        run: cp -r data web/data
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: web
+
+  deploy:
+    needs: ingest
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

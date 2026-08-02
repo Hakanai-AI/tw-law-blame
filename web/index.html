@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>法條溯源 · 台灣法律的 git blame</title>
+<meta name="description" content="查看每一條法律條文何時、由誰、為什麼修改，附官方來源。資料來自立法院開放資料。">
+<style>
+:root{
+  --paper:#faf8f4; --ink:#1a1a17; --muted:#6b6560; --rule:#e3ddd2;
+  --card:#fffefb; --accent:#2c5282; --add:#276749; --del:#9b2c2c;
+  --addbg:#eaf3ec; --delbg:#f8ebeb;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --paper:#16161a; --ink:#e8e6e1; --muted:#9a938c; --rule:#2e2e35;
+    --card:#1d1d22; --accent:#7fa8d8; --add:#7bc496; --del:#e08585;
+    --addbg:#1b2a21; --delbg:#2c1d1d; }
+}
+:root[data-theme=dark]{ --paper:#16161a; --ink:#e8e6e1; --muted:#9a938c; --rule:#2e2e35;
+  --card:#1d1d22; --accent:#7fa8d8; --add:#7bc496; --del:#e08585;
+  --addbg:#1b2a21; --delbg:#2c1d1d; }
+:root[data-theme=light]{ --paper:#faf8f4; --ink:#1a1a17; --muted:#6b6560; --rule:#e3ddd2;
+  --card:#fffefb; --accent:#2c5282; --add:#276749; --del:#9b2c2c;
+  --addbg:#eaf3ec; --delbg:#f8ebeb; }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--rule);padding:28px 0 20px;margin-bottom:22px}
+h1{margin:0;font-size:1.5rem;letter-spacing:.02em;
+  font-family:"Noto Serif TC","Songti TC",serif}
+h1 small{display:block;font-size:.72rem;font-weight:400;color:var(--muted);
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px;font-family:system-ui,sans-serif}
+.sub{color:var(--muted);font-size:.88rem;margin:8px 0 0}
+.note{border-left:3px solid var(--accent);background:var(--card);
+  padding:12px 16px;margin:18px 0;font-size:.85rem;color:var(--muted);border-radius:0 4px 4px 0}
+.note b{color:var(--ink)}
+.grid{display:grid;gap:16px;grid-template-columns:280px 1fr;align-items:start}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+input[type=search]{width:100%;padding:9px 12px;border:1px solid var(--rule);
+  border-radius:6px;background:var(--card);color:var(--ink);font-size:.9rem;font-family:inherit}
+.laws{list-style:none;margin:12px 0 0;padding:0;max-height:70vh;overflow-y:auto}
+.laws li{border-bottom:1px solid var(--rule)}
+.laws button{width:100%;text-align:left;background:none;border:0;color:var(--ink);
+  padding:9px 6px;cursor:pointer;font:inherit;font-size:.88rem;display:flex;
+  justify-content:space-between;gap:10px;align-items:baseline}
+.laws button:hover,.laws button:focus-visible{background:var(--card);outline-offset:-2px}
+.laws button[aria-current=true]{color:var(--accent);font-weight:600}
+.n{color:var(--muted);font-size:.76rem;font-variant-numeric:tabular-nums;flex:none}
+.rec{background:var(--card);border:1px solid var(--rule);border-radius:8px;
+  padding:16px 18px;margin-bottom:14px}
+.rec h3{margin:0 0 4px;font-size:1rem;font-family:"Noto Serif TC","Songti TC",serif}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--muted);
+  margin-bottom:12px;align-items:center}
+.pill{border:1px solid var(--rule);border-radius:99px;padding:1px 9px;font-size:.72rem}
+.pill.passed{border-color:var(--add);color:var(--add)}
+.diff{font-family:"Noto Serif TC","Songti TC",serif;font-size:.93rem;
+  line-height:1.9;margin-bottom:12px;overflow-x:auto}
+ins{background:var(--addbg);color:var(--add);text-decoration:none;padding:1px 2px;border-radius:2px}
+del{background:var(--delbg);color:var(--del);padding:1px 2px;border-radius:2px}
+.why{border-top:1px dashed var(--rule);padding-top:10px;font-size:.85rem;color:var(--muted)}
+.why b{color:var(--ink);font-weight:600}
+a{color:var(--accent)}
+footer{border-top:1px solid var(--rule);margin-top:40px;padding:18px 0 40px;
+  font-size:.78rem;color:var(--muted)}
+.empty{color:var(--muted);padding:40px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1><small>法條溯源</small>台灣法律的 git blame</h1>
+  <p class="sub">每一條條文改了什麼、誰提的、為什麼 — 附官方出處。資料來源：立法院開放資料。</p>
+</header>
+
+<div class="note" id="scope">載入中…</div>
+
+<div class="grid">
+  <aside>
+    <input type="search" id="q" placeholder="搜尋法律名稱…" aria-label="搜尋法律名稱">
+    <ul class="laws" id="laws"></ul>
+  </aside>
+  <main id="main"><p class="empty">← 從左側選一部法律</p></main>
+</div>
+
+<footer>
+  資料為立法院開放資料之衍生索引，正式效力以
+  <a href="https://law.moj.gov.tw/" target="_blank" rel="noopener">全國法規資料庫</a> 為準。
+  <span id="gen"></span>
+</footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let INDEX = null, current = null;
+
+// Segment-level diff. Splitting on Chinese clause punctuation gives units a
+// reader recognises; character-level diff on legal text is unreadable noise.
+const seg = s => (s||"").split(/(?<=[。；：、，])/).filter(Boolean);
+
+function diff(a, b){
+  const A = seg(a), B = seg(b);
+  const m = Array.from({length:A.length+1}, () => new Uint16Array(B.length+1));
+  for (let i=A.length-1;i>=0;i--)
+    for (let j=B.length-1;j>=0;j--)
+      m[i][j] = A[i]===B[j] ? m[i+1][j+1]+1 : Math.max(m[i+1][j], m[i][j+1]);
+  let i=0,j=0,out="";
+  const esc = t => t.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  while (i<A.length && j<B.length){
+    if (A[i]===B[j]) { out += esc(A[i]); i++; j++; }
+    else if (m[i+1][j] >= m[i][j+1]) { out += `<del>${esc(A[i])}</del>`; i++; }
+    else { out += `<ins>${esc(B[j])}</ins>`; j++; }
+  }
+  while (i<A.length) out += `<del>${esc(A[i++])}</del>`;
+  while (j<B.length) out += `<ins>${esc(B[j++])}</ins>`;
+  return out;
+}
+
+function renderLaws(filter=""){
+  const f = filter.trim();
+  const list = INDEX.laws.filter(l => !f || l.law.includes(f));
+  $("#laws").innerHTML = list.slice(0,300).map(l =>
+    `<li><button data-slug="${l.slug}" aria-current="${l.slug===current}">
+      <span>${l.law}</span><span class="n">${l.amendments}</span></button></li>`).join("")
+    || `<li><span class="n" style="padding:10px 6px;display:block">查無符合</span></li>`;
+}
+
+async function open(slug){
+  current = slug;
+  renderLaws($("#q").value);
+  $("#main").innerHTML = `<p class="empty">載入中…</p>`;
+  const rows = await (await fetch(`data/${encodeURIComponent(slug)}.json`)).json();
+  $("#main").innerHTML = rows.map(r => {
+    const passed = (r.status||"").includes("三讀");
+    return `<article class="rec">
+      <h3>${r.article} <span style="font-weight:400;color:var(--muted);font-size:.85rem">${r.title||""}</span></h3>
+      <div class="meta">
+        <span>第${r.term}屆 第${String(Number(r.session))}會期</span>
+        <span>提案：${r.who}</span>
+        <span class="pill ${passed?"passed":""}">${r.status}</span>
+        ${r.pdf?`<a href="${r.pdf}" target="_blank" rel="noopener">官方文件 PDF</a>`:""}
+      </div>
+      <div class="diff">${r.old||r.new ? diff(r.old, r.new) : "<span class='n'>無條文對照</span>"}</div>
+      ${r.why?`<div class="why"><b>立法理由</b>：${r.why}</div>`:""}
+    </article>`;
+  }).join("") || `<p class="empty">此法律無可顯示的修正紀錄</p>`;
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+$("#laws").addEventListener("click", e => {
+  const b = e.target.closest("button[data-slug]");
+  if (b) open(b.dataset.slug);
+});
+$("#q").addEventListener("input", e => renderLaws(e.target.value));
+
+fetch("data/index.json").then(r => r.json()).then(d => {
+  INDEX = d;
+  $("#scope").innerHTML =
+    `<b>資料範圍與限制</b>：目前收錄 <b>${d.totals.laws}</b> 部法律、<b>${d.totals.amendments}</b> 筆修正提案對照。`
+    + ` 這裡顯示的是<b>提案版本</b>的條文與立法理由 — 委員會與院會可再修改，`
+    + `所以「修正後」欄位不等於最終<b>三讀通過</b>的條文。標示「三讀」者為已通過的提案；`
+    + `正式條文請以全國法規資料庫為準。`;
+  $("#gen").textContent = `· 資料更新於 ${d.generated}`;
+  renderLaws();
+});
+</script>
+</body>
+</html>
