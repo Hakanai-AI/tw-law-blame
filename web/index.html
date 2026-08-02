@@ -81,6 +81,13 @@ mark{background:rgba(180,140,20,.28);color:inherit;border-radius:2px;padding:0 1
 .chip{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:99px;
   padding:2px 11px;font:inherit;font-size:.76rem;cursor:pointer}
 .chip:hover{background:var(--accent);color:var(--paper)}
+details.now{margin-top:10px;border-top:1px dashed var(--rule);padding-top:8px}
+details summary{cursor:pointer;font-size:.82rem;color:var(--accent)}
+details.now .diff{margin:8px 0 0}
+.hist{margin:10px 0 0;padding-left:22px;font-size:.8rem;color:var(--muted);
+  display:grid;gap:6px;max-height:340px;overflow-y:auto}
+.hist .n{margin-right:6px}
+#enacted{font-size:.85rem}
 </style>
 </head>
 <body>
@@ -109,6 +116,7 @@ mark{background:rgba(180,140,20,.28);color:inherit;border-radius:2px;padding:0 1
       <label class="chk"><input type="checkbox" id="only3"> 只看三讀通過</label>
       <span class="n" id="count"></span>
     </div>
+    <div class="note" id="enacted" hidden></div>
     <div id="main"><p class="empty">← 從左側選一部法律</p></div>
   </main>
 </div>
@@ -155,7 +163,7 @@ function renderLaws(filter=""){
     || `<li><span class="n" style="padding:10px 6px;display:block">查無符合</span></li>`;
 }
 
-let ROWS = [];
+let ROWS = [], ENACTED = null;
 
 const mark = (t, q) => !q ? t
   : t.replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"), "gi"), m => `<mark>${m}</mark>`);
@@ -184,6 +192,7 @@ function renderRows(){
       </div>
       <div class="diff">${r.old||r.new ? diff(r.old, r.new) : "<span class='n'>無條文對照</span>"}</div>
       ${r.why?`<div class="why"><b>立法理由</b>：${mark(r.why,q)}</div>`:""}
+      ${enactedFor(r)}
     </article>`;
   }).join("") || `<p class="empty">${q||only3 ? "查無符合的修正紀錄" : "此法律無可顯示的修正紀錄"}</p>`;
   if (rows.length > cap)
@@ -191,12 +200,46 @@ function renderRows(){
       `<p class="empty">顯示前 ${cap} 筆，共 ${rows.length} 筆 — 縮小搜尋範圍以看到其餘</p>`);
 }
 
+// The single most important block on the page: what the article says NOW.
+// Everything above it is a *proposal*, which is why it is labelled as the
+// authority and everything else is not.
+function enactedFor(r){
+  if (!ENACTED || !r.key) return "";
+  const a = ENACTED.articles.find(x => x.key === r.key);
+  if (!a) return "";
+  return `<details class="now"><summary>現行條文 ${a.no}（全國法規資料庫）</summary>
+    <div class="diff">${a.text.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</div>
+  </details>`;
+}
+
+function renderEnactedHeader(){
+  const box = $("#enacted");
+  if (!ENACTED) { box.hidden = true; return; }
+  box.hidden = false;
+  const h = ENACTED.histories.slice().reverse();
+  box.innerHTML = `
+    <b>現行法：${ENACTED.name}</b> — 最後修正 ${ENACTED.modified||"—"}，
+    共 ${ENACTED.articles.length} 條，歷次修正 ${ENACTED.histories.length} 次。
+    ${ENACTED.url?`<a href="${ENACTED.url}" target="_blank" rel="noopener">全國法規資料庫</a>`:""}
+    <details><summary>立法沿革（${h.length} 次，最早 ${ENACTED.histories[0]?.date||"—"}）</summary>
+      <ol class="hist">${h.map(x =>
+        `<li><span class="n">${x.date||"—"}</span> ${x.text}</li>`).join("")}</ol>
+    </details>`;
+}
+
 async function open(slug, push=true){
   current = slug;
   renderLaws($("#q").value);
   $("#tools").hidden = false;
   $("#main").innerHTML = `<p class="empty">載入中…</p>`;
-  ROWS = await (await fetch(`data/${encodeURIComponent(slug)}.json`)).json();
+  const [rows, enacted] = await Promise.all([
+    fetch(`data/${encodeURIComponent(slug)}.json`).then(r => r.json()),
+    // Absent for a law we could not match by name — the site degrades to
+    // proposals-only rather than breaking.
+    fetch(`data/enacted/${encodeURIComponent(slug)}.json`).then(r => r.ok ? r.json() : null).catch(() => null),
+  ]);
+  ROWS = rows; ENACTED = enacted;
+  renderEnactedHeader();
   renderRows();
   if (push) location.hash = encodeURIComponent(slug);
   window.scrollTo({top:0,behavior:"smooth"});

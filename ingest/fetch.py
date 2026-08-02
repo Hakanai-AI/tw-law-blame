@@ -89,6 +89,32 @@ def article_of(row: dict) -> str:
     return m.group(0) if m else "—"
 
 
+CN = {c: i for i, c in enumerate("〇一二三四五六七八九")}
+
+
+def _cn(s: str) -> int:
+    if s.isdigit():
+        return int(s)
+    total = section = 0
+    for ch in s:
+        if ch in CN:
+            section = CN[ch]
+        elif ch in "十百千":
+            total += (section or 1) * {"十": 10, "百": 100, "千": 1000}[ch]
+            section = 0
+    return total + section
+
+
+def art_key(article: str) -> str:
+    """「第十八條之一」 -> "18-1". The join key to 全國法規資料庫's enacted text,
+    which numbers articles in digits while 對照表 titles use CJK numerals."""
+    m = re.match(r"第([一二三四五六七八九十百零〇\d]+)條(?:之([一二三四五六七八九十\d]+))?", article or "")
+    if not m:
+        return ""
+    n = _cn(m.group(1))
+    return f"{n}-{_cn(m.group(2))}" if m.group(2) else str(n)
+
+
 def law_of(title: str) -> str:
     """Law name from a 對照表 title, stripping the article/scope suffix.
 
@@ -129,6 +155,7 @@ def build(term: str, period: str) -> dict:
         laws[law_of(title)].append(
             {
                 "article": article_of(r),
+                "key": art_key(article_of(r)),
                 "title": title,
                 "old": " ".join((r.get("activeLaw") or "").split()),
                 "new": " ".join((r.get("reviseLaw") or "").split()),

@@ -29,6 +29,8 @@ SOURCES = [
     {"name": "中央社", "url": "https://feeds.feedburner.com/rsscna/finance", "topic": "財經"},
     # 公視 — Atom, so entry/title rather than item/title.
     {"name": "公視", "url": "https://news.pts.org.tw/xml/newsfeed.xml", "topic": "綜合"},
+    # 聯合報 — RSS 2.0. udn.com/rssfeed/news/1 404s; the numbered channel works.
+    {"name": "聯合報", "url": "https://udn.com/rssfeed/news/2/6638?ch=news", "topic": "要聞"},
 ]
 
 # Statutes are usually named in full in a headline, but a few are near-always
@@ -46,6 +48,10 @@ ALIASES = {
     "勞基法": "勞動基準法",
     "個資": "個人資料保護法",
     "詐騙": "詐欺犯罪危害防制條例",
+    "食安": "食品安全衛生管理法",
+    "苦茶油": "食品安全衛生管理法",
+    "苯駢芘": "食品安全衛生管理法",
+    "下架": "食品安全衛生管理法",
 }
 
 

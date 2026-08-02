@@ -65,6 +65,9 @@ jobs:
               sys.exit(f"corpus too small ({n} amendments) — refusing to publish")
           PY
 
+      - name: Fetch enacted text from 全國法規資料庫
+        run: python3 ingest/enacted.py
+
       # Non-fatal: a dead RSS feed must not block a law-data deploy. The site
       # hides the news panel when news.json is missing.
       - name: Match news headlines to statutes
