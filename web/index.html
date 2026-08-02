@@ -144,6 +144,9 @@ footer{border-top:1px solid var(--rule);margin-top:36px;padding:16px 0 40px;
     <div id="sideNews" hidden>
       <input type="search" id="nq" placeholder="搜尋新聞標題、法律、術語…" aria-label="搜尋新聞">
       <div class="srcfilter" id="srcfilter"></div>
+      <div class="srcfilter" style="border-top:1px solid var(--rule);padding-top:10px;margin-top:12px">
+        <label><input type="checkbox" id="showAll"> 顯示未對應法律的新聞</label>
+      </div>
     </div>
   </aside>
 
@@ -393,7 +396,13 @@ function newsCard(it, q){
 function renderFeed(){
   if (!NEWS){ $("#feed").innerHTML = `<p class="empty">新聞資料尚未產生</p>`; return; }
   const q = $("#nq").value.trim();
-  const items = NEWS.items.filter(i => !srcOff.has(i.source)).filter(i => {
+  // Default to law-related only — this is a law tool, and an unmatched headline
+  // is noise. But keep the toggle: "what we could NOT map" is the honest recall
+  // number, and hiding it entirely would overstate coverage.
+  const showAll = $("#showAll").checked;
+  const items = NEWS.items
+    .filter(i => showAll || i.laws.length || (i.terms||[]).length)
+    .filter(i => !srcOff.has(i.source)).filter(i => {
     if (!q) return true;
     const hay = i.title + i.laws.map(l=>l.law).join("") + (i.terms||[]).map(t=>t.term).join("");
     return hay.includes(q);
@@ -401,7 +410,7 @@ function renderFeed(){
   $("#newsmeta").innerHTML =
     `<b>新聞裡的法律</b> — ${esc(NEWS.sources.join(" · "))}，共 ${NEWS.counts.headlines} 則標題，
      ${NEWS.counts.matched} 則對得上法律或法定術語（術語庫 ${NEWS.counts.glossary||0} 條，取自法規本身的定義條文）。
-     只保留標題與連結，不轉載內文。目前顯示 ${items.length} 則。
+     只保留標題與連結，不轉載內文。目前顯示 ${items.length} 則${showAll?"（含未對應）":"，已隱藏 "+(NEWS.counts.headlines-NEWS.counts.matched)+" 則未對應法律的新聞"}。
      ${q?`<a href="https://news.google.com/search?q=${encodeURIComponent(q)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
         target="_blank" rel="noopener">在 Google News 搜尋「${esc(q)}」→</a>`:""}`;
   $("#feed").innerHTML = items.map(i => newsCard(i,q)).join("")
@@ -422,6 +431,7 @@ $("#fq").addEventListener("input", renderRows);
 $("#only3").addEventListener("change", renderRows);
 $("#tlmode").addEventListener("change", renderRows);
 $("#nq").addEventListener("input", renderFeed);
+$("#showAll").addEventListener("change", renderFeed);
 
 $("#srcfilter").addEventListener("change", e => {
   const s = e.target.dataset.src; if (!s) return;
