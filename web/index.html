@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>法條溯源 · 台灣法律的 git blame</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232c5282'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23faf8f4' font-family='serif'%3E法%3C/text%3E%3C/svg%3E">
 <meta name="description" content="查看每一條法律條文何時、由誰、為什麼修改，附官方來源。資料來自立法院開放資料與全國法規資料庫。">
 <style>
 :root{
@@ -80,6 +81,9 @@ input[type=search]{width:100%;padding:9px 12px;border:1px solid var(--rule);
 
 /* Law view */
 #tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:14px}
+/* A display: rule outranks the UA stylesheet's [hidden]{display:none}, so any
+   element toggled via .hidden needs this or it never actually hides. */
+#tools[hidden]{display:none}
 #tools input[type=search]{flex:1 1 240px}
 .chk{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);
   white-space:nowrap;cursor:pointer}
