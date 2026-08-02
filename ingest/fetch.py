@@ -70,8 +70,22 @@ def rows(url: str, *, key: str, expect_min: int = 1) -> list[dict]:
     return data
 
 
-def article_of(title: str) -> str:
-    m = re.search(r"第[一二三四五六七八九十百零〇\d]+條", title or "")
+ART = r"第[一二三四五六七八九十百零〇\d]+條(?:之[一二三四五六七八九十\d]+)?"
+
+
+def article_of(row: dict) -> str:
+    """Which article this row is about.
+
+    The article number leads the text itself ("第十八條　地價稅採累進稅率…"),
+    and only *sometimes* appears in the title — a "部分條文修正草案對照表"
+    title names no article at all. Reading the title alone left 714 of 745
+    石油管理法 rows labelled "—". Text first, title as fallback.
+    """
+    for k in ("reviseLaw", "activeLaw"):
+        m = re.match(rf"\s*({ART})", row.get(k) or "")
+        if m:
+            return m.group(1)
+    m = re.search(ART, row.get("lawCompareTitle") or "")
     return m.group(0) if m else "—"
 
 
@@ -114,7 +128,7 @@ def build(term: str, period: str) -> dict:
         title = r.get("lawCompareTitle", "")
         laws[law_of(title)].append(
             {
-                "article": article_of(title),
+                "article": article_of(r),
                 "title": title,
                 "old": " ".join((r.get("activeLaw") or "").split()),
                 "new": " ".join((r.get("reviseLaw") or "").split()),
