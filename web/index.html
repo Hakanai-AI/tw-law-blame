@@ -4,129 +4,163 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>法條溯源 · 台灣法律的 git blame</title>
-<meta name="description" content="查看每一條法律條文何時、由誰、為什麼修改，附官方來源。資料來自立法院開放資料。">
+<meta name="description" content="查看每一條法律條文何時、由誰、為什麼修改，附官方來源。資料來自立法院開放資料與全國法規資料庫。">
 <style>
 :root{
   --paper:#faf8f4; --ink:#1a1a17; --muted:#6b6560; --rule:#e3ddd2;
   --card:#fffefb; --accent:#2c5282; --add:#276749; --del:#9b2c2c;
-  --addbg:#eaf3ec; --delbg:#f8ebeb;
+  --addbg:#eaf3ec; --delbg:#f8ebeb; --sunk:#f2eee6;
 }
 @media (prefers-color-scheme:dark){
   :root{ --paper:#16161a; --ink:#e8e6e1; --muted:#9a938c; --rule:#2e2e35;
     --card:#1d1d22; --accent:#7fa8d8; --add:#7bc496; --del:#e08585;
-    --addbg:#1b2a21; --delbg:#2c1d1d; }
+    --addbg:#1b2a21; --delbg:#2c1d1d; --sunk:#121216; }
 }
 :root[data-theme=dark]{ --paper:#16161a; --ink:#e8e6e1; --muted:#9a938c; --rule:#2e2e35;
   --card:#1d1d22; --accent:#7fa8d8; --add:#7bc496; --del:#e08585;
-  --addbg:#1b2a21; --delbg:#2c1d1d; }
+  --addbg:#1b2a21; --delbg:#2c1d1d; --sunk:#121216; }
 :root[data-theme=light]{ --paper:#faf8f4; --ink:#1a1a17; --muted:#6b6560; --rule:#e3ddd2;
   --card:#fffefb; --accent:#2c5282; --add:#276749; --del:#9b2c2c;
-  --addbg:#eaf3ec; --delbg:#f8ebeb; }
+  --addbg:#eaf3ec; --delbg:#f8ebeb; --sunk:#f2eee6; }
 
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;line-height:1.6}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--rule);padding:28px 0 20px;margin-bottom:22px}
-h1{margin:0;font-size:1.5rem;letter-spacing:.02em;
-  font-family:"Noto Serif TC","Songti TC",serif}
-h1 small{display:block;font-size:.72rem;font-weight:400;color:var(--muted);
-  letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px;font-family:system-ui,sans-serif}
-.sub{color:var(--muted);font-size:.88rem;margin:8px 0 0}
-.note{border-left:3px solid var(--accent);background:var(--card);
-  padding:12px 16px;margin:18px 0;font-size:.85rem;color:var(--muted);border-radius:0 4px 4px 0}
-.note b{color:var(--ink)}
-.grid{display:grid;gap:16px;grid-template-columns:280px 1fr;align-items:start}
-@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--rule);padding:26px 0 18px;margin-bottom:20px}
+h1{margin:0;font-size:1.45rem;font-family:"Noto Serif TC","Songti TC",serif}
+h1 small{display:block;font-size:.7rem;font-weight:400;color:var(--muted);
+  letter-spacing:.18em;margin-bottom:6px;font-family:system-ui,sans-serif}
+.sub{color:var(--muted);font-size:.86rem;margin:8px 0 0}
+a{color:var(--accent)}
+.n{color:var(--muted);font-size:.76rem;font-variant-numeric:tabular-nums}
+
+.grid{display:grid;gap:20px;grid-template-columns:270px 1fr;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+
+/* Sidebar */
+nav.views{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);
+  border-radius:8px;overflow:hidden;margin-bottom:14px}
+nav.views button{background:none;border:0;padding:9px 4px;font:inherit;font-size:.86rem;
+  color:var(--muted);cursor:pointer}
+nav.views button[aria-selected=true]{background:var(--accent);color:var(--paper);font-weight:600}
 input[type=search]{width:100%;padding:9px 12px;border:1px solid var(--rule);
   border-radius:6px;background:var(--card);color:var(--ink);font-size:.9rem;font-family:inherit}
-.laws{list-style:none;margin:12px 0 0;padding:0;max-height:70vh;overflow-y:auto}
+.laws{list-style:none;margin:12px 0 0;padding:0;max-height:66vh;overflow-y:auto}
 .laws li{border-bottom:1px solid var(--rule)}
 .laws button{width:100%;text-align:left;background:none;border:0;color:var(--ink);
-  padding:9px 6px;cursor:pointer;font:inherit;font-size:.88rem;display:flex;
+  padding:9px 6px;cursor:pointer;font:inherit;font-size:.87rem;display:flex;
   justify-content:space-between;gap:10px;align-items:baseline}
-.laws button:hover,.laws button:focus-visible{background:var(--card);outline-offset:-2px}
+.laws button:hover{background:var(--card)}
 .laws button[aria-current=true]{color:var(--accent);font-weight:600}
-.n{color:var(--muted);font-size:.76rem;font-variant-numeric:tabular-nums;flex:none}
+.srcfilter{margin-top:12px;display:grid;gap:6px;font-size:.82rem;color:var(--muted)}
+.srcfilter label{display:flex;gap:7px;align-items:center;cursor:pointer}
+
+/* Shared card */
+.note{border-left:3px solid var(--accent);background:var(--card);
+  padding:12px 16px;margin:0 0 16px;font-size:.85rem;color:var(--muted);border-radius:0 5px 5px 0}
+.note b{color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:8px;
+  padding:13px 16px;margin-bottom:12px}
+.card .src{font-size:.72rem;color:var(--muted);letter-spacing:.06em}
+.card .hl{display:block;margin:3px 0 9px;font-size:.93rem;color:var(--ink);text-decoration:none}
+.card .hl:hover{text-decoration:underline}
+
+/* One chip language for every match — law or term, same shape. */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--rule);color:var(--ink);background:var(--sunk);border-radius:99px;
+  padding:3px 12px;font:inherit;font-size:.77rem;cursor:pointer;display:inline-flex;gap:6px;align-items:baseline}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-expanded=true]{border-color:var(--accent);color:var(--accent);background:none}
+.chip .k{font-size:.68rem;color:var(--muted);letter-spacing:.04em}
+.panel{margin-top:10px;padding:11px 13px;background:var(--sunk);border-radius:6px;font-size:.84rem}
+.panel p{margin:0 0 6px}
+.panel .purpose{color:var(--ink);font-family:"Noto Serif TC","Songti TC",serif;line-height:1.85}
+.panel .meta{color:var(--muted);font-size:.78rem}
+
+/* Law view */
+#tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:14px}
+#tools input[type=search]{flex:1 1 240px}
+.chk{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);
+  white-space:nowrap;cursor:pointer}
 .rec{background:var(--card);border:1px solid var(--rule);border-radius:8px;
-  padding:16px 18px;margin-bottom:14px}
+  padding:15px 18px;margin-bottom:13px}
 .rec h3{margin:0 0 4px;font-size:1rem;font-family:"Noto Serif TC","Songti TC",serif}
 .meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--muted);
-  margin-bottom:12px;align-items:center}
+  margin-bottom:11px;align-items:center}
 .pill{border:1px solid var(--rule);border-radius:99px;padding:1px 9px;font-size:.72rem}
 .pill.passed{border-color:var(--add);color:var(--add)}
 .diff{font-family:"Noto Serif TC","Songti TC",serif;font-size:.93rem;
-  line-height:1.9;margin-bottom:12px;overflow-x:auto}
+  line-height:1.9;margin-bottom:11px;overflow-x:auto}
 ins{background:var(--addbg);color:var(--add);text-decoration:none;padding:1px 2px;border-radius:2px}
 del{background:var(--delbg);color:var(--del);padding:1px 2px;border-radius:2px}
-.why{border-top:1px dashed var(--rule);padding-top:10px;font-size:.85rem;color:var(--muted)}
+.why{border-top:1px dashed var(--rule);padding-top:9px;font-size:.85rem;color:var(--muted)}
 .why b{color:var(--ink);font-weight:600}
-a{color:var(--accent)}
-footer{border-top:1px solid var(--rule);margin-top:40px;padding:18px 0 40px;
-  font-size:.78rem;color:var(--muted)}
-.empty{color:var(--muted);padding:40px 0;text-align:center}
-#tools{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:14px}
-#tools input[type=search]{flex:1 1 260px}
-.chk{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);
-  white-space:nowrap;cursor:pointer}
-mark{background:rgba(180,140,20,.28);color:inherit;border-radius:2px;padding:0 1px}
-#news{margin:22px 0 6px}
-#news h2{margin:0;font-size:1rem;font-family:"Noto Serif TC","Songti TC",serif}
-.feed{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
-.feed li{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:11px 14px}
-.feed .src{font-size:.72rem;color:var(--muted);letter-spacing:.08em}
-.feed .hl{display:block;margin:2px 0 8px;font-size:.92rem;color:var(--ink);text-decoration:none}
-.feed .hl:hover{text-decoration:underline}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:99px;
-  padding:2px 11px;font:inherit;font-size:.76rem;cursor:pointer}
-.chip:hover{background:var(--accent);color:var(--paper)}
-details.now{margin-top:10px;border-top:1px dashed var(--rule);padding-top:8px}
 details summary{cursor:pointer;font-size:.82rem;color:var(--accent)}
-details.now .diff{margin:8px 0 0}
-.hist{margin:10px 0 0;padding-left:22px;font-size:.8rem;color:var(--muted);
-  display:grid;gap:6px;max-height:340px;overflow-y:auto}
-.hist .n{margin-right:6px}
-#enacted{font-size:.85rem}
-details.term{margin-top:8px;font-size:.82rem}
-details.term summary{color:var(--ink);font-weight:600}
-.def{margin:6px 0 0;color:var(--muted);line-height:1.7}
-.def b{color:var(--ink)}
+details.now{margin-top:9px;border-top:1px dashed var(--rule);padding-top:8px}
+.hist{margin:10px 0 0;padding-left:20px;font-size:.79rem;color:var(--muted);
+  display:grid;gap:6px;max-height:320px;overflow-y:auto}
+.empty{color:var(--muted);padding:40px 0;text-align:center}
+
+/* Version timeline */
+.tl{border-left:2px solid var(--rule);margin:0 0 0 8px;padding-left:16px}
+.tl .v{position:relative;padding-bottom:18px}
+.tl .v::before{content:"";position:absolute;left:-23px;top:7px;width:9px;height:9px;
+  border-radius:99px;background:var(--rule);border:2px solid var(--paper)}
+.tl .v.passed::before{background:var(--add)}
+.tl .v.current::before{background:var(--accent);width:12px;height:12px;left:-24px}
+.tl h4{margin:0 0 3px;font-size:.87rem}
+footer{border-top:1px solid var(--rule);margin-top:36px;padding:16px 0 40px;
+  font-size:.78rem;color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1><small>法條溯源</small>台灣法律的 git blame</h1>
-  <p class="sub">每一條條文改了什麼、誰提的、為什麼 — 附官方出處。資料來源：立法院開放資料。</p>
+  <p class="sub">每一條條文改了什麼、誰提的、為什麼 — 附官方出處。資料：立法院開放資料 · 全國法規資料庫。</p>
 </header>
-
-<section id="news" hidden>
-  <h2>新聞裡的法律</h2>
-  <p class="sub" id="newsmeta"></p>
-  <ul class="feed" id="feed"></ul>
-</section>
-
-<div class="note" id="scope">載入中…</div>
 
 <div class="grid">
   <aside>
-    <input type="search" id="q" placeholder="搜尋法律名稱…（例：石油、電業）" aria-label="搜尋法律名稱">
-    <ul class="laws" id="laws"></ul>
-  </aside>
-  <main>
-    <div id="tools" hidden>
-      <input type="search" id="fq" placeholder="在這部法律內搜尋條文、立法理由、提案人…" aria-label="全文搜尋">
-      <label class="chk"><input type="checkbox" id="only3"> 只看三讀通過</label>
-      <span class="n" id="count"></span>
+    <nav class="views" role="tablist">
+      <button id="tabLaw"  role="tab" aria-selected="true">法律</button>
+      <button id="tabNews" role="tab" aria-selected="false">新聞</button>
+    </nav>
+
+    <div id="sideLaw">
+      <input type="search" id="q" placeholder="搜尋法律名稱…（例：石油、電業）" aria-label="搜尋法律名稱">
+      <ul class="laws" id="laws"></ul>
     </div>
-    <div class="note" id="enacted" hidden></div>
-    <div id="main"><p class="empty">← 從左側選一部法律</p></div>
+
+    <div id="sideNews" hidden>
+      <input type="search" id="nq" placeholder="搜尋新聞標題、法律、術語…" aria-label="搜尋新聞">
+      <div class="srcfilter" id="srcfilter"></div>
+    </div>
+  </aside>
+
+  <main>
+    <section id="viewLaw">
+      <div id="scope" class="note">載入中…</div>
+      <div id="tools" hidden>
+        <input type="search" id="fq" placeholder="在這部法律內搜尋條文、立法理由、提案人…" aria-label="全文搜尋">
+        <label class="chk"><input type="checkbox" id="only3"> 只看三讀通過</label>
+        <label class="chk"><input type="checkbox" id="tlmode"> 逐條版本時間軸</label>
+        <span class="n" id="count"></span>
+      </div>
+      <div class="note" id="enacted" hidden></div>
+      <div id="main"><p class="empty">← 從左側選一部法律</p></div>
+    </section>
+
+    <section id="viewNews" hidden>
+      <div class="note" id="newsmeta"></div>
+      <div id="feed"></div>
+    </section>
   </main>
 </div>
 
 <footer>
-  資料為立法院開放資料之衍生索引，正式效力以
+  資料為公開資料之衍生索引，正式效力以
   <a href="https://law.moj.gov.tw/" target="_blank" rel="noopener">全國法規資料庫</a> 為準。
   <span id="gen"></span>
 </footer>
@@ -134,7 +168,8 @@ details.term summary{color:var(--ink);font-weight:600}
 
 <script>
 const $ = s => document.querySelector(s);
-let INDEX = null, current = null;
+const esc = t => (t||"").replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+let INDEX=null, NEWS=null, TLDR={}, ROWS=[], ENACTED=null, current=null, srcOff=new Set();
 
 // Segment-level diff. Splitting on Chinese clause punctuation gives units a
 // reader recognises; character-level diff on legal text is unreadable noise.
@@ -147,7 +182,6 @@ function diff(a, b){
     for (let j=B.length-1;j>=0;j--)
       m[i][j] = A[i]===B[j] ? m[i+1][j+1]+1 : Math.max(m[i+1][j], m[i][j+1]);
   let i=0,j=0,out="";
-  const esc = t => t.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
   while (i<A.length && j<B.length){
     if (A[i]===B[j]) { out += esc(A[i]); i++; j++; }
     else if (m[i+1][j] >= m[i][j+1]) { out += `<del>${esc(A[i])}</del>`; i++; }
@@ -158,151 +192,249 @@ function diff(a, b){
   return out;
 }
 
+const mark = (t,q) => !q ? esc(t)
+  : esc(t).replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"gi"), m=>`<mark>${m}</mark>`);
+
+/* ---------- view switching ---------- */
+function show(view){
+  const law = view === "law";
+  $("#viewLaw").hidden = !law;  $("#sideLaw").hidden = !law;
+  $("#viewNews").hidden = law;  $("#sideNews").hidden = law;
+  $("#tabLaw").ariaSelected = String(law);
+  $("#tabNews").ariaSelected = String(!law);
+}
+$("#tabLaw").onclick  = () => show("law");
+$("#tabNews").onclick = () => { show("news"); renderFeed(); };
+
+/* ---------- law list ---------- */
 function renderLaws(filter=""){
   const f = filter.trim();
   const list = INDEX.laws.filter(l => !f || l.law.includes(f));
   $("#laws").innerHTML = list.slice(0,300).map(l =>
-    `<li><button data-slug="${l.slug}" aria-current="${l.slug===current}">
-      <span>${l.law}</span><span class="n">${l.amendments}</span></button></li>`).join("")
+    `<li><button data-slug="${esc(l.slug)}" aria-current="${l.slug===current}">
+      <span>${esc(l.law)}</span><span class="n">${l.amendments}</span></button></li>`).join("")
     || `<li><span class="n" style="padding:10px 6px;display:block">查無符合</span></li>`;
 }
 
-let ROWS = [], ENACTED = null;
+/* ---------- law view ---------- */
+function enactedFor(r){
+  if (!ENACTED || !r.key) return "";
+  const a = ENACTED.articles.find(x => x.key === r.key);
+  if (!a) return "";
+  return `<details class="now"><summary>現行條文 ${esc(a.no)}（全國法規資料庫）</summary>
+    <div class="diff">${esc(a.text)}</div></details>`;
+}
 
-const mark = (t, q) => !q ? t
-  : t.replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"), "gi"), m => `<mark>${m}</mark>`);
+function recCard(r,q){
+  const passed = (r.status||"").includes("三讀");
+  return `<article class="rec">
+    <h3>${esc(r.article)} <span class="n">${mark(r.title||"",q)}</span></h3>
+    <div class="meta">
+      <span>第${esc(r.term)}屆 第${Number(r.session)}會期</span>
+      <span>提案：${mark(r.who,q)}</span>
+      <span class="pill ${passed?"passed":""}">${esc(r.status)}</span>
+      ${r.pdf?`<a href="${esc(r.pdf)}" target="_blank" rel="noopener">官方文件 PDF</a>`:""}
+    </div>
+    <div class="diff">${r.old||r.new ? diff(r.old,r.new) : "<span class='n'>無條文對照</span>"}</div>
+    ${r.why?`<div class="why"><b>立法理由</b>：${mark(r.why,q)}</div>`:""}
+    ${enactedFor(r)}
+  </article>`;
+}
+
+// Multi-version view. NOT a git history: these are *proposals*, most of which
+// never passed, so the timeline shows each proposed wording in order and marks
+// which ones reached 三讀. The final node is the text actually in force.
+function timeline(rows){
+  const byArt = new Map();
+  for (const r of rows){ if(!r.key) continue;
+    (byArt.get(r.key) || byArt.set(r.key,[]).get(r.key)).push(r); }
+  if (!byArt.size) return `<p class="empty">此法律的條號無法解析，無法建立版本時間軸</p>`;
+
+  // Keys look like "18" or "18-1"; Number("18-1") is NaN, so sort on the parts.
+  const ord = k => k.split("-").map(Number);
+  const arts = [...byArt.entries()].sort((a,b) =>
+    (ord(a[0])[0]-ord(b[0])[0]) || ((ord(a[0])[1]||0)-(ord(b[0])[1]||0)));
+  return `<div class="note">每個節點是一次<b>提案版本</b>，不是生效版本 — 多數提案未通過。
+    綠點為三讀通過，藍點為<b>現行條文</b>。相鄰版本之間顯示差異。</div>` +
+  arts.slice(0,40).map(([key, list]) => {
+    const sorted = list.slice().sort((a,b)=>(a.term+a.session).localeCompare(b.term+b.session));
+    const cur = ENACTED && ENACTED.articles.find(x=>x.key===key);
+    let prev = sorted[0].old || "";
+    const nodes = sorted.map(r => {
+      const passed = (r.status||"").includes("三讀");
+      const body = diff(prev, r.new || r.old || "");
+      prev = r.new || prev;
+      return `<div class="v ${passed?"passed":""}">
+        <h4>第${esc(r.term)}屆第${Number(r.session)}會期 · ${esc(r.who)}
+          <span class="pill ${passed?"passed":""}">${esc(r.status)}</span></h4>
+        <div class="diff">${body}</div>
+        ${r.why?`<div class="why">${esc(r.why.slice(0,160))}</div>`:""}
+      </div>`;
+    }).join("");
+    const now = cur ? `<div class="v current"><h4>現行條文 ${esc(cur.no)}</h4>
+      <div class="diff">${diff(prev, cur.text)}</div></div>` : "";
+    return `<article class="rec"><h3>${esc(sorted[0].article)} <span class="n">${sorted.length} 個提案版本</span></h3>
+      <div class="tl">${nodes}${now}</div></article>`;
+  }).join("");
+}
 
 function renderRows(){
   const q = $("#fq").value.trim();
-  const only3 = $("#only3").checked;
   let rows = ROWS;
-  if (only3) rows = rows.filter(r => (r.status||"").includes("三讀"));
-  if (q) rows = rows.filter(r =>
-    (r.article+r.title+r.who+r.why+r.old+r.new).includes(q));
-
+  if ($("#only3").checked) rows = rows.filter(r => (r.status||"").includes("三讀"));
+  if (q) rows = rows.filter(r => (r.article+r.title+r.who+r.why+r.old+r.new).includes(q));
   $("#count").textContent = `${rows.length} / ${ROWS.length} 筆`;
-  // Rendering thousands of diffs at once locks the tab; the corpus has laws
-  // with 2000+ amendments. Cap and say so rather than truncate silently.
-  const cap = 200, shown = rows.slice(0, cap);
-  $("#main").innerHTML = shown.map(r => {
-    const passed = (r.status||"").includes("三讀");
-    return `<article class="rec">
-      <h3>${r.article} <span style="font-weight:400;color:var(--muted);font-size:.85rem">${mark(r.title||"",q)}</span></h3>
-      <div class="meta">
-        <span>第${r.term}屆 第${String(Number(r.session))}會期</span>
-        <span>提案：${mark(r.who,q)}</span>
-        <span class="pill ${passed?"passed":""}">${r.status}</span>
-        ${r.pdf?`<a href="${r.pdf}" target="_blank" rel="noopener">官方文件 PDF</a>`:""}
-      </div>
-      <div class="diff">${r.old||r.new ? diff(r.old, r.new) : "<span class='n'>無條文對照</span>"}</div>
-      ${r.why?`<div class="why"><b>立法理由</b>：${mark(r.why,q)}</div>`:""}
-      ${enactedFor(r)}
-    </article>`;
-  }).join("") || `<p class="empty">${q||only3 ? "查無符合的修正紀錄" : "此法律無可顯示的修正紀錄"}</p>`;
+
+  if ($("#tlmode").checked){ $("#main").innerHTML = timeline(rows); return; }
+
+  const cap = 200, shown = rows.slice(0,cap);
+  $("#main").innerHTML = shown.map(r => recCard(r,q)).join("")
+    || `<p class="empty">查無符合的修正紀錄</p>`;
   if (rows.length > cap)
     $("#main").insertAdjacentHTML("beforeend",
       `<p class="empty">顯示前 ${cap} 筆，共 ${rows.length} 筆 — 縮小搜尋範圍以看到其餘</p>`);
 }
 
-// The single most important block on the page: what the article says NOW.
-// Everything above it is a *proposal*, which is why it is labelled as the
-// authority and everything else is not.
-function enactedFor(r){
-  if (!ENACTED || !r.key) return "";
-  const a = ENACTED.articles.find(x => x.key === r.key);
-  if (!a) return "";
-  return `<details class="now"><summary>現行條文 ${a.no}（全國法規資料庫）</summary>
-    <div class="diff">${a.text.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</div>
-  </details>`;
-}
-
 function renderEnactedHeader(){
   const box = $("#enacted");
-  if (!ENACTED) { box.hidden = true; return; }
+  if (!ENACTED){ box.hidden = true; return; }
   box.hidden = false;
   const h = ENACTED.histories.slice().reverse();
-  box.innerHTML = `
-    <b>現行法：${ENACTED.name}</b> — 最後修正 ${ENACTED.modified||"—"}，
+  box.innerHTML = `<b>現行法：${esc(ENACTED.name)}</b> — 最後修正 ${esc(ENACTED.modified||"—")}，
     共 ${ENACTED.articles.length} 條，歷次修正 ${ENACTED.histories.length} 次。
-    ${ENACTED.url?`<a href="${ENACTED.url}" target="_blank" rel="noopener">全國法規資料庫</a>`:""}
-    <details><summary>立法沿革（${h.length} 次，最早 ${ENACTED.histories[0]?.date||"—"}）</summary>
-      <ol class="hist">${h.map(x =>
-        `<li><span class="n">${x.date||"—"}</span> ${x.text}</li>`).join("")}</ol>
+    ${ENACTED.url?`<a href="${esc(ENACTED.url)}" target="_blank" rel="noopener">全國法規資料庫</a>`:""}
+    <details><summary>立法沿革（最早 ${esc(ENACTED.histories[0]?.date||"—")}）</summary>
+      <ol class="hist">${h.map(x=>`<li><span class="n">${esc(x.date||"—")}</span> ${esc(x.text)}</li>`).join("")}</ol>
     </details>`;
 }
 
-async function open(slug, push=true){
+async function openLaw(slug, push=true){
+  show("law");
   current = slug;
   renderLaws($("#q").value);
   $("#tools").hidden = false;
   $("#main").innerHTML = `<p class="empty">載入中…</p>`;
   const [rows, enacted] = await Promise.all([
-    fetch(`data/${encodeURIComponent(slug)}.json`).then(r => r.json()),
-    // Absent for a law we could not match by name — the site degrades to
-    // proposals-only rather than breaking.
-    fetch(`data/enacted/${encodeURIComponent(slug)}.json`).then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch(`data/${encodeURIComponent(slug)}.json`).then(r=>r.json()),
+    fetch(`data/enacted/${encodeURIComponent(slug)}.json`).then(r=>r.ok?r.json():null).catch(()=>null),
   ]);
   ROWS = rows; ENACTED = enacted;
-  renderEnactedHeader();
-  renderRows();
+  renderEnactedHeader(); renderRows();
   if (push) location.hash = encodeURIComponent(slug);
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
+/* ---------- news view ---------- */
+function chipPanel(kind, payload){
+  if (kind === "law"){
+    const t = TLDR[payload.slug];
+    return `<div class="panel">
+      ${t?`<p class="purpose">${esc(t.purpose)}</p>
+          <p class="meta">全文 ${t.articles} 條 · 歷次修正 ${t.amendments} 次 · 最後修正 ${esc(t.modified)}</p>`
+        :`<p class="meta">尚無現行法對照（法規名稱未能比對）</p>`}
+      <p><button class="chip" data-open="${esc(payload.slug)}">查看修法紀錄（${payload.amendments} 筆）→</button></p>
+    </div>`;
+  }
+  return `<div class="panel">${payload.defs.map(d =>
+    `<p><b>${esc(d.law)}</b> ${esc(d.article)}：${esc(d.text)}
+     ${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">原文</a>`:""}</p>`).join("")}</div>`;
+}
+
+function newsCard(it, q){
+  const chips = [
+    ...it.laws.map(l => ({kind:"law", key:"law:"+l.slug, label:l.law, tag:"法律", payload:l})),
+    ...(it.terms||[]).map(t => ({kind:"term", key:"term:"+t.term, label:t.term,
+       tag: t.scoped?"術語":"通則", payload:t})),
+  ];
+  return `<article class="card" data-key="${esc(it.title)}">
+    <span class="src">${esc(it.source)} · ${esc(it.topic)}</span>
+    <a class="hl" href="${esc(it.url)}" target="_blank" rel="noopener">${mark(it.title,q)}</a>
+    <div class="chips">${chips.map(c =>
+      `<button class="chip" data-kind="${c.kind}" data-ck="${esc(c.key)}" aria-expanded="false">
+        <span class="k">${c.tag}</span>${esc(c.label)}</button>`).join("")}</div>
+    <div class="slot"></div>
+  </article>`;
+}
+
+function renderFeed(){
+  if (!NEWS){ $("#feed").innerHTML = `<p class="empty">新聞資料尚未產生</p>`; return; }
+  const q = $("#nq").value.trim();
+  const items = NEWS.items.filter(i => !srcOff.has(i.source)).filter(i => {
+    if (!q) return true;
+    const hay = i.title + i.laws.map(l=>l.law).join("") + (i.terms||[]).map(t=>t.term).join("");
+    return hay.includes(q);
+  });
+  $("#newsmeta").innerHTML =
+    `<b>新聞裡的法律</b> — ${esc(NEWS.sources.join(" · "))}，共 ${NEWS.counts.headlines} 則標題，
+     ${NEWS.counts.matched} 則對得上法律或法定術語（術語庫 ${NEWS.counts.glossary||0} 條，取自法規本身的定義條文）。
+     只保留標題與連結，不轉載內文。目前顯示 ${items.length} 則。
+     ${q?`<a href="https://news.google.com/search?q=${encodeURIComponent(q)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+        target="_blank" rel="noopener">在 Google News 搜尋「${esc(q)}」→</a>`:""}`;
+  $("#feed").innerHTML = items.map(i => newsCard(i,q)).join("")
+    || `<p class="empty">查無符合的新聞</p>`;
+}
+
+function renderSourceFilter(){
+  $("#srcfilter").innerHTML = NEWS.sources.map(s =>
+    `<label><input type="checkbox" data-src="${esc(s)}" checked> ${esc(s)}</label>`).join("");
+}
+
+/* ---------- events ---------- */
 $("#laws").addEventListener("click", e => {
-  const b = e.target.closest("button[data-slug]");
-  if (b) open(b.dataset.slug);
+  const b = e.target.closest("button[data-slug]"); if (b) openLaw(b.dataset.slug);
 });
 $("#q").addEventListener("input", e => renderLaws(e.target.value));
 $("#fq").addEventListener("input", renderRows);
 $("#only3").addEventListener("change", renderRows);
-addEventListener("hashchange", () => {
-  const s = decodeURIComponent(location.hash.slice(1));
-  if (s && s !== current) open(s, false);
+$("#tlmode").addEventListener("change", renderRows);
+$("#nq").addEventListener("input", renderFeed);
+
+$("#srcfilter").addEventListener("change", e => {
+  const s = e.target.dataset.src; if (!s) return;
+  e.target.checked ? srcOff.delete(s) : srcOff.add(s);
+  renderFeed();
 });
 
-fetch("data/index.json").then(r => r.json()).then(d => {
+$("#feed").addEventListener("click", e => {
+  const open = e.target.closest("button[data-open]");
+  if (open){ openLaw(open.dataset.open); return; }
+  const chip = e.target.closest("button[data-ck]");
+  if (!chip) return;
+  const card = chip.closest(".card"), slot = card.querySelector(".slot");
+  const was = chip.getAttribute("aria-expanded") === "true";
+  card.querySelectorAll(".chip[aria-expanded=true]").forEach(c => c.setAttribute("aria-expanded","false"));
+  if (was){ slot.innerHTML = ""; return; }
+  chip.setAttribute("aria-expanded","true");
+  const item = NEWS.items.find(i => i.title === card.dataset.key);
+  const [kind, id] = chip.dataset.ck.split(/:(.+)/);
+  slot.innerHTML = kind === "law"
+    ? chipPanel("law", item.laws.find(l => l.slug === id))
+    : chipPanel("term", (item.terms||[]).find(t => t.term === id));
+});
+
+addEventListener("hashchange", () => {
+  const s = decodeURIComponent(location.hash.slice(1));
+  if (s && s !== current) openLaw(s, false);
+});
+
+/* ---------- boot ---------- */
+fetch("data/index.json").then(r=>r.json()).then(d => {
   INDEX = d;
   $("#scope").innerHTML =
-    `<b>資料範圍與限制</b>：目前收錄 <b>${d.totals.laws}</b> 部法律、<b>${d.totals.amendments}</b> 筆修正提案對照。`
-    + ` 這裡顯示的是<b>提案版本</b>的條文與立法理由 — 委員會與院會可再修改，`
-    + `所以「修正後」欄位不等於最終<b>三讀通過</b>的條文。標示「三讀」者為已通過的提案；`
-    + `正式條文請以全國法規資料庫為準。`;
+    `<b>資料範圍與限制</b>：收錄 <b>${d.totals.laws}</b> 部法律、<b>${d.totals.amendments}</b> 筆修正提案對照。`
+    + ` 提案版本的條文與立法理由來自立法院，<b>不等於三讀通過的條文</b>；現行條文另引自全國法規資料庫。`;
   $("#gen").textContent = `· 資料更新於 ${d.generated}`;
   renderLaws();
   const s = decodeURIComponent(location.hash.slice(1));
-  if (s) open(s, false);
+  if (s) openLaw(s, false);
 });
 
-// News panel. Absent news.json is normal — a dead feed must not break the site.
-fetch("data/news.json").then(r => r.ok ? r.json() : null).then(n => {
+fetch("data/tldr.json").then(r=>r.ok?r.json():{}).then(d => { TLDR = d; }).catch(()=>{});
+
+fetch("data/news.json").then(r=>r.ok?r.json():null).then(n => {
   if (!n) return;
-  const hits = n.items.filter(i => i.laws.length || (i.terms||[]).length);
-  if (!hits.length) return;
-  $("#news").hidden = false;
-  $("#newsmeta").textContent =
-    `${n.sources.join(" · ")} 今日 ${n.counts.headlines} 則標題，${n.counts.matched} 則對得上法律或法定術語`
-    + `（術語庫 ${n.counts.glossary||0} 條，取自法規本身的定義條文）。只保留標題與連結，不轉載內文。`;
-  $("#feed").innerHTML = hits.slice(0, 10).map(i => `
-    <li>
-      <span class="src">${i.source} · ${i.topic}</span>
-      <a class="hl" href="${i.url}" target="_blank" rel="noopener">${i.title}</a>
-      <div class="chips">${i.laws.map(l =>
-        `<button class="chip" data-slug="${l.slug}">${l.law} · ${l.amendments} 筆修正</button>`
-      ).join("")}</div>
-      ${(i.terms||[]).map(t => `
-        <details class="term">
-          <summary>${t.term}${t.scoped?"":" <span class='n'>（通則定義）</span>"}</summary>
-          ${t.defs.map(d => `<p class="def"><b>${d.law}</b> ${d.article}：${d.text}
-            ${d.url?`<a href="${d.url}" target="_blank" rel="noopener">原文</a>`:""}</p>`).join("")}
-        </details>`).join("")}
-    </li>`).join("");
-}).catch(() => {});
-
-$("#feed").addEventListener("click", e => {
-  const b = e.target.closest("button[data-slug]");
-  if (b) open(b.dataset.slug);
-});
+  NEWS = n; renderSourceFilter();
+}).catch(()=>{});
 </script>
 </body>
 </html>

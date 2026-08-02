@@ -29,8 +29,11 @@ SOURCES = [
     {"name": "中央社", "url": "https://feeds.feedburner.com/rsscna/finance", "topic": "財經"},
     # 公視 — Atom, so entry/title rather than item/title.
     {"name": "公視", "url": "https://news.pts.org.tw/xml/newsfeed.xml", "topic": "綜合"},
-    # 聯合報 — RSS 2.0. udn.com/rssfeed/news/1 404s; the numbered channel works.
-    {"name": "聯合報", "url": "https://udn.com/rssfeed/news/2/6638?ch=news", "topic": "要聞"},
+    # Google News is a *aggregator* feed, not a first-class source: it widens
+    # topical coverage so the news tab has something to search. Headlines link
+    # back to the originating outlet.
+    {"name": "Google News", "url": "https://news.google.com/rss/headlines/section/topic/NATION?hl=zh-TW&gl=TW&ceid=TW:zh-Hant", "topic": "國內"},
+    {"name": "Google News", "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=zh-TW&gl=TW&ceid=TW:zh-Hant", "topic": "財經"},
 ]
 
 # Statutes are usually named in full in a headline, but a few are near-always

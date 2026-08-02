@@ -121,6 +121,31 @@ def main() -> int:
             "articles": arts,
         }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    # 第1條 of a Taiwanese statute is literally its own summary — 「為管理食品衛生
+    # 安全及品質，維護國民健康，特制定本法」 — so the TLDR needs no generation.
+    # Kept in one small file so the news panel can show it without pulling a
+    # whole enacted shard.
+    tldr = {}
+    for entry in idx["laws"]:
+        law = by_name.get(entry["law"])
+        if not law:
+            continue
+        first = next((a for a in law.get("LawArticles", [])
+                      if a.get("ArticleType") == "A"
+                      and re.search(r"第\s*1\s*條", a.get("ArticleNo") or "")), None)
+        text = " ".join((first or {}).get("ArticleContent", "").split())
+        tldr[entry["slug"]] = {
+            "law": entry["law"],
+            "purpose": text[:180],
+            "modified": law.get("LawModifiedDate", ""),
+            "articles": sum(1 for a in law.get("LawArticles", []) if a.get("ArticleType") == "A"),
+            "amendments": len(parse_histories(law.get("LawHistories", ""))),
+            "url": law.get("LawURL", ""),
+        }
+    (DATA / "tldr.json").write_text(
+        json.dumps(tldr, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"tldr for {len(tldr)} laws")
+
     (DATA / "enacted" / "_meta.json").write_text(json.dumps({
         "source": "全國法規資料庫 (law.moj.gov.tw)",
         "updated": doc.get("UpdateDate"),
