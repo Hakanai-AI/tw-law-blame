@@ -176,8 +176,16 @@ def main() -> int:
         return 1
 
     index = []
+    used: set[str] = set()
     for law, items in sorted(merged.items(), key=lambda kv: -len(kv[1])):
+        # Two law names can sanitise to the same slug (punctuation-only
+        # differences, or the 60-char truncation). Without this, the second
+        # one overwrites the first's file and its rows vanish from the site
+        # while still being counted in the index — an 883-row silent loss.
         slug = re.sub(r"[^\w一-鿿-]", "", law)[:60] or "unknown"
+        if slug in used:
+            slug = f"{slug}-{len(used)}"
+        used.add(slug)
         items.sort(key=lambda x: (x["term"], x["session"], x["article"]))
         (OUT / f"{slug}.json").write_text(
             json.dumps(items, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
