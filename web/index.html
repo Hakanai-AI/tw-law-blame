@@ -70,6 +70,17 @@ footer{border-top:1px solid var(--rule);margin-top:40px;padding:18px 0 40px;
 .chk{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);
   white-space:nowrap;cursor:pointer}
 mark{background:rgba(180,140,20,.28);color:inherit;border-radius:2px;padding:0 1px}
+#news{margin:22px 0 6px}
+#news h2{margin:0;font-size:1rem;font-family:"Noto Serif TC","Songti TC",serif}
+.feed{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.feed li{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:11px 14px}
+.feed .src{font-size:.72rem;color:var(--muted);letter-spacing:.08em}
+.feed .hl{display:block;margin:2px 0 8px;font-size:.92rem;color:var(--ink);text-decoration:none}
+.feed .hl:hover{text-decoration:underline}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:99px;
+  padding:2px 11px;font:inherit;font-size:.76rem;cursor:pointer}
+.chip:hover{background:var(--accent);color:var(--paper)}
 </style>
 </head>
 <body>
@@ -78,6 +89,12 @@ mark{background:rgba(180,140,20,.28);color:inherit;border-radius:2px;padding:0 1
   <h1><small>法條溯源</small>台灣法律的 git blame</h1>
   <p class="sub">每一條條文改了什麼、誰提的、為什麼 — 附官方出處。資料來源：立法院開放資料。</p>
 </header>
+
+<section id="news" hidden>
+  <h2>新聞裡的法律</h2>
+  <p class="sub" id="newsmeta"></p>
+  <ul class="feed" id="feed"></ul>
+</section>
 
 <div class="note" id="scope">載入中…</div>
 
@@ -208,6 +225,30 @@ fetch("data/index.json").then(r => r.json()).then(d => {
   renderLaws();
   const s = decodeURIComponent(location.hash.slice(1));
   if (s) open(s, false);
+});
+
+// News panel. Absent news.json is normal — a dead feed must not break the site.
+fetch("data/news.json").then(r => r.ok ? r.json() : null).then(n => {
+  if (!n) return;
+  const hits = n.items.filter(i => i.laws.length);
+  if (!hits.length) return;
+  $("#news").hidden = false;
+  $("#newsmeta").textContent =
+    `${n.sources.join(" · ")} 今日 ${n.counts.headlines} 則標題，${n.counts.matched} 則點名了現行法律。`
+    + ` 只保留標題與連結，不轉載內文。`;
+  $("#feed").innerHTML = hits.slice(0, 10).map(i => `
+    <li>
+      <span class="src">${i.source} · ${i.topic}</span>
+      <a class="hl" href="${i.url}" target="_blank" rel="noopener">${i.title}</a>
+      <div class="chips">${i.laws.map(l =>
+        `<button class="chip" data-slug="${l.slug}">${l.law} · ${l.amendments} 筆修正</button>`
+      ).join("")}</div>
+    </li>`).join("");
+}).catch(() => {});
+
+$("#feed").addEventListener("click", e => {
+  const b = e.target.closest("button[data-slug]");
+  if (b) open(b.dataset.slug);
 });
 </script>
 </body>
