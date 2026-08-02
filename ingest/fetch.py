@@ -128,7 +128,11 @@ def build(term: str, period: str) -> dict:
 def main() -> int:
     # Terms/sessions to ingest. Kept explicit rather than discovered, so a
     # silent-empty on one period fails loudly instead of shrinking the corpus.
-    targets = [(t, f"{p:02d}") for t in os.environ.get("TERMS", "10,11").split(",")
+    # Both params must be ZERO-PADDED. `term=8` returns 0 rows with a 200;
+    # `term=08` returns 3319. Same trap as sessionPeriod. int() then reformat
+    # so a caller passing either form gets the working one.
+    targets = [(f"{int(t):02d}", f"{p:02d}")
+               for t in os.environ.get("TERMS", "08,09,10,11").split(",")
                for p in range(1, int(os.environ.get("MAX_PERIOD", "8")) + 1)]
 
     OUT.mkdir(parents=True, exist_ok=True)
