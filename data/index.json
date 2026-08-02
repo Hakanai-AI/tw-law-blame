@@ -1,0 +1,6495 @@
+{
+ "generated": "2026-08-02T18:05:34Z",
+ "laws": [
+  {
+   "law": "立法院職權行使法",
+   "slug": "立法院職權行使法",
+   "amendments": 2170,
+   "articles": 12,
+   "bills": 44
+  },
+  {
+   "law": "護照條例修正草案",
+   "slug": "護照條例修正草案",
+   "amendments": 1638,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公職人員選舉罷免法",
+   "slug": "公職人員選舉罷免法",
+   "amendments": 1595,
+   "articles": 42,
+   "bills": 162
+  },
+  {
+   "law": "電業法修正",
+   "slug": "電業法修正",
+   "amendments": 1505,
+   "articles": 1,
+   "bills": 8
+  },
+  {
+   "law": "土地徵收條例修正",
+   "slug": "土地徵收條例修正",
+   "amendments": 1439,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公民投票法",
+   "slug": "公民投票法",
+   "amendments": 883,
+   "articles": 14,
+   "bills": 51
+  },
+  {
+   "law": "中華民國刑法",
+   "slug": "中華民國刑法",
+   "amendments": 873,
+   "articles": 73,
+   "bills": 289
+  },
+  {
+   "law": "法院組織法",
+   "slug": "法院組織法",
+   "amendments": 832,
+   "articles": 13,
+   "bills": 27
+  },
+  {
+   "law": "臺灣地區與大陸地區人民關係條例",
+   "slug": "臺灣地區與大陸地區人民關係條例",
+   "amendments": 799,
+   "articles": 31,
+   "bills": 102
+  },
+  {
+   "law": "國家安全會議組織法修正",
+   "slug": "國家安全會議組織法修正",
+   "amendments": 798,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "石油管理法",
+   "slug": "石油管理法",
+   "amendments": 745,
+   "articles": 9,
+   "bills": 24
+  },
+  {
+   "law": "立法院組織法",
+   "slug": "立法院組織法",
+   "amendments": 595,
+   "articles": 10,
+   "bills": 31
+  },
+  {
+   "law": "刑事訴訟法",
+   "slug": "刑事訴訟法",
+   "amendments": 593,
+   "articles": 63,
+   "bills": 155
+  },
+  {
+   "law": "總統副總統選舉罷免法",
+   "slug": "總統副總統選舉罷免法",
+   "amendments": 574,
+   "articles": 21,
+   "bills": 61
+  },
+  {
+   "law": "檔案法",
+   "slug": "檔案法",
+   "amendments": 561,
+   "articles": 4,
+   "bills": 8
+  },
+  {
+   "law": "警察職權行使法",
+   "slug": "警察職權行使法",
+   "amendments": 558,
+   "articles": 3,
+   "bills": 8
+  },
+  {
+   "law": "中華民國憲法增修",
+   "slug": "中華民國憲法增修",
+   "amendments": 530,
+   "articles": 8,
+   "bills": 42
+  },
+  {
+   "law": "立法委員行為法",
+   "slug": "立法委員行為法",
+   "amendments": 486,
+   "articles": 2,
+   "bills": 8
+  },
+  {
+   "law": "公司法",
+   "slug": "公司法",
+   "amendments": 459,
+   "articles": 27,
+   "bills": 54
+  },
+  {
+   "law": "所得稅法",
+   "slug": "所得稅法",
+   "amendments": 446,
+   "articles": 19,
+   "bills": 210
+  },
+  {
+   "law": "立法院議事規則",
+   "slug": "立法院議事規則",
+   "amendments": 435,
+   "articles": 6,
+   "bills": 21
+  },
+  {
+   "law": "勞動基準法",
+   "slug": "勞動基準法",
+   "amendments": 394,
+   "articles": 51,
+   "bills": 215
+  },
+  {
+   "law": "勞工保險條例",
+   "slug": "勞工保險條例",
+   "amendments": 376,
+   "articles": 30,
+   "bills": 196
+  },
+  {
+   "law": "幼兒教育及照顧法",
+   "slug": "幼兒教育及照顧法",
+   "amendments": 371,
+   "articles": 17,
+   "bills": 46
+  },
+  {
+   "law": "陸海空軍軍官士官服役條例",
+   "slug": "陸海空軍軍官士官服役條例",
+   "amendments": 370,
+   "articles": 17,
+   "bills": 56
+  },
+  {
+   "law": "通訊保障及監察法",
+   "slug": "通訊保障及監察法",
+   "amendments": 365,
+   "articles": 8,
+   "bills": 28
+  },
+  {
+   "law": "道路交通管理處罰條例",
+   "slug": "道路交通管理處罰條例",
+   "amendments": 333,
+   "articles": 43,
+   "bills": 191
+  },
+  {
+   "law": "動物保護法",
+   "slug": "動物保護法",
+   "amendments": 285,
+   "articles": 18,
+   "bills": 61
+  },
+  {
+   "law": "空氣污染防制法",
+   "slug": "空氣污染防制法",
+   "amendments": 284,
+   "articles": 27,
+   "bills": 77
+  },
+  {
+   "law": "地方制度法",
+   "slug": "地方制度法",
+   "amendments": 279,
+   "articles": 24,
+   "bills": 60
+  },
+  {
+   "law": "都市更新條例修正",
+   "slug": "都市更新條例修正",
+   "amendments": 272,
+   "articles": 1,
+   "bills": 6
+  },
+  {
+   "law": "都市更新條例",
+   "slug": "都市更新條例",
+   "amendments": 269,
+   "articles": 6,
+   "bills": 25
+  },
+  {
+   "law": "入出國及移民法",
+   "slug": "入出國及移民法",
+   "amendments": 269,
+   "articles": 18,
+   "bills": 51
+  },
+  {
+   "law": "羈押法修正",
+   "slug": "羈押法修正",
+   "amendments": 266,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "大學法",
+   "slug": "大學法",
+   "amendments": 261,
+   "articles": 15,
+   "bills": 39
+  },
+  {
+   "law": "食品衛生管理法",
+   "slug": "食品衛生管理法",
+   "amendments": 249,
+   "articles": 19,
+   "bills": 74
+  },
+  {
+   "law": "食品安全衛生管理法",
+   "slug": "食品安全衛生管理法",
+   "amendments": 238,
+   "articles": 19,
+   "bills": 65
+  },
+  {
+   "law": "藥事法",
+   "slug": "藥事法",
+   "amendments": 228,
+   "articles": 24,
+   "bills": 59
+  },
+  {
+   "law": "立法院各委員會組織法",
+   "slug": "立法院各委員會組織法",
+   "amendments": 228,
+   "articles": 8,
+   "bills": 25
+  },
+  {
+   "law": "兒童及少年福利與權益保障法",
+   "slug": "兒童及少年福利與權益保障法",
+   "amendments": 222,
+   "articles": 34,
+   "bills": 84
+  },
+  {
+   "law": "保險法",
+   "slug": "保險法",
+   "amendments": 218,
+   "articles": 22,
+   "bills": 72
+  },
+  {
+   "law": "礦業法修正",
+   "slug": "礦業法修正",
+   "amendments": 206,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "文化資產保存法",
+   "slug": "文化資產保存法",
+   "amendments": 204,
+   "articles": 11,
+   "bills": 38
+  },
+  {
+   "law": "毒品危害防制條例",
+   "slug": "毒品危害防制條例",
+   "amendments": 194,
+   "articles": 10,
+   "bills": 59
+  },
+  {
+   "law": "法官法",
+   "slug": "法官法",
+   "amendments": 193,
+   "articles": 16,
+   "bills": 28
+  },
+  {
+   "law": "醫療法",
+   "slug": "醫療法",
+   "amendments": 186,
+   "articles": 27,
+   "bills": 72
+  },
+  {
+   "law": "國家安全法",
+   "slug": "國家安全法",
+   "amendments": 186,
+   "articles": 6,
+   "bills": 22
+  },
+  {
+   "law": "災害防救法",
+   "slug": "災害防救法",
+   "amendments": 173,
+   "articles": 15,
+   "bills": 56
+  },
+  {
+   "law": "公務人員退休法",
+   "slug": "公務人員退休法",
+   "amendments": 173,
+   "articles": 13,
+   "bills": 33
+  },
+  {
+   "law": "性別工作平等法",
+   "slug": "性別工作平等法",
+   "amendments": 171,
+   "articles": 19,
+   "bills": 106
+  },
+  {
+   "law": "就業服務法",
+   "slug": "就業服務法",
+   "amendments": 165,
+   "articles": 23,
+   "bills": 81
+  },
+  {
+   "law": "民法",
+   "slug": "民法",
+   "amendments": 164,
+   "articles": 21,
+   "bills": 44
+  },
+  {
+   "law": "中華民國憲法",
+   "slug": "中華民國憲法",
+   "amendments": 162,
+   "articles": 5,
+   "bills": 22
+  },
+  {
+   "law": "軍人及其家屬優待條例修正草案",
+   "slug": "軍人及其家屬優待條例修正草案",
+   "amendments": 162,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "律師法修正草案",
+   "slug": "律師法修正草案",
+   "amendments": 158,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "職業災害勞工保護法修正",
+   "slug": "職業災害勞工保護法修正",
+   "amendments": 154,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "集會遊行法修正",
+   "slug": "集會遊行法修正",
+   "amendments": 148,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "陸海空軍刑法",
+   "slug": "陸海空軍刑法",
+   "amendments": 148,
+   "articles": 7,
+   "bills": 18
+  },
+  {
+   "law": "心理師法修正",
+   "slug": "心理師法修正",
+   "amendments": 148,
+   "articles": 1,
+   "bills": 5
+  },
+  {
+   "law": "勞工退休金條例",
+   "slug": "勞工退休金條例",
+   "amendments": 147,
+   "articles": 12,
+   "bills": 42
+  },
+  {
+   "law": "司法院大法官審理案件法修正草案",
+   "slug": "司法院大法官審理案件法修正草案",
+   "amendments": 147,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "政府採購法",
+   "slug": "政府採購法",
+   "amendments": 146,
+   "articles": 19,
+   "bills": 43
+  },
+  {
+   "law": "國家機密保護法",
+   "slug": "國家機密保護法",
+   "amendments": 146,
+   "articles": 3,
+   "bills": 8
+  },
+  {
+   "law": "民用航空法",
+   "slug": "民用航空法",
+   "amendments": 139,
+   "articles": 18,
+   "bills": 38
+  },
+  {
+   "law": "全民健康保險法",
+   "slug": "全民健康保險法",
+   "amendments": 138,
+   "articles": 28,
+   "bills": 81
+  },
+  {
+   "law": "農田水利會組織通則修正草案",
+   "slug": "農田水利會組織通則修正草案",
+   "amendments": 138,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "律師法修正",
+   "slug": "律師法修正",
+   "amendments": 138,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "學校教職員退休條例",
+   "slug": "學校教職員退休條例",
+   "amendments": 136,
+   "articles": 12,
+   "bills": 29
+  },
+  {
+   "law": "公路法",
+   "slug": "公路法",
+   "amendments": 135,
+   "articles": 23,
+   "bills": 58
+  },
+  {
+   "law": "都市計畫法",
+   "slug": "都市計畫法",
+   "amendments": 131,
+   "articles": 11,
+   "bills": 27
+  },
+  {
+   "law": "住宅法",
+   "slug": "住宅法",
+   "amendments": 131,
+   "articles": 18,
+   "bills": 44
+  },
+  {
+   "law": "公民投票法修正",
+   "slug": "公民投票法修正",
+   "amendments": 131,
+   "articles": 1,
+   "bills": 5
+  },
+  {
+   "law": "水土保持法",
+   "slug": "水土保持法",
+   "amendments": 129,
+   "articles": 4,
+   "bills": 8
+  },
+  {
+   "law": "建築法",
+   "slug": "建築法",
+   "amendments": 126,
+   "articles": 12,
+   "bills": 43
+  },
+  {
+   "law": "菸害防制法",
+   "slug": "菸害防制法",
+   "amendments": 122,
+   "articles": 13,
+   "bills": 53
+  },
+  {
+   "law": "文化資產保存法修正",
+   "slug": "文化資產保存法修正",
+   "amendments": 120,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "銀行法",
+   "slug": "銀行法",
+   "amendments": 119,
+   "articles": 15,
+   "bills": 31
+  },
+  {
+   "law": "水污染防治法",
+   "slug": "水污染防治法",
+   "amendments": 119,
+   "articles": 14,
+   "bills": 30
+  },
+  {
+   "law": "著作權法修正草案",
+   "slug": "著作權法修正草案",
+   "amendments": 118,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "家庭暴力防治法",
+   "slug": "家庭暴力防治法",
+   "amendments": 117,
+   "articles": 12,
+   "bills": 23
+  },
+  {
+   "law": "公教人員保險法",
+   "slug": "公教人員保險法",
+   "amendments": 115,
+   "articles": 13,
+   "bills": 41
+  },
+  {
+   "law": "礦業法",
+   "slug": "礦業法",
+   "amendments": 115,
+   "articles": 5,
+   "bills": 19
+  },
+  {
+   "law": "海關緝私條例",
+   "slug": "海關緝私條例",
+   "amendments": 114,
+   "articles": 3,
+   "bills": 10
+  },
+  {
+   "law": "財團法人原住民族文化事業基金會設置條例修正",
+   "slug": "財團法人原住民族文化事業基金會設置條例修正",
+   "amendments": 109,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "身心障礙者權益保障法",
+   "slug": "身心障礙者權益保障法",
+   "amendments": 108,
+   "articles": 28,
+   "bills": 56
+  },
+  {
+   "law": "商業會計法",
+   "slug": "商業會計法",
+   "amendments": 108,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "民事訴訟法",
+   "slug": "民事訴訟法",
+   "amendments": 107,
+   "articles": 23,
+   "bills": 32
+  },
+  {
+   "law": "政治獻金法",
+   "slug": "政治獻金法",
+   "amendments": 106,
+   "articles": 11,
+   "bills": 34
+  },
+  {
+   "law": "產業創新條例",
+   "slug": "產業創新條例",
+   "amendments": 105,
+   "articles": 17,
+   "bills": 35
+  },
+  {
+   "law": "就業保險法",
+   "slug": "就業保險法",
+   "amendments": 103,
+   "articles": 17,
+   "bills": 61
+  },
+  {
+   "law": "財政收支劃分法修正",
+   "slug": "財政收支劃分法修正",
+   "amendments": 102,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "內政部消防署組織條例修正草案",
+   "slug": "內政部消防署組織條例修正草案",
+   "amendments": 100,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公共電視法修正草案",
+   "slug": "公共電視法修正草案",
+   "amendments": 100,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民法親屬編",
+   "slug": "民法親屬編",
+   "amendments": 99,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "發展觀光條例",
+   "slug": "發展觀光條例",
+   "amendments": 99,
+   "articles": 18,
+   "bills": 38
+  },
+  {
+   "law": "國際金融業務條例",
+   "slug": "國際金融業務條例",
+   "amendments": 99,
+   "articles": 3,
+   "bills": 7
+  },
+  {
+   "law": "老人福利法",
+   "slug": "老人福利法",
+   "amendments": 97,
+   "articles": 17,
+   "bills": 45
+  },
+  {
+   "law": "化粧品衛生管理條例",
+   "slug": "化粧品衛生管理條例",
+   "amendments": 97,
+   "articles": 8,
+   "bills": 24
+  },
+  {
+   "law": "人民團體法",
+   "slug": "人民團體法",
+   "amendments": 96,
+   "articles": 9,
+   "bills": 13
+  },
+  {
+   "law": "都市更新條例修正草案",
+   "slug": "都市更新條例修正草案",
+   "amendments": 96,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "內政部組織法修正草案",
+   "slug": "內政部組織法修正草案",
+   "amendments": 95,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "警察服制條例",
+   "slug": "警察服制條例",
+   "amendments": 95,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "犯罪被害人保護法",
+   "slug": "犯罪被害人保護法",
+   "amendments": 94,
+   "articles": 5,
+   "bills": 17
+  },
+  {
+   "law": "破產法修正草案",
+   "slug": "破產法修正草案",
+   "amendments": 93,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "人工生殖法",
+   "slug": "人工生殖法",
+   "amendments": 92,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "化粧品衛生管理條例修正草案",
+   "slug": "化粧品衛生管理條例修正草案",
+   "amendments": 91,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "高級中等教育法",
+   "slug": "高級中等教育法",
+   "amendments": 89,
+   "articles": 13,
+   "bills": 25
+  },
+  {
+   "law": "公務員懲戒法修正草案",
+   "slug": "公務員懲戒法修正草案",
+   "amendments": 89,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "毒性化學物質管理法修正",
+   "slug": "毒性化學物質管理法修正",
+   "amendments": 89,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "船員法",
+   "slug": "船員法",
+   "amendments": 86,
+   "articles": 4,
+   "bills": 11
+  },
+  {
+   "law": "消防法",
+   "slug": "消防法",
+   "amendments": 85,
+   "articles": 16,
+   "bills": 38
+  },
+  {
+   "law": "政務人員退職撫卹條例修正草案",
+   "slug": "政務人員退職撫卹條例修正草案",
+   "amendments": 85,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "立法院程序委員會組織規程",
+   "slug": "立法院程序委員會組織規程",
+   "amendments": 84,
+   "articles": 4,
+   "bills": 12
+  },
+  {
+   "law": "電影法修正",
+   "slug": "電影法修正",
+   "amendments": 84,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "職業災害勞工保護法",
+   "slug": "職業災害勞工保護法",
+   "amendments": 84,
+   "articles": 7,
+   "bills": 21
+  },
+  {
+   "law": "空中大學設置條例修正草案",
+   "slug": "空中大學設置條例修正草案",
+   "amendments": 84,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "祭祀公業條例",
+   "slug": "祭祀公業條例",
+   "amendments": 83,
+   "articles": 4,
+   "bills": 14
+  },
+  {
+   "law": "私立學校法",
+   "slug": "私立學校法",
+   "amendments": 83,
+   "articles": 12,
+   "bills": 29
+  },
+  {
+   "law": "森林法",
+   "slug": "森林法",
+   "amendments": 83,
+   "articles": 10,
+   "bills": 33
+  },
+  {
+   "law": "國家公園法",
+   "slug": "國家公園法",
+   "amendments": 83,
+   "articles": 10,
+   "bills": 24
+  },
+  {
+   "law": "財政收支劃分法修正草案",
+   "slug": "財政收支劃分法修正草案",
+   "amendments": 82,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國籍法",
+   "slug": "國籍法",
+   "amendments": 82,
+   "articles": 7,
+   "bills": 28
+  },
+  {
+   "law": "勞工安全衛生法修正",
+   "slug": "勞工安全衛生法修正",
+   "amendments": 82,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "社會救助法",
+   "slug": "社會救助法",
+   "amendments": 78,
+   "articles": 12,
+   "bills": 35
+  },
+  {
+   "law": "個人資料保護法",
+   "slug": "個人資料保護法",
+   "amendments": 78,
+   "articles": 9,
+   "bills": 14
+  },
+  {
+   "law": "毒性化學物質管理法",
+   "slug": "毒性化學物質管理法",
+   "amendments": 78,
+   "articles": 2,
+   "bills": 8
+  },
+  {
+   "law": "國民體育法",
+   "slug": "國民體育法",
+   "amendments": 78,
+   "articles": 11,
+   "bills": 21
+  },
+  {
+   "law": "住宅法修正草案",
+   "slug": "住宅法修正草案",
+   "amendments": 78,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "兒童及少年性交易防制條例修正",
+   "slug": "兒童及少年性交易防制條例修正",
+   "amendments": 77,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "文化藝術獎助條例",
+   "slug": "文化藝術獎助條例",
+   "amendments": 76,
+   "articles": 7,
+   "bills": 16
+  },
+  {
+   "law": "集會遊行法",
+   "slug": "集會遊行法",
+   "amendments": 76,
+   "articles": 4,
+   "bills": 8
+  },
+  {
+   "law": "警械使用條例",
+   "slug": "警械使用條例",
+   "amendments": 76,
+   "articles": 5,
+   "bills": 13
+  },
+  {
+   "law": "幼兒教育及照顧法修正草案",
+   "slug": "幼兒教育及照顧法修正草案",
+   "amendments": 76,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "廣播電視法",
+   "slug": "廣播電視法",
+   "amendments": 75,
+   "articles": 10,
+   "bills": 20
+  },
+  {
+   "law": "野生動物保育法",
+   "slug": "野生動物保育法",
+   "amendments": 74,
+   "articles": 14,
+   "bills": 31
+  },
+  {
+   "law": "政府資訊公開法",
+   "slug": "政府資訊公開法",
+   "amendments": 74,
+   "articles": 6,
+   "bills": 11
+  },
+  {
+   "law": "建築師法修正草案",
+   "slug": "建築師法修正草案",
+   "amendments": 74,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "農民健康保險條例",
+   "slug": "農民健康保險條例",
+   "amendments": 73,
+   "articles": 9,
+   "bills": 27
+  },
+  {
+   "law": "合作社法",
+   "slug": "合作社法",
+   "amendments": 73,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "消費者保護法",
+   "slug": "消費者保護法",
+   "amendments": 73,
+   "articles": 15,
+   "bills": 23
+  },
+  {
+   "law": "水利法",
+   "slug": "水利法",
+   "amendments": 73,
+   "articles": 4,
+   "bills": 12
+  },
+  {
+   "law": "離島建設條例",
+   "slug": "離島建設條例",
+   "amendments": 73,
+   "articles": 10,
+   "bills": 33
+  },
+  {
+   "law": "替代役實施條例",
+   "slug": "替代役實施條例",
+   "amendments": 73,
+   "articles": 7,
+   "bills": 15
+  },
+  {
+   "law": "學位授予法修正草案",
+   "slug": "學位授予法修正草案",
+   "amendments": 72,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "行政訴訟法",
+   "slug": "行政訴訟法",
+   "amendments": 71,
+   "articles": 7,
+   "bills": 15
+  },
+  {
+   "law": "漁業法",
+   "slug": "漁業法",
+   "amendments": 70,
+   "articles": 12,
+   "bills": 22
+  },
+  {
+   "law": "教師法修正草案",
+   "slug": "教師法修正草案",
+   "amendments": 70,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "鐵路法",
+   "slug": "鐵路法",
+   "amendments": 69,
+   "articles": 15,
+   "bills": 30
+  },
+  {
+   "law": "核子事故緊急應變法修正草案",
+   "slug": "核子事故緊急應變法修正草案",
+   "amendments": 69,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "廢棄物清理法",
+   "slug": "廢棄物清理法",
+   "amendments": 68,
+   "articles": 11,
+   "bills": 20
+  },
+  {
+   "law": "貨物稅條例",
+   "slug": "貨物稅條例",
+   "amendments": 67,
+   "articles": 9,
+   "bills": 50
+  },
+  {
+   "law": "羈押法修正草案",
+   "slug": "羈押法修正草案",
+   "amendments": 67,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "電業法修正草案",
+   "slug": "電業法修正草案",
+   "amendments": 67,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "立法院組織法刪除",
+   "slug": "立法院組織法刪除",
+   "amendments": 66,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "糧食管理法",
+   "slug": "糧食管理法",
+   "amendments": 66,
+   "articles": 8,
+   "bills": 29
+  },
+  {
+   "law": "組織犯罪防制條例",
+   "slug": "組織犯罪防制條例",
+   "amendments": 66,
+   "articles": 5,
+   "bills": 17
+  },
+  {
+   "law": "加值型及非加值型營業稅法",
+   "slug": "加值型及非加值型營業稅法",
+   "amendments": 65,
+   "articles": 9,
+   "bills": 34
+  },
+  {
+   "law": "大眾捷運法",
+   "slug": "大眾捷運法",
+   "amendments": 64,
+   "articles": 8,
+   "bills": 17
+  },
+  {
+   "law": "促進民間參與公共建設法",
+   "slug": "促進民間參與公共建設法",
+   "amendments": 64,
+   "articles": 5,
+   "bills": 8
+  },
+  {
+   "law": "殯葬管理條例",
+   "slug": "殯葬管理條例",
+   "amendments": 64,
+   "articles": 11,
+   "bills": 24
+  },
+  {
+   "law": "審計法",
+   "slug": "審計法",
+   "amendments": 64,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "少年事件處理法",
+   "slug": "少年事件處理法",
+   "amendments": 64,
+   "articles": 3,
+   "bills": 7
+  },
+  {
+   "law": "信託法",
+   "slug": "信託法",
+   "amendments": 64,
+   "articles": 1,
+   "bills": 5
+  },
+  {
+   "law": "財政收支劃分法",
+   "slug": "財政收支劃分法",
+   "amendments": 63,
+   "articles": 8,
+   "bills": 24
+  },
+  {
+   "law": "菸酒管理法",
+   "slug": "菸酒管理法",
+   "amendments": 63,
+   "articles": 9,
+   "bills": 27
+  },
+  {
+   "law": "優生保健法修正草案",
+   "slug": "優生保健法修正草案",
+   "amendments": 62,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "預算法",
+   "slug": "預算法",
+   "amendments": 62,
+   "articles": 12,
+   "bills": 15
+  },
+  {
+   "law": "證券交易法",
+   "slug": "證券交易法",
+   "amendments": 62,
+   "articles": 19,
+   "bills": 36
+  },
+  {
+   "law": "中華民國總統府組織法",
+   "slug": "中華民國總統府組織法",
+   "amendments": 62,
+   "articles": 2,
+   "bills": 6
+  },
+  {
+   "law": "公共電視法修正",
+   "slug": "公共電視法修正",
+   "amendments": 61,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "公寓大廈管理條例",
+   "slug": "公寓大廈管理條例",
+   "amendments": 61,
+   "articles": 17,
+   "bills": 36
+  },
+  {
+   "law": "國軍退除役官兵輔導條例",
+   "slug": "國軍退除役官兵輔導條例",
+   "amendments": 61,
+   "articles": 7,
+   "bills": 11
+  },
+  {
+   "law": "傳染病防治法",
+   "slug": "傳染病防治法",
+   "amendments": 60,
+   "articles": 9,
+   "bills": 22
+  },
+  {
+   "law": "學校衛生法",
+   "slug": "學校衛生法",
+   "amendments": 60,
+   "articles": 9,
+   "bills": 28
+  },
+  {
+   "law": "關稅法",
+   "slug": "關稅法",
+   "amendments": 59,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "公務人員退休撫卹基金管理條例修正",
+   "slug": "公務人員退休撫卹基金管理條例修正",
+   "amendments": 58,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "飼料管理法",
+   "slug": "飼料管理法",
+   "amendments": 58,
+   "articles": 5,
+   "bills": 10
+  },
+  {
+   "law": "公務人員考績法修正草案",
+   "slug": "公務人員考績法修正草案",
+   "amendments": 58,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "立法院議事規則刪除",
+   "slug": "立法院議事規則刪除",
+   "amendments": 58,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "社會秩序維護法",
+   "slug": "社會秩序維護法",
+   "amendments": 58,
+   "articles": 17,
+   "bills": 41
+  },
+  {
+   "law": "國營國際機場園區股份有限公司設置條例",
+   "slug": "國營國際機場園區股份有限公司設置條例",
+   "amendments": 58,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "核子損害賠償法",
+   "slug": "核子損害賠償法",
+   "amendments": 57,
+   "articles": 3,
+   "bills": 11
+  },
+  {
+   "law": "自來水法",
+   "slug": "自來水法",
+   "amendments": 57,
+   "articles": 7,
+   "bills": 23
+  },
+  {
+   "law": "集會遊行法修正草案",
+   "slug": "集會遊行法修正草案",
+   "amendments": 57,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "內政部組織法修正",
+   "slug": "內政部組織法修正",
+   "amendments": 57,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "貿易法",
+   "slug": "貿易法",
+   "amendments": 57,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "客家基本法修正",
+   "slug": "客家基本法修正",
+   "amendments": 57,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "獸醫師法",
+   "slug": "獸醫師法",
+   "amendments": 56,
+   "articles": 5,
+   "bills": 11
+  },
+  {
+   "law": "高級中等學校建教合作實施及建教生權益保障法",
+   "slug": "高級中等學校建教合作實施及建教生權益保障法",
+   "amendments": 56,
+   "articles": 13,
+   "bills": 24
+  },
+  {
+   "law": "公益勸募條例",
+   "slug": "公益勸募條例",
+   "amendments": 56,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "農地重劃條例",
+   "slug": "農地重劃條例",
+   "amendments": 55,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "電業法",
+   "slug": "電業法",
+   "amendments": 55,
+   "articles": 11,
+   "bills": 27
+  },
+  {
+   "law": "國營事業管理法",
+   "slug": "國營事業管理法",
+   "amendments": 55,
+   "articles": 9,
+   "bills": 25
+  },
+  {
+   "law": "管制藥品管理條例",
+   "slug": "管制藥品管理條例",
+   "amendments": 55,
+   "articles": 3,
+   "bills": 7
+  },
+  {
+   "law": "專科學校法修正草案",
+   "slug": "專科學校法修正草案",
+   "amendments": 55,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員退休撫卹基金管理委員會組織條例修正",
+   "slug": "公務人員退休撫卹基金管理委員會組織條例修正",
+   "amendments": 55,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "國家賠償法修正草案",
+   "slug": "國家賠償法修正草案",
+   "amendments": 54,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "運動產業發展條例",
+   "slug": "運動產業發展條例",
+   "amendments": 54,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "軍人及其家屬優待條例修正",
+   "slug": "軍人及其家屬優待條例修正",
+   "amendments": 54,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "毒性化學物質管理法修正草案",
+   "slug": "毒性化學物質管理法修正草案",
+   "amendments": 54,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "農會法",
+   "slug": "農會法",
+   "amendments": 53,
+   "articles": 11,
+   "bills": 19
+  },
+  {
+   "law": "教師法",
+   "slug": "教師法",
+   "amendments": 53,
+   "articles": 14,
+   "bills": 30
+  },
+  {
+   "law": "工業團體法",
+   "slug": "工業團體法",
+   "amendments": 53,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "船舶法",
+   "slug": "船舶法",
+   "amendments": 53,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "環境基本法",
+   "slug": "環境基本法",
+   "amendments": 53,
+   "articles": 5,
+   "bills": 8
+  },
+  {
+   "law": "原子能法修正",
+   "slug": "原子能法修正",
+   "amendments": 53,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "醫師法",
+   "slug": "醫師法",
+   "amendments": 52,
+   "articles": 17,
+   "bills": 35
+  },
+  {
+   "law": "動物用藥品管理法",
+   "slug": "動物用藥品管理法",
+   "amendments": 52,
+   "articles": 6,
+   "bills": 7
+  },
+  {
+   "law": "稅捐稽徵法",
+   "slug": "稅捐稽徵法",
+   "amendments": 52,
+   "articles": 20,
+   "bills": 36
+  },
+  {
+   "law": "公務人員退休撫卹基金監理委員會組織條例修正",
+   "slug": "公務人員退休撫卹基金監理委員會組織條例修正",
+   "amendments": 52,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "國民年金法",
+   "slug": "國民年金法",
+   "amendments": 51,
+   "articles": 17,
+   "bills": 45
+  },
+  {
+   "law": "勞動檢查法",
+   "slug": "勞動檢查法",
+   "amendments": 51,
+   "articles": 9,
+   "bills": 13
+  },
+  {
+   "law": "罕見疾病防治及藥物法",
+   "slug": "罕見疾病防治及藥物法",
+   "amendments": 50,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "郵政儲金匯兌法",
+   "slug": "郵政儲金匯兌法",
+   "amendments": 50,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "陸海空軍軍官士官服役條例修正",
+   "slug": "陸海空軍軍官士官服役條例修正",
+   "amendments": 50,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國民教育法",
+   "slug": "國民教育法",
+   "amendments": 48,
+   "articles": 11,
+   "bills": 30
+  },
+  {
+   "law": "護理人員法",
+   "slug": "護理人員法",
+   "amendments": 48,
+   "articles": 11,
+   "bills": 22
+  },
+  {
+   "law": "有線廣播電視法",
+   "slug": "有線廣播電視法",
+   "amendments": 47,
+   "articles": 15,
+   "bills": 22
+  },
+  {
+   "law": "電信法",
+   "slug": "電信法",
+   "amendments": 47,
+   "articles": 13,
+   "bills": 24
+  },
+  {
+   "law": "所得基本稅額條例",
+   "slug": "所得基本稅額條例",
+   "amendments": 47,
+   "articles": 3,
+   "bills": 13
+  },
+  {
+   "law": "土地徵收條例",
+   "slug": "土地徵收條例",
+   "amendments": 47,
+   "articles": 5,
+   "bills": 10
+  },
+  {
+   "law": "國防部組織法修正草案",
+   "slug": "國防部組織法修正草案",
+   "amendments": 46,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "著作權法",
+   "slug": "著作權法",
+   "amendments": 46,
+   "articles": 12,
+   "bills": 20
+  },
+  {
+   "law": "專利法",
+   "slug": "專利法",
+   "amendments": 46,
+   "articles": 7,
+   "bills": 11
+  },
+  {
+   "law": "再生能源發展條例",
+   "slug": "再生能源發展條例",
+   "amendments": 46,
+   "articles": 4,
+   "bills": 12
+  },
+  {
+   "law": "電子遊戲場業管理條例",
+   "slug": "電子遊戲場業管理條例",
+   "amendments": 46,
+   "articles": 5,
+   "bills": 11
+  },
+  {
+   "law": "海洋污染防治法",
+   "slug": "海洋污染防治法",
+   "amendments": 46,
+   "articles": 6,
+   "bills": 11
+  },
+  {
+   "law": "陸海空軍懲罰法修正草案",
+   "slug": "陸海空軍懲罰法修正草案",
+   "amendments": 46,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "中華民國紅十字會法修正",
+   "slug": "中華民國紅十字會法修正",
+   "amendments": 46,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "記帳士法修正",
+   "slug": "記帳士法修正",
+   "amendments": 46,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "能源管理法",
+   "slug": "能源管理法",
+   "amendments": 46,
+   "articles": 4,
+   "bills": 8
+  },
+  {
+   "law": "菸害防制法修正",
+   "slug": "菸害防制法修正",
+   "amendments": 46,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政程序法",
+   "slug": "行政程序法",
+   "amendments": 45,
+   "articles": 19,
+   "bills": 25
+  },
+  {
+   "law": "法醫師法",
+   "slug": "法醫師法",
+   "amendments": 45,
+   "articles": 6,
+   "bills": 8
+  },
+  {
+   "law": "人類免疫缺乏病毒傳染防治及感染者權益保障條例",
+   "slug": "人類免疫缺乏病毒傳染防治及感染者權益保障條例",
+   "amendments": 45,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "「公民投票法",
+   "slug": "公民投票法",
+   "amendments": 44,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "兵役法施行法",
+   "slug": "兵役法施行法",
+   "amendments": 44,
+   "articles": 6,
+   "bills": 12
+  },
+  {
+   "law": "公共電視法",
+   "slug": "公共電視法",
+   "amendments": 44,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "平均地權條例",
+   "slug": "平均地權條例",
+   "amendments": 44,
+   "articles": 12,
+   "bills": 24
+  },
+  {
+   "law": "家庭教育法",
+   "slug": "家庭教育法",
+   "amendments": 44,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "全民健康保險法刪除",
+   "slug": "全民健康保險法刪除",
+   "amendments": 44,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "金融控股公司法",
+   "slug": "金融控股公司法",
+   "amendments": 44,
+   "articles": 7,
+   "bills": 17
+  },
+  {
+   "law": "職業安全衛生法",
+   "slug": "職業安全衛生法",
+   "amendments": 44,
+   "articles": 10,
+   "bills": 20
+  },
+  {
+   "law": "環境影響評估法",
+   "slug": "環境影響評估法",
+   "amendments": 43,
+   "articles": 8,
+   "bills": 21
+  },
+  {
+   "law": "性騷擾防治法",
+   "slug": "性騷擾防治法",
+   "amendments": 43,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "專利師法",
+   "slug": "專利師法",
+   "amendments": 43,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "農田水利會組織通則修正",
+   "slug": "農田水利會組織通則修正",
+   "amendments": 43,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "科學工業園區設置管理條例修正草案",
+   "slug": "科學工業園區設置管理條例修正草案",
+   "amendments": 43,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "運動彩券發行條例",
+   "slug": "運動彩券發行條例",
+   "amendments": 42,
+   "articles": 8,
+   "bills": 14
+  },
+  {
+   "law": "特殊境遇家庭扶助條例",
+   "slug": "特殊境遇家庭扶助條例",
+   "amendments": 42,
+   "articles": 7,
+   "bills": 23
+  },
+  {
+   "law": "國營港務股份有限公司設置條例",
+   "slug": "國營港務股份有限公司設置條例",
+   "amendments": 42,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "軍人撫卹條例",
+   "slug": "軍人撫卹條例",
+   "amendments": 42,
+   "articles": 7,
+   "bills": 12
+  },
+  {
+   "law": "軍人保險條例",
+   "slug": "軍人保險條例",
+   "amendments": 42,
+   "articles": 3,
+   "bills": 9
+  },
+  {
+   "law": "全民防衛動員準備法",
+   "slug": "全民防衛動員準備法",
+   "amendments": 42,
+   "articles": 5,
+   "bills": 12
+  },
+  {
+   "law": "國民體育法修正",
+   "slug": "國民體育法修正",
+   "amendments": 42,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公立國民小學及國民中學委託私人辦理條例修正",
+   "slug": "公立國民小學及國民中學委託私人辦理條例修正",
+   "amendments": 42,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "空氣污染防制法修正草案",
+   "slug": "空氣污染防制法修正草案",
+   "amendments": 42,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國有財產法",
+   "slug": "國有財產法",
+   "amendments": 41,
+   "articles": 9,
+   "bills": 18
+  },
+  {
+   "law": "中小企業發展條例",
+   "slug": "中小企業發展條例",
+   "amendments": 41,
+   "articles": 9,
+   "bills": 18
+  },
+  {
+   "law": "公教人員保險法修正草案",
+   "slug": "公教人員保險法修正草案",
+   "amendments": 41,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "金融消費者保護法",
+   "slug": "金融消費者保護法",
+   "amendments": 41,
+   "articles": 8,
+   "bills": 14
+  },
+  {
+   "law": "電影法修正草案",
+   "slug": "電影法修正草案",
+   "amendments": 41,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "考試院組織法",
+   "slug": "考試院組織法",
+   "amendments": 40,
+   "articles": 2,
+   "bills": 10
+  },
+  {
+   "law": "農藥管理法",
+   "slug": "農藥管理法",
+   "amendments": 40,
+   "articles": 6,
+   "bills": 11
+  },
+  {
+   "law": "投資經營非我國籍漁船管理條例修正",
+   "slug": "投資經營非我國籍漁船管理條例修正",
+   "amendments": 40,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "客家基本法修正草案",
+   "slug": "客家基本法修正草案",
+   "amendments": 40,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "緊急醫療救護法",
+   "slug": "緊急醫療救護法",
+   "amendments": 39,
+   "articles": 6,
+   "bills": 12
+  },
+  {
+   "law": "營造業法",
+   "slug": "營造業法",
+   "amendments": 39,
+   "articles": 8,
+   "bills": 15
+  },
+  {
+   "law": "性別平等教育法",
+   "slug": "性別平等教育法",
+   "amendments": 39,
+   "articles": 6,
+   "bills": 12
+  },
+  {
+   "law": "精神衛生法",
+   "slug": "精神衛生法",
+   "amendments": 39,
+   "articles": 9,
+   "bills": 18
+  },
+  {
+   "law": "國軍老舊眷村改建條例",
+   "slug": "國軍老舊眷村改建條例",
+   "amendments": 39,
+   "articles": 7,
+   "bills": 21
+  },
+  {
+   "law": "戶籍法",
+   "slug": "戶籍法",
+   "amendments": 39,
+   "articles": 8,
+   "bills": 12
+  },
+  {
+   "law": "警察法",
+   "slug": "警察法",
+   "amendments": 39,
+   "articles": 3,
+   "bills": 7
+  },
+  {
+   "law": "著作權集體管理團體條例",
+   "slug": "著作權集體管理團體條例",
+   "amendments": 39,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "中華郵政股份有限公司設置條例",
+   "slug": "中華郵政股份有限公司設置條例",
+   "amendments": 39,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "要塞堡壘地帶法修正草案",
+   "slug": "要塞堡壘地帶法修正草案",
+   "amendments": 39,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "原住民身分法修正草案",
+   "slug": "原住民身分法修正草案",
+   "amendments": 39,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "兵役法",
+   "slug": "兵役法",
+   "amendments": 38,
+   "articles": 11,
+   "bills": 24
+  },
+  {
+   "law": "法律扶助法",
+   "slug": "法律扶助法",
+   "amendments": 38,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "洗錢防制法",
+   "slug": "洗錢防制法",
+   "amendments": 38,
+   "articles": 7,
+   "bills": 18
+  },
+  {
+   "law": "公務人員退休資遣撫卹法",
+   "slug": "公務人員退休資遣撫卹法",
+   "amendments": 38,
+   "articles": 8,
+   "bills": 17
+  },
+  {
+   "law": "國家賠償法",
+   "slug": "國家賠償法",
+   "amendments": 37,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "香港澳門關係條例",
+   "slug": "香港澳門關係條例",
+   "amendments": 37,
+   "articles": 9,
+   "bills": 17
+  },
+  {
+   "law": "心理師法",
+   "slug": "心理師法",
+   "amendments": 37,
+   "articles": 5,
+   "bills": 14
+  },
+  {
+   "law": "助產人員法",
+   "slug": "助產人員法",
+   "amendments": 37,
+   "articles": 5,
+   "bills": 11
+  },
+  {
+   "law": "內政部入出國及移民署組織法修正草案",
+   "slug": "內政部入出國及移民署組織法修正草案",
+   "amendments": 36,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "優生保健法",
+   "slug": "優生保健法",
+   "amendments": 36,
+   "articles": 5,
+   "bills": 12
+  },
+  {
+   "law": "證券交易稅條例",
+   "slug": "證券交易稅條例",
+   "amendments": 36,
+   "articles": 3,
+   "bills": 18
+  },
+  {
+   "law": "公共債務法修正",
+   "slug": "公共債務法修正",
+   "amendments": 36,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "司法院大法官審理案件法修正",
+   "slug": "司法院大法官審理案件法修正",
+   "amendments": 36,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "商標法",
+   "slug": "商標法",
+   "amendments": 36,
+   "articles": 4,
+   "bills": 10
+  },
+  {
+   "law": "健康食品管理法",
+   "slug": "健康食品管理法",
+   "amendments": 35,
+   "articles": 8,
+   "bills": 14
+  },
+  {
+   "law": "遺產及贈與稅法",
+   "slug": "遺產及贈與稅法",
+   "amendments": 35,
+   "articles": 10,
+   "bills": 24
+  },
+  {
+   "law": "軍事審判法",
+   "slug": "軍事審判法",
+   "amendments": 35,
+   "articles": 5,
+   "bills": 13
+  },
+  {
+   "law": "公務人員退休撫卹基金管理委員會組織條例修正草案",
+   "slug": "公務人員退休撫卹基金管理委員會組織條例修正草案",
+   "amendments": 35,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公證法",
+   "slug": "公證法",
+   "amendments": 34,
+   "articles": 4,
+   "bills": 8
+  },
+  {
+   "law": "消費者債務清理條例",
+   "slug": "消費者債務清理條例",
+   "amendments": 34,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "兒童及少年性交易防制條例修正草案",
+   "slug": "兒童及少年性交易防制條例修正草案",
+   "amendments": 34,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "家事事件法",
+   "slug": "家事事件法",
+   "amendments": 34,
+   "articles": 10,
+   "bills": 11
+  },
+  {
+   "law": "原住民族教育法修正",
+   "slug": "原住民族教育法修正",
+   "amendments": 34,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "專科學校法",
+   "slug": "專科學校法",
+   "amendments": 33,
+   "articles": 10,
+   "bills": 12
+  },
+  {
+   "law": "貪污治罪條例",
+   "slug": "貪污治罪條例",
+   "amendments": 33,
+   "articles": 8,
+   "bills": 15
+  },
+  {
+   "law": "優生保健法修正",
+   "slug": "優生保健法修正",
+   "amendments": 33,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家情報工作法",
+   "slug": "國家情報工作法",
+   "amendments": 33,
+   "articles": 5,
+   "bills": 8
+  },
+  {
+   "law": "學位授予法",
+   "slug": "學位授予法",
+   "amendments": 33,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "商業登記法",
+   "slug": "商業登記法",
+   "amendments": 32,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "天然氣事業法",
+   "slug": "天然氣事業法",
+   "amendments": 32,
+   "articles": 7,
+   "bills": 9
+  },
+  {
+   "law": "學校型態實驗教育實施條例",
+   "slug": "學校型態實驗教育實施條例",
+   "amendments": 32,
+   "articles": 5,
+   "bills": 10
+  },
+  {
+   "law": "飛航事故調查法",
+   "slug": "飛航事故調查法",
+   "amendments": 31,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "師資培育法修正草案",
+   "slug": "師資培育法修正草案",
+   "amendments": 31,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "高級中等以下教育階段非學校型態實驗教育實施條例修正草案",
+   "slug": "高級中等以下教育階段非學校型態實驗教育實施條例修正草案",
+   "amendments": 31,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "學校型態實驗教育實施條例修正",
+   "slug": "學校型態實驗教育實施條例修正",
+   "amendments": 31,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "華僑回國投資條例修正草案",
+   "slug": "華僑回國投資條例修正草案",
+   "amendments": 31,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院組織法",
+   "slug": "行政院組織法",
+   "amendments": 30,
+   "articles": 6,
+   "bills": 18
+  },
+  {
+   "law": "地政士法",
+   "slug": "地政士法",
+   "amendments": 30,
+   "articles": 5,
+   "bills": 12
+  },
+  {
+   "law": "航業法修正草案",
+   "slug": "航業法修正草案",
+   "amendments": 30,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "戒嚴時期人民受損權利回復條例",
+   "slug": "戒嚴時期人民受損權利回復條例",
+   "amendments": 30,
+   "articles": 3,
+   "bills": 8
+  },
+  {
+   "law": "公共債務法",
+   "slug": "公共債務法",
+   "amendments": 30,
+   "articles": 8,
+   "bills": 14
+  },
+  {
+   "law": "二二八事件處理及賠償條例",
+   "slug": "二二八事件處理及賠償條例",
+   "amendments": 30,
+   "articles": 3,
+   "bills": 8
+  },
+  {
+   "law": "人體器官移植條例",
+   "slug": "人體器官移植條例",
+   "amendments": 30,
+   "articles": 5,
+   "bills": 8
+  },
+  {
+   "law": "公務人員考試法修正草案",
+   "slug": "公務人員考試法修正草案",
+   "amendments": 30,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "學校型態實驗教育實施條例修正草案",
+   "slug": "學校型態實驗教育實施條例修正草案",
+   "amendments": 30,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "文化創意產業發展法修正草案",
+   "slug": "文化創意產業發展法修正草案",
+   "amendments": 30,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "外國人投資條例修正草案",
+   "slug": "外國人投資條例修正草案",
+   "amendments": 30,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "漁會法",
+   "slug": "漁會法",
+   "amendments": 29,
+   "articles": 9,
+   "bills": 12
+  },
+  {
+   "law": "土地稅法",
+   "slug": "土地稅法",
+   "amendments": 29,
+   "articles": 12,
+   "bills": 22
+  },
+  {
+   "law": "行政法院組織法",
+   "slug": "行政法院組織法",
+   "amendments": 29,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "電子票證發行管理條例",
+   "slug": "電子票證發行管理條例",
+   "amendments": 29,
+   "articles": 8,
+   "bills": 8
+  },
+  {
+   "law": "不動產經紀業管理條例",
+   "slug": "不動產經紀業管理條例",
+   "amendments": 29,
+   "articles": 5,
+   "bills": 10
+  },
+  {
+   "law": "槍砲彈藥刀械管制條例",
+   "slug": "槍砲彈藥刀械管制條例",
+   "amendments": 29,
+   "articles": 4,
+   "bills": 15
+  },
+  {
+   "law": "使用牌照稅法",
+   "slug": "使用牌照稅法",
+   "amendments": 29,
+   "articles": 9,
+   "bills": 19
+  },
+  {
+   "law": "調度司法警察條例修正",
+   "slug": "調度司法警察條例修正",
+   "amendments": 29,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民法繼承編",
+   "slug": "民法繼承編",
+   "amendments": 29,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公立學校教職員退休資遣撫卹條例",
+   "slug": "公立學校教職員退休資遣撫卹條例",
+   "amendments": 29,
+   "articles": 7,
+   "bills": 18
+  },
+  {
+   "law": "內政部空中勤務總隊組織法修正草案",
+   "slug": "內政部空中勤務總隊組織法修正草案",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "動物傳染病防治條例",
+   "slug": "動物傳染病防治條例",
+   "amendments": 28,
+   "articles": 6,
+   "bills": 10
+  },
+  {
+   "law": "衛星廣播電視法",
+   "slug": "衛星廣播電視法",
+   "amendments": 28,
+   "articles": 8,
+   "bills": 11
+  },
+  {
+   "law": "工廠管理輔導法",
+   "slug": "工廠管理輔導法",
+   "amendments": 28,
+   "articles": 5,
+   "bills": 13
+  },
+  {
+   "law": "特殊教育法",
+   "slug": "特殊教育法",
+   "amendments": 28,
+   "articles": 8,
+   "bills": 11
+  },
+  {
+   "law": "專門職業及技術人員考試法修正草案",
+   "slug": "專門職業及技術人員考試法修正草案",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "醫事放射師法",
+   "slug": "醫事放射師法",
+   "amendments": 28,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "醫事檢驗師法",
+   "slug": "醫事檢驗師法",
+   "amendments": 28,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "菸酒管理法修正草案",
+   "slug": "菸酒管理法修正草案",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "軍事教育條例",
+   "slug": "軍事教育條例",
+   "amendments": 28,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "公寓大廈管理條例修正",
+   "slug": "公寓大廈管理條例修正",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務員懲戒委員會組織法修正草案",
+   "slug": "公務員懲戒委員會組織法修正草案",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "文化資產保存法修正草案",
+   "slug": "文化資產保存法修正草案",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "調度司法警察條例修正草案",
+   "slug": "調度司法警察條例修正草案",
+   "amendments": 28,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "兒童及少年性剝削防制條例",
+   "slug": "兒童及少年性剝削防制條例",
+   "amendments": 28,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "共同管道法",
+   "slug": "共同管道法",
+   "amendments": 27,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "農業發展條例",
+   "slug": "農業發展條例",
+   "amendments": 27,
+   "articles": 13,
+   "bills": 18
+  },
+  {
+   "law": "中央行政機關組織基準法",
+   "slug": "中央行政機關組織基準法",
+   "amendments": 27,
+   "articles": 11,
+   "bills": 14
+  },
+  {
+   "law": "警察人員人事條例",
+   "slug": "警察人員人事條例",
+   "amendments": 27,
+   "articles": 8,
+   "bills": 17
+  },
+  {
+   "law": "規費法",
+   "slug": "規費法",
+   "amendments": 27,
+   "articles": 5,
+   "bills": 20
+  },
+  {
+   "law": "律師法",
+   "slug": "律師法",
+   "amendments": 27,
+   "articles": 8,
+   "bills": 15
+  },
+  {
+   "law": "智慧財產法院組織法",
+   "slug": "智慧財產法院組織法",
+   "amendments": 27,
+   "articles": 6,
+   "bills": 7
+  },
+  {
+   "law": "物理治療師法",
+   "slug": "物理治療師法",
+   "amendments": 27,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "原住民身分法",
+   "slug": "原住民身分法",
+   "amendments": 27,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "中央研究院組織法修正",
+   "slug": "中央研究院組織法修正",
+   "amendments": 27,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "低放射性廢棄物最終處置設施場址設置條例修正",
+   "slug": "低放射性廢棄物最終處置設施場址設置條例修正",
+   "amendments": 27,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "強迫入學條例",
+   "slug": "強迫入學條例",
+   "amendments": 26,
+   "articles": 5,
+   "bills": 17
+  },
+  {
+   "law": "藥師法",
+   "slug": "藥師法",
+   "amendments": 26,
+   "articles": 7,
+   "bills": 21
+  },
+  {
+   "law": "植物防疫檢疫法",
+   "slug": "植物防疫檢疫法",
+   "amendments": 26,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "強制汽車責任保險法",
+   "slug": "強制汽車責任保險法",
+   "amendments": 26,
+   "articles": 8,
+   "bills": 11
+  },
+  {
+   "law": "中華民國刑法刪除",
+   "slug": "中華民國刑法刪除",
+   "amendments": 26,
+   "articles": 5,
+   "bills": 14
+  },
+  {
+   "law": "金融機構合併法",
+   "slug": "金融機構合併法",
+   "amendments": 26,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "全民國防教育法",
+   "slug": "全民國防教育法",
+   "amendments": 26,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "期貨交易法",
+   "slug": "期貨交易法",
+   "amendments": 26,
+   "articles": 7,
+   "bills": 8
+  },
+  {
+   "law": "國際機場園區發展條例",
+   "slug": "國際機場園區發展條例",
+   "amendments": 25,
+   "articles": 6,
+   "bills": 17
+  },
+  {
+   "law": "土地法",
+   "slug": "土地法",
+   "amendments": 25,
+   "articles": 12,
+   "bills": 19
+  },
+  {
+   "law": "監察法",
+   "slug": "監察法",
+   "amendments": 25,
+   "articles": 9,
+   "bills": 15
+  },
+  {
+   "law": "公務人員保障法",
+   "slug": "公務人員保障法",
+   "amendments": 25,
+   "articles": 6,
+   "bills": 8
+  },
+  {
+   "law": "志願士兵服役條例",
+   "slug": "志願士兵服役條例",
+   "amendments": 25,
+   "articles": 2,
+   "bills": 8
+  },
+  {
+   "law": "財團法人國家衛生研究院設置條例",
+   "slug": "財團法人國家衛生研究院設置條例",
+   "amendments": 25,
+   "articles": 4,
+   "bills": 10
+  },
+  {
+   "law": "師資培育法",
+   "slug": "師資培育法",
+   "amendments": 25,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "終身學習法修正草案",
+   "slug": "終身學習法修正草案",
+   "amendments": 25,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "終身學習法",
+   "slug": "終身學習法",
+   "amendments": 25,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "外交部及駐外館處文件證明條例",
+   "slug": "外交部及駐外館處文件證明條例",
+   "amendments": 25,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "陸海空軍勳賞條例修正草案",
+   "slug": "陸海空軍勳賞條例修正草案",
+   "amendments": 25,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員考試法",
+   "slug": "公務人員考試法",
+   "amendments": 24,
+   "articles": 7,
+   "bills": 12
+  },
+  {
+   "law": "農產品市場交易法",
+   "slug": "農產品市場交易法",
+   "amendments": 24,
+   "articles": 7,
+   "bills": 13
+  },
+  {
+   "law": "花東地區發展條例",
+   "slug": "花東地區發展條例",
+   "amendments": 24,
+   "articles": 2,
+   "bills": 8
+  },
+  {
+   "law": "非訟事件法",
+   "slug": "非訟事件法",
+   "amendments": 24,
+   "articles": 6,
+   "bills": 8
+  },
+  {
+   "law": "外役監條例",
+   "slug": "外役監條例",
+   "amendments": 24,
+   "articles": 3,
+   "bills": 11
+  },
+  {
+   "law": "調度司法警察條例",
+   "slug": "調度司法警察條例",
+   "amendments": 24,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "職能治療師法",
+   "slug": "職能治療師法",
+   "amendments": 24,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "票券金融管理法",
+   "slug": "票券金融管理法",
+   "amendments": 24,
+   "articles": 3,
+   "bills": 7
+  },
+  {
+   "law": "洗錢防制法修正草案",
+   "slug": "洗錢防制法修正草案",
+   "amendments": 24,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "人口販運防制法修正",
+   "slug": "人口販運防制法修正",
+   "amendments": 24,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "學位授予法修正",
+   "slug": "學位授予法修正",
+   "amendments": 24,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "再生能源發展條例修正草案",
+   "slug": "再生能源發展條例修正草案",
+   "amendments": 24,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "工會法",
+   "slug": "工會法",
+   "amendments": 23,
+   "articles": 8,
+   "bills": 16
+  },
+  {
+   "law": "少年及家事法院組織法",
+   "slug": "少年及家事法院組織法",
+   "amendments": 23,
+   "articles": 5,
+   "bills": 5
+  },
+  {
+   "law": "職業災害勞工保護法修正草案",
+   "slug": "職業災害勞工保護法修正草案",
+   "amendments": 23,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "勞工安全衛生法",
+   "slug": "勞工安全衛生法",
+   "amendments": 23,
+   "articles": 8,
+   "bills": 9
+  },
+  {
+   "law": "公益勸募條例修正",
+   "slug": "公益勸募條例修正",
+   "amendments": 23,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "菸酒稅法",
+   "slug": "菸酒稅法",
+   "amendments": 23,
+   "articles": 3,
+   "bills": 16
+  },
+  {
+   "law": "建築師法",
+   "slug": "建築師法",
+   "amendments": 23,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "原住民族基本法",
+   "slug": "原住民族基本法",
+   "amendments": 23,
+   "articles": 9,
+   "bills": 14
+  },
+  {
+   "law": "航業法",
+   "slug": "航業法",
+   "amendments": 23,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "國立大學校院校務基金設置條例修正草案",
+   "slug": "國立大學校院校務基金設置條例修正草案",
+   "amendments": 23,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "法律扶助法修正草案",
+   "slug": "法律扶助法修正草案",
+   "amendments": 23,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "長期照顧服務法",
+   "slug": "長期照顧服務法",
+   "amendments": 23,
+   "articles": 7,
+   "bills": 10
+  },
+  {
+   "law": "海洋委員會海巡署組織法修正",
+   "slug": "海洋委員會海巡署組織法修正",
+   "amendments": 23,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公職人員財產申報法",
+   "slug": "公職人員財產申報法",
+   "amendments": 22,
+   "articles": 8,
+   "bills": 14
+  },
+  {
+   "law": "地方民意代表費用支給及村里長事務補助費補助條例",
+   "slug": "地方民意代表費用支給及村里長事務補助費補助條例",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 14
+  },
+  {
+   "law": "土石採取法",
+   "slug": "土石採取法",
+   "amendments": 22,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "公共場所母乳哺育條例",
+   "slug": "公共場所母乳哺育條例",
+   "amendments": 22,
+   "articles": 3,
+   "bills": 14
+  },
+  {
+   "law": "性侵害犯罪防治法",
+   "slug": "性侵害犯罪防治法",
+   "amendments": 22,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "漢翔航空工業股份有限公司設置條例修正草案",
+   "slug": "漢翔航空工業股份有限公司設置條例修正草案",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "食品衛生管理法修正草案",
+   "slug": "食品衛生管理法修正草案",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "關務人員人事條例修正草案",
+   "slug": "關務人員人事條例修正草案",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "政務人員退職撫卹條例",
+   "slug": "政務人員退職撫卹條例",
+   "amendments": 22,
+   "articles": 5,
+   "bills": 11
+  },
+  {
+   "law": "海洋委員會海洋保育署組織法修正",
+   "slug": "海洋委員會海洋保育署組織法修正",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "國民體育法修正草案",
+   "slug": "國民體育法修正草案",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "原住民保留地禁伐補償及造林回饋條例修正",
+   "slug": "原住民保留地禁伐補償及造林回饋條例修正",
+   "amendments": 22,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "教育基本法",
+   "slug": "教育基本法",
+   "amendments": 21,
+   "articles": 9,
+   "bills": 16
+  },
+  {
+   "law": "民事訴訟法施行法",
+   "slug": "民事訴訟法施行法",
+   "amendments": 21,
+   "articles": 4,
+   "bills": 11
+  },
+  {
+   "law": "商業團體法",
+   "slug": "商業團體法",
+   "amendments": 21,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "勞資爭議處理法",
+   "slug": "勞資爭議處理法",
+   "amendments": 21,
+   "articles": 10,
+   "bills": 15
+  },
+  {
+   "law": "大量解僱勞工保護法",
+   "slug": "大量解僱勞工保護法",
+   "amendments": 21,
+   "articles": 8,
+   "bills": 12
+  },
+  {
+   "law": "原住民族教育法",
+   "slug": "原住民族教育法",
+   "amendments": 21,
+   "articles": 9,
+   "bills": 17
+  },
+  {
+   "law": "通訊傳播基本法",
+   "slug": "通訊傳播基本法",
+   "amendments": 21,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "交通部公路總局組織條例修正",
+   "slug": "交通部公路總局組織條例修正",
+   "amendments": 21,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公益彩券發行條例",
+   "slug": "公益彩券發行條例",
+   "amendments": 20,
+   "articles": 5,
+   "bills": 13
+  },
+  {
+   "law": "兒童及少年性交易防制條例",
+   "slug": "兒童及少年性交易防制條例",
+   "amendments": 20,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "商品標示法",
+   "slug": "商品標示法",
+   "amendments": 20,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "妨害兵役治罪條例",
+   "slug": "妨害兵役治罪條例",
+   "amendments": 20,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "金融機構合併法修正草案",
+   "slug": "金融機構合併法修正草案",
+   "amendments": 20,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "統計法修正",
+   "slug": "統計法修正",
+   "amendments": 20,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "原住民族教育法修正草案",
+   "slug": "原住民族教育法修正草案",
+   "amendments": 20,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "補習及進修教育法",
+   "slug": "補習及進修教育法",
+   "amendments": 19,
+   "articles": 4,
+   "bills": 16
+  },
+  {
+   "law": "有線廣播電視法修正草案",
+   "slug": "有線廣播電視法修正草案",
+   "amendments": 19,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "學校教職員撫卹條例修正草案",
+   "slug": "學校教職員撫卹條例修正草案",
+   "amendments": 19,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "有線廣播電視法修正",
+   "slug": "有線廣播電視法修正",
+   "amendments": 19,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "儲蓄互助社法",
+   "slug": "儲蓄互助社法",
+   "amendments": 19,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "證人保護法",
+   "slug": "證人保護法",
+   "amendments": 19,
+   "articles": 3,
+   "bills": 10
+  },
+  {
+   "law": "山坡地保育利用條例",
+   "slug": "山坡地保育利用條例",
+   "amendments": 19,
+   "articles": 3,
+   "bills": 12
+  },
+  {
+   "law": "文化創意產業發展法",
+   "slug": "文化創意產業發展法",
+   "amendments": 19,
+   "articles": 4,
+   "bills": 12
+  },
+  {
+   "law": "投資經營非我國籍漁船管理條例修正草案",
+   "slug": "投資經營非我國籍漁船管理條例修正草案",
+   "amendments": 19,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員任用法",
+   "slug": "公務人員任用法",
+   "amendments": 18,
+   "articles": 7,
+   "bills": 12
+  },
+  {
+   "law": "志願服務法",
+   "slug": "志願服務法",
+   "amendments": 18,
+   "articles": 6,
+   "bills": 11
+  },
+  {
+   "law": "癌症防治法",
+   "slug": "癌症防治法",
+   "amendments": 18,
+   "articles": 5,
+   "bills": 10
+  },
+  {
+   "law": "特種貨物及勞務稅條例",
+   "slug": "特種貨物及勞務稅條例",
+   "amendments": 18,
+   "articles": 8,
+   "bills": 12
+  },
+  {
+   "law": "公職人員利益衝突迴避法",
+   "slug": "公職人員利益衝突迴避法",
+   "amendments": 18,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "科學技術基本法",
+   "slug": "科學技術基本法",
+   "amendments": 18,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "信用合作社法",
+   "slug": "信用合作社法",
+   "amendments": 18,
+   "articles": 4,
+   "bills": 8
+  },
+  {
+   "law": "票據法",
+   "slug": "票據法",
+   "amendments": 18,
+   "articles": 6,
+   "bills": 13
+  },
+  {
+   "law": "農業科技園區設置管理條例",
+   "slug": "農業科技園區設置管理條例",
+   "amendments": 18,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "前瞻基礎建設特別條例",
+   "slug": "前瞻基礎建設特別條例",
+   "amendments": 18,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "海岸巡防法修正草案",
+   "slug": "海岸巡防法修正草案",
+   "amendments": 18,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "強制執行法",
+   "slug": "強制執行法",
+   "amendments": 17,
+   "articles": 9,
+   "bills": 10
+  },
+  {
+   "law": "主計機構人員設置管理條例修正草案",
+   "slug": "主計機構人員設置管理條例修正草案",
+   "amendments": 17,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "保全業法",
+   "slug": "保全業法",
+   "amendments": 17,
+   "articles": 3,
+   "bills": 13
+  },
+  {
+   "law": "中央研究院組織法",
+   "slug": "中央研究院組織法",
+   "amendments": 17,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "姓名條例修正草案",
+   "slug": "姓名條例修正草案",
+   "amendments": 17,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "口腔健康法",
+   "slug": "口腔健康法",
+   "amendments": 17,
+   "articles": 2,
+   "bills": 6
+  },
+  {
+   "law": "教育部組織法",
+   "slug": "教育部組織法",
+   "amendments": 17,
+   "articles": 3,
+   "bills": 11
+  },
+  {
+   "law": "警察獎章條例修正",
+   "slug": "警察獎章條例修正",
+   "amendments": 17,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "高級中等以下教育階段非學校型態實驗教育實施條例",
+   "slug": "高級中等以下教育階段非學校型態實驗教育實施條例",
+   "amendments": 17,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "監獄行刑法修正草案",
+   "slug": "監獄行刑法修正草案",
+   "amendments": 17,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "陸海空軍軍官士官任職條例",
+   "slug": "陸海空軍軍官士官任職條例",
+   "amendments": 16,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "司法院司法人員研習所組織條例修正草案",
+   "slug": "司法院司法人員研習所組織條例修正草案",
+   "amendments": 16,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "司法院組織法",
+   "slug": "司法院組織法",
+   "amendments": 16,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "國家金融安定基金設置及管理條例",
+   "slug": "國家金融安定基金設置及管理條例",
+   "amendments": 16,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "營業秘密法",
+   "slug": "營業秘密法",
+   "amendments": 16,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "公平交易法",
+   "slug": "公平交易法",
+   "amendments": 16,
+   "articles": 7,
+   "bills": 9
+  },
+  {
+   "law": "監獄行刑法",
+   "slug": "監獄行刑法",
+   "amendments": 16,
+   "articles": 9,
+   "bills": 12
+  },
+  {
+   "law": "財團法人原住民族文化事業基金會設置條例",
+   "slug": "財團法人原住民族文化事業基金會設置條例",
+   "amendments": 16,
+   "articles": 6,
+   "bills": 7
+  },
+  {
+   "law": "簡易人壽保險法",
+   "slug": "簡易人壽保險法",
+   "amendments": 16,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "電影法",
+   "slug": "電影法",
+   "amendments": 16,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "原住民族工作權保障法",
+   "slug": "原住民族工作權保障法",
+   "amendments": 16,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "老年農民福利津貼暫行條例",
+   "slug": "老年農民福利津貼暫行條例",
+   "amendments": 15,
+   "articles": 3,
+   "bills": 12
+  },
+  {
+   "law": "核子事故緊急應變法",
+   "slug": "核子事故緊急應變法",
+   "amendments": 15,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "訴願法",
+   "slug": "訴願法",
+   "amendments": 15,
+   "articles": 7,
+   "bills": 11
+  },
+  {
+   "law": "農田水利會組織通則",
+   "slug": "農田水利會組織通則",
+   "amendments": 15,
+   "articles": 5,
+   "bills": 6
+  },
+  {
+   "law": "社會工作師法",
+   "slug": "社會工作師法",
+   "amendments": 15,
+   "articles": 5,
+   "bills": 9
+  },
+  {
+   "law": "耕地三七五減租條例",
+   "slug": "耕地三七五減租條例",
+   "amendments": 15,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "區域計畫法",
+   "slug": "區域計畫法",
+   "amendments": 15,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "司法院組織法修正草案",
+   "slug": "司法院組織法修正草案",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "勞工保險條例修正草案",
+   "slug": "勞工保險條例修正草案",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "住宅法修正",
+   "slug": "住宅法修正",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "再生能源發展條例修正",
+   "slug": "再生能源發展條例修正",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "飛航事故調查法修正草案",
+   "slug": "飛航事故調查法修正草案",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員退休撫卹基金監理委員會組織條例修正草案",
+   "slug": "公務人員退休撫卹基金監理委員會組織條例修正草案",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員退休撫卹基金管理條例修正草案",
+   "slug": "公務人員退休撫卹基金管理條例修正草案",
+   "amendments": 15,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "華僑身分證明條例",
+   "slug": "華僑身分證明條例",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "教育經費編列與管理法",
+   "slug": "教育經費編列與管理法",
+   "amendments": 14,
+   "articles": 3,
+   "bills": 10
+  },
+  {
+   "law": "公務員服務法",
+   "slug": "公務員服務法",
+   "amendments": 14,
+   "articles": 5,
+   "bills": 13
+  },
+  {
+   "law": "會計法",
+   "slug": "會計法",
+   "amendments": 14,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "地籍清理條例",
+   "slug": "地籍清理條例",
+   "amendments": 14,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "學校教職員退休條例修正",
+   "slug": "學校教職員退休條例修正",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "圖書館法",
+   "slug": "圖書館法",
+   "amendments": 14,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "公務人員退休撫卹基金管理條例",
+   "slug": "公務人員退休撫卹基金管理條例",
+   "amendments": 14,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "公教人員保險法修正",
+   "slug": "公教人員保險法修正",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法親屬編、繼承編",
+   "slug": "民法親屬編繼承編",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "教育會法",
+   "slug": "教育會法",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "會計師法",
+   "slug": "會計師法",
+   "amendments": 14,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "決算法",
+   "slug": "決算法",
+   "amendments": 14,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "國家海洋研究院組織法修正",
+   "slug": "國家海洋研究院組織法修正",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "航路標識條例修正草案",
+   "slug": "航路標識條例修正草案",
+   "amendments": 14,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "典試法修正草案",
+   "slug": "典試法修正草案",
+   "amendments": 13,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民防法",
+   "slug": "民防法",
+   "amendments": 13,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "學校法人及其所屬私立學校教職員退休撫卹離職資遣條例",
+   "slug": "學校法人及其所屬私立學校教職員退休撫卹離職資遣條例",
+   "amendments": 13,
+   "articles": 6,
+   "bills": 7
+  },
+  {
+   "law": "公務人員訓練進修法",
+   "slug": "公務人員訓練進修法",
+   "amendments": 13,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "褒揚條例",
+   "slug": "褒揚條例",
+   "amendments": 13,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "市區道路條例",
+   "slug": "市區道路條例",
+   "amendments": 13,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "司法院大法官審理案件法",
+   "slug": "司法院大法官審理案件法",
+   "amendments": 13,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "教育人員任用條例",
+   "slug": "教育人員任用條例",
+   "amendments": 13,
+   "articles": 8,
+   "bills": 13
+  },
+  {
+   "law": "駐外外交領事人員任用條例修正草案",
+   "slug": "駐外外交領事人員任用條例修正草案",
+   "amendments": 13,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "姓名條例",
+   "slug": "姓名條例",
+   "amendments": 13,
+   "articles": 6,
+   "bills": 8
+  },
+  {
+   "law": "噪音管制法",
+   "slug": "噪音管制法",
+   "amendments": 13,
+   "articles": 6,
+   "bills": 9
+  },
+  {
+   "law": "技術及職業教育法",
+   "slug": "技術及職業教育法",
+   "amendments": 13,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "原住民身分法修正",
+   "slug": "原住民身分法修正",
+   "amendments": 13,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "空氣污染防制法修正",
+   "slug": "空氣污染防制法修正",
+   "amendments": 13,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "冷凍空調業管理條例",
+   "slug": "冷凍空調業管理條例",
+   "amendments": 13,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "娛樂稅法",
+   "slug": "娛樂稅法",
+   "amendments": 12,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "水患治理特別條例",
+   "slug": "水患治理特別條例",
+   "amendments": 12,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "自由貿易港區設置管理條例",
+   "slug": "自由貿易港區設置管理條例",
+   "amendments": 12,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "中央選舉委員會組織法",
+   "slug": "中央選舉委員會組織法",
+   "amendments": 12,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "環境教育法",
+   "slug": "環境教育法",
+   "amendments": 12,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "提審法修正草案",
+   "slug": "提審法修正草案",
+   "amendments": 12,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "食品衛生管理法部分修正",
+   "slug": "食品衛生管理法部分修正",
+   "amendments": 12,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "證券投資信託及顧問法",
+   "slug": "證券投資信託及顧問法",
+   "amendments": 12,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "停車場法",
+   "slug": "停車場法",
+   "amendments": 12,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "海洋委員會組織法修正",
+   "slug": "海洋委員會組織法修正",
+   "amendments": 12,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "飛航安全調查委員會組織法修正草案",
+   "slug": "飛航安全調查委員會組織法修正草案",
+   "amendments": 12,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "農產品生產及驗證管理法修正",
+   "slug": "農產品生產及驗證管理法修正",
+   "amendments": 12,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "懲治走私條例",
+   "slug": "懲治走私條例",
+   "amendments": 11,
+   "articles": 2,
+   "bills": 7
+  },
+  {
+   "law": "生技新藥產業發展條例",
+   "slug": "生技新藥產業發展條例",
+   "amendments": 11,
+   "articles": 2,
+   "bills": 7
+  },
+  {
+   "law": "中華民國紅十字會法",
+   "slug": "中華民國紅十字會法",
+   "amendments": 11,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "土壤及地下水污染整治法",
+   "slug": "土壤及地下水污染整治法",
+   "amendments": 11,
+   "articles": 5,
+   "bills": 6
+  },
+  {
+   "law": "法院組織法刪除",
+   "slug": "法院組織法刪除",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 10
+  },
+  {
+   "law": "金融監督管理委員會組織法",
+   "slug": "金融監督管理委員會組織法",
+   "amendments": 11,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "無線電視事業公股處理條例",
+   "slug": "無線電視事業公股處理條例",
+   "amendments": 11,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "公平交易法修正草案",
+   "slug": "公平交易法修正草案",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "陸海空軍服制條例修正草案",
+   "slug": "陸海空軍服制條例修正草案",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "管理外匯條例",
+   "slug": "管理外匯條例",
+   "amendments": 11,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "信託業法",
+   "slug": "信託業法",
+   "amendments": 11,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "特種勤務條例",
+   "slug": "特種勤務條例",
+   "amendments": 11,
+   "articles": 5,
+   "bills": 7
+  },
+  {
+   "law": "交通部郵電事業人員退休撫卹條例",
+   "slug": "交通部郵電事業人員退休撫卹條例",
+   "amendments": 11,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "藝術教育法",
+   "slug": "藝術教育法",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "溫室氣體減量及管理法",
+   "slug": "溫室氣體減量及管理法",
+   "amendments": 11,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "郵政法",
+   "slug": "郵政法",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公立國民小學及國民中學委託私人辦理條例修正草案",
+   "slug": "公立國民小學及國民中學委託私人辦理條例修正草案",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "統計法修正草案",
+   "slug": "統計法修正草案",
+   "amendments": 11,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "安寧緩和醫療條例",
+   "slug": "安寧緩和醫療條例",
+   "amendments": 10,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "獎勵民間參與交通建設條例",
+   "slug": "獎勵民間參與交通建設條例",
+   "amendments": 10,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "藥害救濟法",
+   "slug": "藥害救濟法",
+   "amendments": 10,
+   "articles": 1,
+   "bills": 6
+  },
+  {
+   "law": "科學工業園區設置管理條例",
+   "slug": "科學工業園區設置管理條例",
+   "amendments": 10,
+   "articles": 5,
+   "bills": 9
+  },
+  {
+   "law": "房屋稅條例",
+   "slug": "房屋稅條例",
+   "amendments": 10,
+   "articles": 4,
+   "bills": 9
+  },
+  {
+   "law": "證券投資人及期貨交易人保護法",
+   "slug": "證券投資人及期貨交易人保護法",
+   "amendments": 10,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "工廠法",
+   "slug": "工廠法",
+   "amendments": 10,
+   "articles": 4,
+   "bills": 7
+  },
+  {
+   "law": "流域綜合治理特別條例",
+   "slug": "流域綜合治理特別條例",
+   "amendments": 10,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "總統副總統文物管理條例",
+   "slug": "總統副總統文物管理條例",
+   "amendments": 10,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "公益彩券發行條例修正",
+   "slug": "公益彩券發行條例修正",
+   "amendments": 10,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公民與政治權利國際公約及經濟社會文化權利國際公約施行法修正",
+   "slug": "公民與政治權利國際公約及經濟社會文化權利國際公約施行法修正",
+   "amendments": 10,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "記帳士法",
+   "slug": "記帳士法",
+   "amendments": 9,
+   "articles": 3,
+   "bills": 8
+  },
+  {
+   "law": "公務人員行政中立法",
+   "slug": "公務人員行政中立法",
+   "amendments": 9,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "衛星廣播電視法修正",
+   "slug": "衛星廣播電視法修正",
+   "amendments": 9,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "核子反應器設施管制法",
+   "slug": "核子反應器設施管制法",
+   "amendments": 9,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "公務人員陞遷法",
+   "slug": "公務人員陞遷法",
+   "amendments": 9,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "發展大眾運輸條例",
+   "slug": "發展大眾運輸條例",
+   "amendments": 9,
+   "articles": 5,
+   "bills": 6
+  },
+  {
+   "law": "呼吸治療師法",
+   "slug": "呼吸治療師法",
+   "amendments": 9,
+   "articles": 3,
+   "bills": 7
+  },
+  {
+   "law": "外國人投資條例",
+   "slug": "外國人投資條例",
+   "amendments": 9,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "刑事補償法",
+   "slug": "刑事補償法",
+   "amendments": 9,
+   "articles": 5,
+   "bills": 5
+  },
+  {
+   "law": "企業併購法修正草案",
+   "slug": "企業併購法修正草案",
+   "amendments": 9,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "陸海空軍勳賞條例",
+   "slug": "陸海空軍勳賞條例",
+   "amendments": 9,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "中華民國紅十字會法修正草案",
+   "slug": "中華民國紅十字會法修正草案",
+   "amendments": 9,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "納稅者權利保護法",
+   "slug": "納稅者權利保護法",
+   "amendments": 9,
+   "articles": 6,
+   "bills": 8
+  },
+  {
+   "law": "能源管理法部份",
+   "slug": "能源管理法部份",
+   "amendments": 9,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "嚴重特殊傳染性肺炎防治及紓困振興特別條例",
+   "slug": "嚴重特殊傳染性肺炎防治及紓困振興特別條例",
+   "amendments": 9,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "學校教職員退休條例修正草案",
+   "slug": "學校教職員退休條例修正草案",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "卸任總統副總統禮遇條例",
+   "slug": "卸任總統副總統禮遇條例",
+   "amendments": 8,
+   "articles": 2,
+   "bills": 6
+  },
+  {
+   "law": "交通事業人員任用條例",
+   "slug": "交通事業人員任用條例",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "財務罰鍰處理暫行條例",
+   "slug": "財務罰鍰處理暫行條例",
+   "amendments": 8,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "羈押法",
+   "slug": "羈押法",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "護照條例",
+   "slug": "護照條例",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "下水道法",
+   "slug": "下水道法",
+   "amendments": 8,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "公務人員撫卹法",
+   "slug": "公務人員撫卹法",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "警察教育條例",
+   "slug": "警察教育條例",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "國家中山科學研究院設置條例",
+   "slug": "國家中山科學研究院設置條例",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "國家教育研究院組織法",
+   "slug": "國家教育研究院組織法",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "立法院各委員會召集委員選舉辦法",
+   "slug": "立法院各委員會召集委員選舉辦法",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "宣誓條例",
+   "slug": "宣誓條例",
+   "amendments": 8,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "臺灣金融控股股份有限公司條例",
+   "slug": "臺灣金融控股股份有限公司條例",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "衛生福利部組織法",
+   "slug": "衛生福利部組織法",
+   "amendments": 8,
+   "articles": 2,
+   "bills": 6
+  },
+  {
+   "law": "公民與政治權利國際公約及經濟社會文化權利國際公約施行法",
+   "slug": "公民與政治權利國際公約及經濟社會文化權利國際公約施行法",
+   "amendments": 8,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "公立國民小學及國民中學委託私人辦理條例",
+   "slug": "公立國民小學及國民中學委託私人辦理條例",
+   "amendments": 8,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "警察消防海巡移民空勤人員及協勤民力安全基金設置管理條例",
+   "slug": "警察消防海巡移民空勤人員及協勤民力安全基金設置管理條例",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "國家發展委員會檔案管理局組織法修正",
+   "slug": "國家發展委員會檔案管理局組織法修正",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員協會法",
+   "slug": "公務人員協會法",
+   "amendments": 8,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "典試法",
+   "slug": "典試法",
+   "amendments": 7,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "空中大學設置條例",
+   "slug": "空中大學設置條例",
+   "amendments": 7,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "行政罰法",
+   "slug": "行政罰法",
+   "amendments": 7,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "華僑回國投資條例",
+   "slug": "華僑回國投資條例",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "稅捐稽徵法刪除",
+   "slug": "稅捐稽徵法刪除",
+   "amendments": 7,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "農產品生產及驗證管理法",
+   "slug": "農產品生產及驗證管理法",
+   "amendments": 7,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "補習及進修教育法修正草案",
+   "slug": "補習及進修教育法修正草案",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "莫拉克颱風災後重建特別條例",
+   "slug": "莫拉克颱風災後重建特別條例",
+   "amendments": 7,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "放射性物料管理法",
+   "slug": "放射性物料管理法",
+   "amendments": 7,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "文化部組織法",
+   "slug": "文化部組織法",
+   "amendments": 7,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "立法院各委員會會議室規則",
+   "slug": "立法院各委員會會議室規則",
+   "amendments": 7,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "師資培育法修正",
+   "slug": "師資培育法修正",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "室內空氣品質管理法",
+   "slug": "室內空氣品質管理法",
+   "amendments": 7,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "資恐防制法",
+   "slug": "資恐防制法",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "外國人投資條例修正",
+   "slug": "外國人投資條例修正",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家賠償法修正",
+   "slug": "國家賠償法修正",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "科技部新竹科學工業園區管理局組織法修正草案",
+   "slug": "科技部新竹科學工業園區管理局組織法修正草案",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "科技部中部科學工業園區管理局組織法修正草案",
+   "slug": "科技部中部科學工業園區管理局組織法修正草案",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "科技部南部科學工業園區管理局組織法修正草案",
+   "slug": "科技部南部科學工業園區管理局組織法修正草案",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "家庭教育法修正",
+   "slug": "家庭教育法修正",
+   "amendments": 7,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "反滲透法",
+   "slug": "反滲透法",
+   "amendments": 7,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "公務人員俸給法",
+   "slug": "公務人員俸給法",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 6
+  },
+  {
+   "law": "衛星廣播電視法修正草案",
+   "slug": "衛星廣播電視法修正草案",
+   "amendments": 6,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政執行法",
+   "slug": "行政執行法",
+   "amendments": 6,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "專門職業及技術人員考試法",
+   "slug": "專門職業及技術人員考試法",
+   "amendments": 6,
+   "articles": 5,
+   "bills": 6
+  },
+  {
+   "law": "商港法",
+   "slug": "商港法",
+   "amendments": 6,
+   "articles": 5,
+   "bills": 5
+  },
+  {
+   "law": "戒嚴時期不當叛亂暨匪諜審判案件補償條例",
+   "slug": "戒嚴時期不當叛亂暨匪諜審判案件補償條例",
+   "amendments": 6,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "團體協約法",
+   "slug": "團體協約法",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "國家通訊傳播委員會組織法",
+   "slug": "國家通訊傳播委員會組織法",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "民法繼承編施行法",
+   "slug": "民法繼承編施行法",
+   "amendments": 6,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "內政部組織法",
+   "slug": "內政部組織法",
+   "amendments": 6,
+   "articles": 4,
+   "bills": 6
+  },
+  {
+   "law": "刑事妥速審判法",
+   "slug": "刑事妥速審判法",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "營養師法",
+   "slug": "營養師法",
+   "amendments": 6,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "國家文化藝術基金會設置條例",
+   "slug": "國家文化藝術基金會設置條例",
+   "amendments": 6,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "不動產證券化條例",
+   "slug": "不動產證券化條例",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "陸海空軍軍官士官考績條例",
+   "slug": "陸海空軍軍官士官考績條例",
+   "amendments": 6,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "人口販運防制法",
+   "slug": "人口販運防制法",
+   "amendments": 6,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "中華民國刑法施行法",
+   "slug": "中華民國刑法施行法",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "學生輔導法",
+   "slug": "學生輔導法",
+   "amendments": 6,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "戰士授田憑據處理條例",
+   "slug": "戰士授田憑據處理條例",
+   "amendments": 6,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "勳章條例",
+   "slug": "勳章條例",
+   "amendments": 6,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "統計法",
+   "slug": "統計法",
+   "amendments": 6,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "客家基本法",
+   "slug": "客家基本法",
+   "amendments": 6,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "中央法規標準法",
+   "slug": "中央法規標準法",
+   "amendments": 5,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "職業學校法",
+   "slug": "職業學校法",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "高級中學法",
+   "slug": "高級中學法",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "聘用人員聘用條例",
+   "slug": "聘用人員聘用條例",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "公務員懲戒法",
+   "slug": "公務員懲戒法",
+   "amendments": 5,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "監察院組織法",
+   "slug": "監察院組織法",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 5
+  },
+  {
+   "law": "人體生物資料庫管理條例",
+   "slug": "人體生物資料庫管理條例",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "破產法",
+   "slug": "破產法",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "存款保險條例",
+   "slug": "存款保險條例",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "國籍法刪除",
+   "slug": "國籍法刪除",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "氣象法",
+   "slug": "氣象法",
+   "amendments": 5,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "國立大學校院校務基金設置條例",
+   "slug": "國立大學校院校務基金設置條例",
+   "amendments": 5,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "智慧財產案件審理法",
+   "slug": "智慧財產案件審理法",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "技師法",
+   "slug": "技師法",
+   "amendments": 5,
+   "articles": 4,
+   "bills": 5
+  },
+  {
+   "law": "中央銀行法",
+   "slug": "中央銀行法",
+   "amendments": 5,
+   "articles": 3,
+   "bills": 5
+  },
+  {
+   "law": "行政訴訟法施行法",
+   "slug": "行政訴訟法施行法",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "行政法人法",
+   "slug": "行政法人法",
+   "amendments": 5,
+   "articles": 4,
+   "bills": 4
+  },
+  {
+   "law": "行政院功能業務與組織調整暫行條例",
+   "slug": "行政院功能業務與組織調整暫行條例",
+   "amendments": 5,
+   "articles": 2,
+   "bills": 5
+  },
+  {
+   "law": "爆竹煙火管理條例",
+   "slug": "爆竹煙火管理條例",
+   "amendments": 5,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "國防工業發展基金設置條例",
+   "slug": "國防工業發展基金設置條例",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "洗錢防制法修正",
+   "slug": "洗錢防制法修正",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國立中正紀念堂管理處組織法",
+   "slug": "國立中正紀念堂管理處組織法",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "政務人員退職撫卹條例修正",
+   "slug": "政務人員退職撫卹條例修正",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員退休撫卹基金管理委員會組織條例",
+   "slug": "公務人員退休撫卹基金管理委員會組織條例",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "菸害防制法修正草案",
+   "slug": "菸害防制法修正草案",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "警察勤務條例",
+   "slug": "警察勤務條例",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "科技部組織法",
+   "slug": "科技部組織法",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公務員懲戒委員會組織法",
+   "slug": "公務員懲戒委員會組織法",
+   "amendments": 5,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "陸海空軍軍官士官任官條例",
+   "slug": "陸海空軍軍官士官任官條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "公務人員升官等考試法",
+   "slug": "公務人員升官等考試法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "海洋汙染防治法",
+   "slug": "海洋汙染防治法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "職工福利金條例",
+   "slug": "職工福利金條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "在臺公司大陸地區股東股權行使條例",
+   "slug": "在臺公司大陸地區股東股權行使條例",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "軍人及其家屬優待條例刪除",
+   "slug": "軍人及其家屬優待條例刪除",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "交通部臺灣鐵路管理局所屬分支機構組織通則",
+   "slug": "交通部臺灣鐵路管理局所屬分支機構組織通則",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "幼稚教育法",
+   "slug": "幼稚教育法",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "殘害人群治罪條例",
+   "slug": "殘害人群治罪條例",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "學校教職員撫卹條例",
+   "slug": "學校教職員撫卹條例",
+   "amendments": 4,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "要塞堡壘地帶法",
+   "slug": "要塞堡壘地帶法",
+   "amendments": 4,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "新市鎮開發條例",
+   "slug": "新市鎮開發條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "當舖業法",
+   "slug": "當舖業法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "中國輸出入銀行條例",
+   "slug": "中國輸出入銀行條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "人體研究法",
+   "slug": "人體研究法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "聽力師法",
+   "slug": "聽力師法",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "語言治療師法",
+   "slug": "語言治療師法",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "血液製劑條例",
+   "slug": "血液製劑條例",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "企業併購法",
+   "slug": "企業併購法",
+   "amendments": 4,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "民法第一千一百八十九條及第一千一百九十八條",
+   "slug": "民法第一千一百八十九條及第一千一百九十八條",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法刪除第一千二百二十三條、第一千二百二十四條及第一千二百二十五條",
+   "slug": "民法刪除第一千二百二十三條第一千二百二十四條及第一千二百二十五條",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "後備軍人轉任公職考試比敘條例",
+   "slug": "後備軍人轉任公職考試比敘條例",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "職業訓練法",
+   "slug": "職業訓練法",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "公害糾紛處理法",
+   "slug": "公害糾紛處理法",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 4
+  },
+  {
+   "law": "國防部組織法",
+   "slug": "國防部組織法",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "海岸管理法",
+   "slug": "海岸管理法",
+   "amendments": 4,
+   "articles": 3,
+   "bills": 4
+  },
+  {
+   "law": "電子支付機構管理條例",
+   "slug": "電子支付機構管理條例",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "經濟部組織法",
+   "slug": "經濟部組織法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 4
+  },
+  {
+   "law": "駐外外交領事人員任用條例",
+   "slug": "駐外外交領事人員任用條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "國立故宮博物院組織法",
+   "slug": "國立故宮博物院組織法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "飛航安全調查委員會組織法",
+   "slug": "飛航安全調查委員會組織法",
+   "amendments": 4,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "原住民保留地禁伐補償及造林回饋條例",
+   "slug": "原住民保留地禁伐補償及造林回饋條例",
+   "amendments": 4,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "行政院海岸巡防署海洋巡防總局組織條例",
+   "slug": "行政院海岸巡防署海洋巡防總局組織條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "駐外機構組織通則",
+   "slug": "駐外機構組織通則",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "印信條例",
+   "slug": "印信條例",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "司法人員人事條例",
+   "slug": "司法人員人事條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "病人自主權利法",
+   "slug": "病人自主權利法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "促進轉型正義條例",
+   "slug": "促進轉型正義條例",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "科技部新竹科學工業園區管理局組織法名稱、",
+   "slug": "科技部新竹科學工業園區管理局組織法名稱",
+   "amendments": 4,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "政黨法",
+   "slug": "政黨法",
+   "amendments": 4,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "土地法刪除",
+   "slug": "土地法刪除",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "貨物稅條例刪除",
+   "slug": "貨物稅條例刪除",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "刑事訴訟法施行法",
+   "slug": "刑事訴訟法施行法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "專門職業及技術人員轉任公務人員條例",
+   "slug": "專門職業及技術人員轉任公務人員條例",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "監察法刪除",
+   "slug": "監察法刪除",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "民法第一千一百十六條",
+   "slug": "民法第一千一百十六條",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民法親屬編第一千零九條、第一千零十一條及第一千零三十條之一",
+   "slug": "民法親屬編第一千零九條第一千零十一條及第一千零三十條之一",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公教人員保險法刪除",
+   "slug": "公教人員保險法刪除",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "民法第一千零五十九條",
+   "slug": "民法第一千零五十九條",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "保安處分執行法",
+   "slug": "保安處分執行法",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "不動產估價師法",
+   "slug": "不動產估價師法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "工程技術顧問公司管理條例",
+   "slug": "工程技術顧問公司管理條例",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "鄉鎮市調解條例",
+   "slug": "鄉鎮市調解條例",
+   "amendments": 3,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "民法第一千零五十五條",
+   "slug": "民法第一千零五十五條",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "軍人及其家屬優待條例",
+   "slug": "軍人及其家屬優待條例",
+   "amendments": 3,
+   "articles": 3,
+   "bills": 3
+  },
+  {
+   "law": "國家賠償法刪除",
+   "slug": "國家賠償法刪除",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "總統副總統宣誓條例",
+   "slug": "總統副總統宣誓條例",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "立法委員互選院長副院長辦法",
+   "slug": "立法委員互選院長副院長辦法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "僑務委員會組織法",
+   "slug": "僑務委員會組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "外交部組織法",
+   "slug": "外交部組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "殺傷性地雷管制條例",
+   "slug": "殺傷性地雷管制條例",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "農業金融法",
+   "slug": "農業金融法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "教育部體育署組織法",
+   "slug": "教育部體育署組織法",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "民法繼承編第一千一百七十三條、第一千一百八十七條及第一千二百二十五條",
+   "slug": "民法繼承編第一千一百七十三條第一千一百八十七條及第一千二百二十五條",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院大陸委員會組織條例",
+   "slug": "行政院大陸委員會組織條例",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "空氣汙染防制法",
+   "slug": "空氣汙染防制法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "衛生福利部社會及家庭署組織法",
+   "slug": "衛生福利部社會及家庭署組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "海洋委員會組織法",
+   "slug": "海洋委員會組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "遠洋漁業條例",
+   "slug": "遠洋漁業條例",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "海關進口稅則名稱、第八十七章增註二十及增註二十一修正",
+   "slug": "海關進口稅則名稱第八十七章增註二十及增註二十一修正",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "科技部新竹科學工業園區管理局組織法",
+   "slug": "科技部新竹科學工業園區管理局組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "科技部中部科學工業園區管理局組織法",
+   "slug": "科技部中部科學工業園區管理局組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "科技部南部科學工業園區管理局組織法",
+   "slug": "科技部南部科學工業園區管理局組織法",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "教保服務人員條例",
+   "slug": "教保服務人員條例",
+   "amendments": 3,
+   "articles": 1,
+   "bills": 3
+  },
+  {
+   "law": "零售市場管理條例",
+   "slug": "零售市場管理條例",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 3
+  },
+  {
+   "law": "中央警察大學組織條例",
+   "slug": "中央警察大學組織條例",
+   "amendments": 3,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "國防法",
+   "slug": "國防法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "農村再生條例",
+   "slug": "農村再生條例",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "管收條例",
+   "slug": "管收條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "海上捕獲法庭審判條例",
+   "slug": "海上捕獲法庭審判條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零三十條之一",
+   "slug": "民法第一千零三十條之一",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民營公用事業監督條例",
+   "slug": "民營公用事業監督條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "所得稅法刪除",
+   "slug": "所得稅法刪除",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "國家安全會議組織法",
+   "slug": "國家安全會議組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "海商法",
+   "slug": "海商法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "集會遊行法刪除",
+   "slug": "集會遊行法刪除",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "溫泉法",
+   "slug": "溫泉法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "勞動基準法刪除",
+   "slug": "勞動基準法刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零一條之一及第一千零五十六條",
+   "slug": "民法第一千零一條之一及第一千零五十六條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部臺灣鐵路管理局組織條例",
+   "slug": "交通部臺灣鐵路管理局組織條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部臺灣鐵路管理局貨運服務總所組織條例",
+   "slug": "交通部臺灣鐵路管理局貨運服務總所組織條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部臺灣鐵路管理局餐旅服務總所組織條例",
+   "slug": "交通部臺灣鐵路管理局餐旅服務總所組織條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部臺灣鐵路管理局各機廠組織通則",
+   "slug": "交通部臺灣鐵路管理局各機廠組織通則",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "臺灣地區與大陸地區人民關係條例刪除",
+   "slug": "臺灣地區與大陸地區人民關係條例刪除",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "民法第一千一百三十二條及第一千二百十二條",
+   "slug": "民法第一千一百三十二條及第一千二百十二條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "銀行法刪除",
+   "slug": "銀行法刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "金融資產證券化條例",
+   "slug": "金融資產證券化條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "內政部警政署刑事警察局組織條例",
+   "slug": "內政部警政署刑事警察局組織條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "法務部調查局組織法",
+   "slug": "法務部調查局組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "軍人待遇條例",
+   "slug": "軍人待遇條例",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "牙體技術師法",
+   "slug": "牙體技術師法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民法第一千一百八十三條及第一千二百十一條之一",
+   "slug": "民法第一千一百八十三條及第一千二百十一條之一",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "海岸巡防法",
+   "slug": "海岸巡防法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "中央廣播電臺設置條例",
+   "slug": "中央廣播電臺設置條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民法第一千零五十二條",
+   "slug": "民法第一千零五十二條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百二十條",
+   "slug": "民法第一千一百二十條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院金融重建基金設置及管理條例",
+   "slug": "行政院金融重建基金設置及管理條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "原住民族傳統智慧創作保護條例",
+   "slug": "原住民族傳統智慧創作保護條例",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "刑事訴訟法刪除",
+   "slug": "刑事訴訟法刪除",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "化品衛生管理條例",
+   "slug": "化品衛生管理條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國立高級中等學校校務基金設置條例",
+   "slug": "國立高級中等學校校務基金設置條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百九十條及第一千一百九十一條",
+   "slug": "民法第一千一百九十條及第一千一百九十一條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政法院組織法刪除",
+   "slug": "行政法院組織法刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "兒童權利公約施行法",
+   "slug": "兒童權利公約施行法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "蒙藏委員會組織法刪除",
+   "slug": "蒙藏委員會組織法刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家發展委員會組織法",
+   "slug": "國家發展委員會組織法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "積體電路電路布局保護法",
+   "slug": "積體電路電路布局保護法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "植物品種及種苗法",
+   "slug": "植物品種及種苗法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "中華民國國徽國旗法",
+   "slug": "中華民國國徽國旗法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "請願法",
+   "slug": "請願法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "仲裁法",
+   "slug": "仲裁法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "最高法院設置分庭條例",
+   "slug": "最高法院設置分庭條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "內政部警政署組織法",
+   "slug": "內政部警政署組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "公職人員利益衝突迴避法修正草案",
+   "slug": "公職人員利益衝突迴避法修正草案",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "立法院議場規則",
+   "slug": "立法院議場規則",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "國家表演藝術中心設置條例",
+   "slug": "國家表演藝術中心設置條例",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "生產事故救濟條例",
+   "slug": "生產事故救濟條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "油症患者健康照護服務條例",
+   "slug": "油症患者健康照護服務條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國軍退除役官兵輔導條例刪除",
+   "slug": "國軍退除役官兵輔導條例刪除",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "金融監督管理委員會組織法名稱及",
+   "slug": "金融監督管理委員會組織法名稱及",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家通訊傳播委員會組織法名稱及",
+   "slug": "國家通訊傳播委員會組織法名稱及",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "大眾運輸工具播音語言平等保障法",
+   "slug": "大眾運輸工具播音語言平等保障法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "光碟管理條例",
+   "slug": "光碟管理條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法繼承編第一千一百三十八條及第一千二百二十三條",
+   "slug": "民法繼承編第一千一百三十八條及第一千二百二十三條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "中央政府總預算案審查程序",
+   "slug": "中央政府總預算案審查程序",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "教育部青年發展署組織法",
+   "slug": "教育部青年發展署組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "畜牧法",
+   "slug": "畜牧法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家安全局組織法",
+   "slug": "國家安全局組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院海岸巡防署海岸巡防總局各地區巡防局組織通則",
+   "slug": "行政院海岸巡防署海岸巡防總局各地區巡防局組織通則",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "離島建設條例刪除",
+   "slug": "離島建設條例刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "民法第一千零三十條之一及第一千零四十一條",
+   "slug": "民法第一千零三十條之一及第一千零四十一條",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部觀光局組織條例",
+   "slug": "交通部觀光局組織條例",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "低放射性廢棄物最終處置設施場址設置條例",
+   "slug": "低放射性廢棄物最終處置設施場址設置條例",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "印花稅法",
+   "slug": "印花稅法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "勞動部勞動及職業安全衛生研究所組織法",
+   "slug": "勞動部勞動及職業安全衛生研究所組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "法務部組織法",
+   "slug": "法務部組織法",
+   "amendments": 2,
+   "articles": 2,
+   "bills": 2
+  },
+  {
+   "law": "驗光人員法",
+   "slug": "驗光人員法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "船舶登記法",
+   "slug": "船舶登記法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員考試法刪除",
+   "slug": "公務人員考試法刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "內政部組織法刪除",
+   "slug": "內政部組織法刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "農民健康保險條例第四章第四節節名修正草案",
+   "slug": "農民健康保險條例第四章第四節節名修正草案",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "國軍軍事勤務致人民傷亡損害補償條例",
+   "slug": "國軍軍事勤務致人民傷亡損害補償條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "建築法第",
+   "slug": "建築法第",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "駐華外國機構及其人員特權暨豁免條例",
+   "slug": "駐華外國機構及其人員特權暨豁免條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "獎章條例",
+   "slug": "獎章條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 2
+  },
+  {
+   "law": "社會秩序維護法修正",
+   "slug": "社會秩序維護法修正",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "涉外民事法律適用法",
+   "slug": "涉外民事法律適用法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "法務部法醫研究所組織法",
+   "slug": "法務部法醫研究所組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "法務部司法官學院組織法",
+   "slug": "法務部司法官學院組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "妨害兵役治罪條例刪除",
+   "slug": "妨害兵役治罪條例刪除",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "境外資金匯回管理運用及課稅條例",
+   "slug": "境外資金匯回管理運用及課稅條例",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國軍退除役官兵輔導委員會組織法",
+   "slug": "國軍退除役官兵輔導委員會組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院人事行政總處組織法",
+   "slug": "行政院人事行政總處組織法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "電信管理法",
+   "slug": "電信管理法",
+   "amendments": 2,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "電腦處理個人資料保護法",
+   "slug": "電腦處理個人資料保護法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "警察刑事紀錄證明核發條例",
+   "slug": "警察刑事紀錄證明核發條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "所得稅",
+   "slug": "所得稅",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零五十三條",
+   "slug": "民法第一千零五十三條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "洗錢防制法刪除",
+   "slug": "洗錢防制法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零五十五條之一",
+   "slug": "民法第一千零五十五條之一",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "考試院組織法刪除",
+   "slug": "考試院組織法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "漁港法",
+   "slug": "漁港法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零十一條",
+   "slug": "民法第一千零十一條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零七十九條之四",
+   "slug": "民法第一千零七十九條之四",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "監察院組織法刪除",
+   "slug": "監察院組織法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "提審法",
+   "slug": "提審法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "內政部消防署組織條例第十—條",
+   "slug": "內政部消防署組織條例第十條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "中華民國刑法第一百八十五之三",
+   "slug": "中華民國刑法第一百八十五之三",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "遺產及贈與稅",
+   "slug": "遺產及贈與稅",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "契稅條例",
+   "slug": "契稅條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法刪除第一千零十一條",
+   "slug": "民法刪除第一千零十一條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "證券交易稅條例刪除",
+   "slug": "證券交易稅條例刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "契稅條例刪除",
+   "slug": "契稅條例刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "遺產及贈與稅法刪除",
+   "slug": "遺產及贈與稅法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通事業人員考成條例",
+   "slug": "交通事業人員考成條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公務人員考績法",
+   "slug": "公務人員考績法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "竊盜犯贓物犯保安處分條例",
+   "slug": "竊盜犯贓物犯保安處分條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院主計總處組織法",
+   "slug": "行政院主計總處組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "中華民國刑法施行法刪除",
+   "slug": "中華民國刑法施行法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "軍人保險條例刪除",
+   "slug": "軍人保險條例刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "商品檢驗法",
+   "slug": "商品檢驗法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "動物傳染病防治條例刪除",
+   "slug": "動物傳染病防治條例刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "植物防疫檢疫法刪除",
+   "slug": "植物防疫檢疫法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "農藥管理法刪除",
+   "slug": "農藥管理法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "菸酒管理法刪除",
+   "slug": "菸酒管理法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "建築法刪除",
+   "slug": "建築法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "漢生病病患人權保障及補償條例",
+   "slug": "漢生病病患人權保障及補償條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "郵政儲金匯兌法刪除",
+   "slug": "郵政儲金匯兌法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "陸海空軍服制條例",
+   "slug": "陸海空軍服制條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "內政部消防署組織條例",
+   "slug": "內政部消防署組織條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百十一條之二",
+   "slug": "民法第一千一百十一條之二",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公司法刪除",
+   "slug": "公司法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "文化資產保存",
+   "slug": "文化資產保存",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百四十五條",
+   "slug": "民法第一千一百四十五條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "財政部證券暨期貨管理委員會組織條例",
+   "slug": "財政部證券暨期貨管理委員會組織條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "地質法",
+   "slug": "地質法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國防部參謀本部組織法",
+   "slug": "國防部參謀本部組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "道路交通安全管理處罰條例",
+   "slug": "道路交通安全管理處罰條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零五十八條",
+   "slug": "民法第一千零五十八條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法總則編",
+   "slug": "民法總則編",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法刪除",
+   "slug": "民法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法總則施行法",
+   "slug": "民法總則施行法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法債編施行法",
+   "slug": "民法債編施行法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "各級學校扶助學生就學勸募條例",
+   "slug": "各級學校扶助學生就學勸募條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "漁業法刪除",
+   "slug": "漁業法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "社會救助法法",
+   "slug": "社會救助法法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法刪除第一千一百四十六條",
+   "slug": "民法刪除第一千一百四十六條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行刑累進處遇條例",
+   "slug": "行刑累進處遇條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公營事業移轉民營條例",
+   "slug": "公營事業移轉民營條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家運動訓練中心設置條例",
+   "slug": "國家運動訓練中心設置條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "廣播電視法刪除",
+   "slug": "廣播電視法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "期貨交易稅條例",
+   "slug": "期貨交易稅條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "海關進口稅則第八十七章增註十七修正",
+   "slug": "海關進口稅則第八十七章增註十七修正",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家安全法刪除",
+   "slug": "國家安全法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院原子能委員會組織條例",
+   "slug": "行政院原子能委員會組織條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "赦免法",
+   "slug": "赦免法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "榮民總醫院組織通則",
+   "slug": "榮民總醫院組織通則",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "地方稅法通則",
+   "slug": "地方稅法通則",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "環境用藥管理法",
+   "slug": "環境用藥管理法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "水下文化資產保存法",
+   "slug": "水下文化資產保存法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "性別工作平等法刪除",
+   "slug": "性別工作平等法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "監察院各委員會組織法",
+   "slug": "監察院各委員會組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "教育部國民及學前教育署組織法",
+   "slug": "教育部國民及學前教育署組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部組織法",
+   "slug": "交通部組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "政風機構人員設置管理條例",
+   "slug": "政風機構人員設置管理條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "交通部組織法刪除",
+   "slug": "交通部組織法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千零六十三條",
+   "slug": "民法第一千零六十三條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "破產法施行法",
+   "slug": "破產法施行法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院海岸巡防署海岸巡防總局組織條例",
+   "slug": "行政院海岸巡防署海岸巡防總局組織條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "後備軍人轉任公職考試比敘條例刪除",
+   "slug": "後備軍人轉任公職考試比敘條例刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "人民團體法刪除",
+   "slug": "人民團體法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "行政院環境保護署組織條例",
+   "slug": "行政院環境保護署組織條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "文化藝術獎助條例刪除",
+   "slug": "文化藝術獎助條例刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "事業用爆炸物管理條例",
+   "slug": "事業用爆炸物管理條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家發展委員會組織法刪除",
+   "slug": "國家發展委員會組織法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "國家發展委員會檔案管理局組織法",
+   "slug": "國家發展委員會檔案管理局組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "觀察勒戒處分執行條例",
+   "slug": "觀察勒戒處分執行條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公文程式條例",
+   "slug": "公文程式條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "原住民族教育法刪除",
+   "slug": "原住民族教育法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "公營大眾捷運股份有限公司設置管理條例",
+   "slug": "公營大眾捷運股份有限公司設置管理條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "外國護照簽證條例",
+   "slug": "外國護照簽證條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "財政部組織法",
+   "slug": "財政部組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "財政部財政資訊中心組織法",
+   "slug": "財政部財政資訊中心組織法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "農會法刪除",
+   "slug": "農會法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "蒙藏族身分證明條例",
+   "slug": "蒙藏族身分證明條例",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "典試法刪除",
+   "slug": "典試法刪除",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百六十五條",
+   "slug": "民法第一千一百六十五條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百七十八條",
+   "slug": "民法第一千一百七十八條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "民法第一千一百九十四條",
+   "slug": "民法第一千一百九十四條",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "外國專業人才延攬及僱用法",
+   "slug": "外國專業人才延攬及僱用法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  },
+  {
+   "law": "博物館法",
+   "slug": "博物館法",
+   "amendments": 1,
+   "articles": 1,
+   "bills": 1
+  }
+ ],
+ "totals": {
+  "laws": 924,
+  "amendments": 49914
+ },
+ "skipped": [
+  "09/08: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=09&sessionPeriod=08&fileType=json",
+  "10/02: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=02&fileType=json",
+  "10/03: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=03&fileType=json",
+  "10/04: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=04&fileType=json",
+  "10/05: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=05&fileType=json",
+  "10/06: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=06&fileType=json",
+  "10/07: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=07&fileType=json",
+  "10/08: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=10&sessionPeriod=08&fileType=json",
+  "11/01: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=01&fileType=json",
+  "11/02: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=02&fileType=json",
+  "11/03: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=03&fileType=json",
+  "11/04: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=04&fileType=json",
+  "11/05: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=05&fileType=json",
+  "11/06: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=06&fileType=json",
+  "11/07: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=07&fileType=json",
+  "11/08: got 0 rows, expected >= 1 — silent-empty, check params: https://data.ly.gov.tw/odw/ID19Action.action?term=11&sessionPeriod=08&fileType=json"
+ ]
+}
