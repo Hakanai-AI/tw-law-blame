@@ -52,12 +52,42 @@ A civic tool that presented proposal text as enacted law would be worse than no 
 **Every one of these returns a successful-looking response with no usable data.**
 The ingester asserts on record count, never on HTTP status.
 
+## What it does
+
+**https://hakanai-ai.github.io/tw-law-blame/**
+
+- **Blame view** — per article, every bill that proposed changing it: segment-level
+  diff, 立法理由, 提案人, 三讀 status, link to the official PDF.
+- **現行條文** — what the article says *now*, from 全國法規資料庫, alongside the proposals.
+- **立法沿革** — every amendment since the statute was created. 食品安全衛生管理法 goes
+  back to 民國64年 (1975), four decades before 立法院's open data starts.
+- **News → law → blame** — 中央社 · 公視 · 聯合報 headlines matched to the statutes they
+  name, so a story leads to that law's history. Headline and link only; never article text.
+- **Jargon lookup** — 1,837 terms mined from the statutes' own 定義 articles. A term like
+  主管機關 is defined by 229 statutes, so when a headline names a law, that law's
+  definition wins; generic hits are labelled as such.
+- **Search** — law names corpus-wide, full text within a law, 三讀-only filter, deep links.
+
+## Sources
+
+| What | Where | Gives |
+|---|---|---|
+| Proposals | 立法院 ID19 ⨝ ID20 | proposed text, 立法理由, 提案人, 三讀 status |
+| Enacted law | 全國法規資料庫 `api/Ch/Law/JSON` | current article text, 立法沿革, term definitions |
+| News | 中央社 (RSS) · 公視 (Atom) · 聯合報 (RSS) | headlines only |
+
+`api/Ch/Law/JSON` ignores its `?ID=` parameter and returns the **whole** corpus as a zip
+containing `ChLaw.json` (1,346 statutes, 6.1MB). One download, no per-law scraping.
+
 ## Layout
 
 ```
-ingest/    fetchers + normaliser (Python, stdlib only)
-data/      generated JSON shards, committed so Pages can serve them statically
-web/       static front-end (no build step, no dependencies)
+ingest/fetch.py     立法院 proposals -> per-law shards
+ingest/enacted.py   全國法規資料庫 -> current text + 沿革
+ingest/terms.py     定義 articles -> jargon glossary
+ingest/news.py      RSS/Atom -> headline/statute/term matches
+web/                static front-end (no build step, no dependencies)
+data/               generated, NOT committed (93MB, reproducible)
 ```
 
 ## Licence
