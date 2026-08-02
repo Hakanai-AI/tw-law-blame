@@ -37,13 +37,30 @@ jobs:
         with:
           python-version: '3.12'
 
+      # The 立法院 fetch is ~30 slow round-trips and dominates the run. Cache it
+      # on the day plus a hash of the ingester, so a front-end-only push
+      # redeploys in a minute instead of re-pulling a corpus that has not
+      # changed. The daily cron still gets a cold key each day.
+      - name: Cache day
+        id: day
+        run: echo "d=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore corpus cache
+        id: corpus
+        uses: actions/cache@v4
+        with:
+          path: data
+          key: corpus-${{ steps.day.outputs.d }}-${{ hashFiles('ingest/fetch.py') }}
+
       # Start from empty. Shards are named after the parsed law name, so a
       # change to that parser leaves the old names behind and they would ship
       # alongside the new ones.
       - name: Clear stale shards
+        if: steps.corpus.outputs.cache-hit != 'true'
         run: rm -rf data
 
       - name: Fetch 立法院 open data
+        if: steps.corpus.outputs.cache-hit != 'true'
         env:
           TERMS: ${{ inputs.terms || '8,9,10,11' }}
           MAX_PERIOD: '8'
