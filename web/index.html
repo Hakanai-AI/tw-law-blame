@@ -88,6 +88,10 @@ details.now .diff{margin:8px 0 0}
   display:grid;gap:6px;max-height:340px;overflow-y:auto}
 .hist .n{margin-right:6px}
 #enacted{font-size:.85rem}
+details.term{margin-top:8px;font-size:.82rem}
+details.term summary{color:var(--ink);font-weight:600}
+.def{margin:6px 0 0;color:var(--muted);line-height:1.7}
+.def b{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -273,12 +277,12 @@ fetch("data/index.json").then(r => r.json()).then(d => {
 // News panel. Absent news.json is normal — a dead feed must not break the site.
 fetch("data/news.json").then(r => r.ok ? r.json() : null).then(n => {
   if (!n) return;
-  const hits = n.items.filter(i => i.laws.length);
+  const hits = n.items.filter(i => i.laws.length || (i.terms||[]).length);
   if (!hits.length) return;
   $("#news").hidden = false;
   $("#newsmeta").textContent =
-    `${n.sources.join(" · ")} 今日 ${n.counts.headlines} 則標題，${n.counts.matched} 則點名了現行法律。`
-    + ` 只保留標題與連結，不轉載內文。`;
+    `${n.sources.join(" · ")} 今日 ${n.counts.headlines} 則標題，${n.counts.matched} 則對得上法律或法定術語`
+    + `（術語庫 ${n.counts.glossary||0} 條，取自法規本身的定義條文）。只保留標題與連結，不轉載內文。`;
   $("#feed").innerHTML = hits.slice(0, 10).map(i => `
     <li>
       <span class="src">${i.source} · ${i.topic}</span>
@@ -286,6 +290,12 @@ fetch("data/news.json").then(r => r.ok ? r.json() : null).then(n => {
       <div class="chips">${i.laws.map(l =>
         `<button class="chip" data-slug="${l.slug}">${l.law} · ${l.amendments} 筆修正</button>`
       ).join("")}</div>
+      ${(i.terms||[]).map(t => `
+        <details class="term">
+          <summary>${t.term}${t.scoped?"":" <span class='n'>（通則定義）</span>"}</summary>
+          ${t.defs.map(d => `<p class="def"><b>${d.law}</b> ${d.article}：${d.text}
+            ${d.url?`<a href="${d.url}" target="_blank" rel="noopener">原文</a>`:""}</p>`).join("")}
+        </details>`).join("")}
     </li>`).join("");
 }).catch(() => {});
 

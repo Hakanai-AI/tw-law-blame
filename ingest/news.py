@@ -108,9 +108,40 @@ def match_laws(headline: str, laws: list[dict]) -> list[dict]:
     return hits
 
 
+def match_terms(headline: str, glossary: dict, matched_laws: list[dict]) -> list[dict]:
+    """Legal jargon in the headline, with the statute's own definition.
+
+    A term like 主管機關 is defined by 229 different statutes, so an arbitrary
+    pick is noise. When the headline also named a law, that law's definition
+    wins — 主管機關 in a food-safety story means the one in 食品安全衛生管理法,
+    not the one in 政府採購法.
+    """
+    names = {l["law"] for l in matched_laws}
+    out = []
+    for term, defs in glossary.items():
+        if len(term) < 3 or term not in headline:
+            continue
+        preferred = [d for d in defs if d["law"] in names] or defs
+        out.append({"term": term, "defs": preferred[:3], "scoped": bool(
+            [d for d in defs if d["law"] in names])})
+    # Longest first: 目的事業主管機關 is more informative than 主管機關.
+    out.sort(key=lambda t: -len(t["term"]))
+    # Drop a term wholly contained in a longer one already matched.
+    kept = []
+    for t in out:
+        if not any(t["term"] in k["term"] for k in kept):
+            kept.append(t)
+    return kept[:6]
+
+
 def main() -> int:
     idx = json.loads((DATA / "index.json").read_text(encoding="utf-8"))
     laws = idx["laws"]
+    try:
+        glossary = json.loads((DATA / "terms.json").read_text(encoding="utf-8"))["terms"]
+    except FileNotFoundError:
+        glossary = {}
+        print("WARN: terms.json absent — run ingest/terms.py for jargon lookup")
 
     items, failed = [], []
     for src in SOURCES:
@@ -133,16 +164,18 @@ def main() -> int:
             continue
         seen.add(it["title"])
         it["laws"] = match_laws(it["title"], laws)
+        it["terms"] = match_terms(it["title"], glossary, it["laws"])
         uniq.append(it)
 
-    matched = [i for i in uniq if i["laws"]]
+    matched = [i for i in uniq if i["laws"] or i["terms"]]
     out = {
         "generated": idx["generated"],
         "sources": sorted({s["name"] for s in SOURCES}),
         "failed": failed,
-        "counts": {"headlines": len(uniq), "matched": len(matched)},
+        "counts": {"headlines": len(uniq), "matched": len(matched),
+                   "glossary": len(glossary)},
         # Matched first — that is the whole point of the panel.
-        "items": matched + [i for i in uniq if not i["laws"]][:30],
+        "items": matched + [i for i in uniq if not (i["laws"] or i["terms"])][:30],
     }
     (DATA / "news.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -151,8 +184,11 @@ def main() -> int:
     for f in failed:
         print(f"  FEED FAILED {f}")
     for m in matched:
-        names = ", ".join(f"{l['law']}({l['amendments']}筆, via {l['via']})" for l in m["laws"])
-        print(f"  [{m['source']}] {m['title'][:46]}  ->  {names}")
+        names = ", ".join(f"{l['law']}({l['amendments']}筆, via {l['via']})" for l in m["laws"]) or "—"
+        print(f"  [{m['source']}] {m['title'][:44]}  ->  {names}")
+        if m["terms"]:
+            print("        術語: " + ", ".join(
+                f"{t['term']}{'*' if t['scoped'] else ''}" for t in m["terms"]))
     return 0
 
 
