@@ -1,0 +1,11 @@
+{
+  "_comment": "Per-term period counts the upstream ID19 dataset actually served, measured 2026-08-09. The ingest asserts against this so a FUTURE silent shrink fails the build. Raise a number here only alongside evidence that upstream started serving more; never lower one to make a red build green.",
+  "_measured": "2026-08-09",
+  "_note": "term 11 (the current legislature) serves 0 rows at ID19 in every param form tried (11/1, 11/01, 11/02, 11/2). That is upstream reality, not a fetch bug — see README 'Coverage'.",
+  "terms": {
+    "08": 8,
+    "09": 7,
+    "10": 1,
+    "11": 0
+  }
+}

@@ -35,6 +35,34 @@ Two tiers, and the UI says so:
 
 A civic tool that presented proposal text as enacted law would be worse than no tool.
 
+### Coverage: upstream serves nothing for the current legislature
+
+Measured against the live API on 2026-08-09, `odw/ID19Action` returns **16 of 32**
+term/period combinations with rows. The gap is contiguous and recent:
+
+| term | periods with data |
+|---|---|
+| 08 | 8 / 8 |
+| 09 | 7 / 8 (09/08 empty) |
+| 10 | 1 / 8 (only 10/01) |
+| 11 | 0 / 8 — the **current** legislature |
+
+This is upstream reality, not a fetch bug. `term=11` returns `{"dataList":[]}` with
+HTTP 200 in every parameter form tried (`11/1`, `11/01`, `11/02`, `11/2`), while
+`term=10&sessionPeriod=01` returns 921 rows and `term=09&sessionPeriod=07` returns 1316
+through the identical code path. It is **not** the zero-padding trap documented below —
+that one is real (`term=9` → 0, `term=09` → rows) but does not explain term 11, whose
+padded and unpadded forms are the same string.
+
+So the corpus effectively ends at term 10 period 1. The site now says which terms it
+covers instead of showing a bare total, and `ingest/coverage-baseline.json` pins the
+per-term counts so a *further* shrink fails the build. The corpus-size threshold could
+never catch this: ~50k historical rows keep the total far above any floor while every
+recent session is missing.
+
+If upstream starts serving term 11, the ingest prints a `NOTE ... improved` line —
+raise the baseline then.
+
 ## Integration notes (each of these cost real debugging time)
 
 1. **Legacy TLS required.** OpenSSL 3 rejects `data.ly.gov.tw` outright
