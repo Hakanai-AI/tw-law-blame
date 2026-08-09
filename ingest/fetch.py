@@ -187,13 +187,19 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     merged: dict[str, list] = defaultdict(list)
     ok, skipped = 0, []
+    # Per-term coverage. The corpus-size assertion downstream cannot see a loss
+    # concentrated at one end: 16/32 periods returned zero for weeks while
+    # ~50k historical rows kept the total comfortably above any threshold.
+    coverage: dict[str, dict[str, int]] = defaultdict(lambda: {"ok": 0, "empty": 0})
 
     for term, period in targets:
         try:
             for law, items in build(term.strip(), period).items():
                 merged[law].extend(items)
             ok += 1
+            coverage[term]["ok"] += 1
         except RuntimeError as exc:
+            coverage[term]["empty"] += 1
             # A period that genuinely has no sitting is legitimate; record it
             # rather than letting it silently shrink the corpus.
             skipped.append(f"{term}/{period}: {exc}")
@@ -227,7 +233,9 @@ def main() -> int:
         json.dumps(
             {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
              "laws": index,
-             "totals": {"laws": len(index), "amendments": sum(i["amendments"] for i in index)},
+             "totals": {"laws": len(index), "amendments": sum(i["amendments"] for i in index),
+                        "periods_ok": ok, "periods_total": len(targets)},
+             "coverage": {t: dict(c) for t, c in sorted(coverage.items())},
              "skipped": skipped},
             ensure_ascii=False, indent=1),
         encoding="utf-8",

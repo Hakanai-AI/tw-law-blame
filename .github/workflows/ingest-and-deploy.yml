@@ -69,17 +69,40 @@ jobs:
       # Assert on content, not on the previous step's exit code. Every failure
       # mode this API has returns HTTP 200 with nothing usable, so a green
       # fetch step is not evidence that data exists.
-      - name: Assert the corpus is non-trivial
+      - name: Assert the corpus is non-trivial and coverage has not regressed
         run: |
           python3 - <<'PY'
           import json, pathlib, sys
           idx = json.loads(pathlib.Path("data/index.json").read_text())
           n = idx["totals"]["amendments"]
-          print(f"{idx['totals']['laws']} laws, {n} amendments")
+          t = idx["totals"]
+          print(f"{t['laws']} laws, {n} amendments, "
+                f"{t['periods_ok']}/{t['periods_total']} periods ok")
           for s in idx["skipped"]:
               print(f"  skipped {s}")
+
           if n < 500:
               sys.exit(f"corpus too small ({n} amendments) — refusing to publish")
+
+          # A total-size threshold cannot see a loss concentrated at one end.
+          # 16/32 periods returned zero for weeks — every recent term missing —
+          # while ~50k historical rows sailed past the check above. Compare
+          # per-term coverage against what upstream was measured to serve, so a
+          # future shrink fails here instead of shipping a quietly smaller site.
+          base = json.loads(
+              pathlib.Path("ingest/coverage-baseline.json").read_text())["terms"]
+          have = {k: v["ok"] for k, v in idx["coverage"].items()}
+          lost = {k: (base[k], have.get(k, 0))
+                  for k in base if have.get(k, 0) < base[k]}
+          if lost:
+              for k, (was, now) in sorted(lost.items()):
+                  print(f"  REGRESSED term {k}: {was} periods -> {now}")
+              sys.exit("coverage regressed against ingest/coverage-baseline.json "
+                       "— upstream changed or the fetch broke; refusing to publish")
+          gained = {k: (base[k], have[k]) for k in have if have[k] > base.get(k, 0)}
+          for k, (was, now) in sorted(gained.items()):
+              print(f"  NOTE term {k} improved {was} -> {now}; "
+                    f"raise the baseline to lock it in")
           PY
 
       - name: Fetch enacted text from 全國法規資料庫

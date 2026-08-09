@@ -464,9 +464,15 @@ addEventListener("hashchange", () => {
 /* ---------- boot ---------- */
 fetch("data/index.json").then(r=>r.json()).then(d => {
   INDEX = d;
+  // State the covered terms explicitly. The upstream ID19 dataset serves no
+  // rows for the current legislature, so a bare law/amendment count reads as
+  // "complete" when the most recent sessions are absent.
+  const covered = Object.entries(d.coverage || {})
+    .filter(([, c]) => c.ok > 0).map(([t]) => `第 ${Number(t)} 屆`).join("、");
   $("#scope").innerHTML =
-    `<b>資料範圍與限制</b>：收錄 <b>${d.totals.laws}</b> 部法律、<b>${d.totals.amendments}</b> 筆修正提案對照。`
-    + ` 提案版本的條文與立法理由來自立法院，<b>不等於三讀通過的條文</b>；現行條文另引自全國法規資料庫。`;
+    `<b>資料範圍與限制</b>：收錄 <b>${d.totals.laws}</b> 部法律、<b>${d.totals.amendments}</b> 筆修正提案對照`
+    + (covered ? `，涵蓋 <b>${covered}</b>（共 ${d.totals.periods_ok}/${d.totals.periods_total} 個會期有資料）` : "")
+    + `。 提案版本的條文與立法理由來自立法院，<b>不等於三讀通過的條文</b>；現行條文另引自全國法規資料庫。`;
   $("#gen").textContent = `· 資料更新於 ${d.generated}`;
   renderLaws();
   const s = decodeURIComponent(location.hash.slice(1));
