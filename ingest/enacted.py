@@ -15,6 +15,7 @@ import json
 import re
 import ssl
 import sys
+import time
 import urllib.request
 import zipfile
 from io import BytesIO
@@ -73,11 +74,30 @@ def parse_histories(raw: str) -> list[dict]:
     return out
 
 
-def main() -> int:
+def download(retries: int = 3) -> bytes:
+    """The dump is one 6MB request with no fallback, so a single transport
+    blip loses the whole day's run (2026-08-14: `[Errno 101] Network is
+    unreachable` on the scheduled run; the host served 200 minutes later).
+    Same retry shape as fetch.get(), kept separate because that one carries
+    data.ly.gov.tw's legacy-renegotiation context, which law.moj.gov.tw
+    neither needs nor should be handed.
+    """
     ctx = ssl.create_default_context()
-    req = urllib.request.Request(DUMP, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=180, context=ctx) as r:
-        blob = r.read()
+    last = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(DUMP, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=180, context=ctx) as r:
+                return r.read()
+        except Exception as exc:  # noqa: BLE001 - retry any transport error
+            last = exc
+            print(f"attempt {attempt + 1}/{retries} failed: {exc}", file=sys.stderr)
+            time.sleep(5 * (attempt + 1))
+    raise RuntimeError(f"download failed after {retries}: {DUMP}: {last}")
+
+
+def main() -> int:
+    blob = download()
     print(f"downloaded {len(blob)/1e6:.1f}MB")
 
     with zipfile.ZipFile(BytesIO(blob)) as z:
