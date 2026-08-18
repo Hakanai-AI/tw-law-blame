@@ -11,8 +11,10 @@ it always returns the **whole** corpus as a zip containing `ChLaw.json`
 (1,346 statutes). One download, no per-law requests.
 """
 
+import contextlib
 import json
 import re
+import socket
 import ssl
 import sys
 import time
@@ -74,20 +76,48 @@ def parse_histories(raw: str) -> list[dict]:
     return out
 
 
+@contextlib.contextmanager
+def _ipv4_only():
+    """Force IPv4 for the duration of the block.
+
+    law.moj.gov.tw publishes an AAAA record that does not serve:
+
+        curl -4 …/api/Ch/Law/JSON   200, 6,117,710 bytes
+        curl -6 …/api/Ch/Law/JSON   connect fails
+
+    So whether the download works depends on which family the resolver hands
+    back first, which is why this looked "transient" on 2026-08-14 (a re-run
+    happened to get IPv4) and then failed three times in 45s on 2026-08-18.
+    Retrying cannot fix a broken AAAA; only not using it can.
+    """
+    real = socket.getaddrinfo
+
+    def ipv4_only(host, port, family=0, *args, **kwargs):
+        return real(host, port, socket.AF_INET, *args, **kwargs)
+
+    socket.getaddrinfo = ipv4_only
+    try:
+        yield
+    finally:
+        socket.getaddrinfo = real
+
+
 def download(retries: int = 3) -> bytes:
-    """The dump is one 6MB request with no fallback, so a single transport
-    blip loses the whole day's run (2026-08-14: `[Errno 101] Network is
-    unreachable` on the scheduled run; the host served 200 minutes later).
-    Same retry shape as fetch.get(), kept separate because that one carries
-    data.ly.gov.tw's legacy-renegotiation context, which law.moj.gov.tw
-    neither needs nor should be handed.
+    """One 6MB request with no fallback, so any transport failure loses the
+    whole day's run. Pinned to IPv4 (see _ipv4_only) and retried, in that
+    order of importance — the retry covers a genuine blip, the IPv4 pin covers
+    the host's non-serving AAAA record.
+
+    Kept separate from fetch.get() because that one carries data.ly.gov.tw's
+    legacy-renegotiation context, which law.moj.gov.tw neither needs nor
+    should be handed.
     """
     ctx = ssl.create_default_context()
     last = None
     for attempt in range(retries):
         try:
             req = urllib.request.Request(DUMP, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=180, context=ctx) as r:
+            with _ipv4_only(), urllib.request.urlopen(req, timeout=180, context=ctx) as r:
                 return r.read()
         except Exception as exc:  # noqa: BLE001 - retry any transport error
             last = exc
